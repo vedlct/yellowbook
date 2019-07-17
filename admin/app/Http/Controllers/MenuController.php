@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Menu;
+use App\Post;
 use Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -42,8 +43,10 @@ class MenuController extends Controller
      */
     public function create()
     {
-        $allMenu=Menu::select('menu.menuId','menu.menuName')->get();
-        return view('menu.addMenu',compact('allMenu'));
+        $allMenu=Menu::select('menu.menuId','menu.menuName')->where('menu.parentId',null)->get();
+        $allPost=Post::select('postId','header')->get();
+        $lastOrderNumber=Menu::max('orderNumber');
+        return view('menu.addMenu',compact('allMenu','lastOrderNumber','allPost'));
     }
 
     /**
@@ -57,7 +60,7 @@ class MenuController extends Controller
         $rules=[
             'menuName' => 'required|max:255',
             'menuStatus' => 'required|max:50',
-            'orderNumber' => 'required',
+            'orderNumber' => 'required|unique:menu',
 
         ];
 
@@ -105,13 +108,16 @@ class MenuController extends Controller
      */
     public function edit($id)
     {
-        $allMenu=Menu::select('menu.menuId','menu.menuName')->where('menu.menuId','!=',$id)->get();
+        $allMenu=Menu::select('menu.menuId','menu.menuName')->where('menu.parentId',null)->where('menu.menuId','!=',$id)->get();
+        $allPost=Post::select('postId','header')->get();
+        $lastOrderNumber=Menu::max('orderNumber');
         $menu= Menu::select('menu.menuId','menu.menuName','menu.menuType','menu.insertedBy','menu.lastModifiedBy',
-            'menu.lastModifiedDate', 'menu.menuStatus','menu.orderNumber','newMenu.menuName as parentMenu')
+            'menu.lastModifiedDate', 'menu.menuStatus','menu.orderNumber','newMenu.menuName as parentMenu','menu.postId')
             ->leftJoin('menu as newMenu', 'newMenu.parentId', '=', 'menu.menuId')
+            ->leftJoin('posts', 'posts.postId', '=', 'menu.postId')
             ->findOrFail($id);
 
-        return view('menu.editMenu',compact('menu','allMenu'));
+        return view('menu.editMenu',compact('menu','allMenu','allPost','lastOrderNumber'));
     }
 
     /**
@@ -123,7 +129,38 @@ class MenuController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $rules=[
+            'menuName' => 'required|max:255',
+            'menuStatus' => 'required|max:50',
+            'orderNumber' => 'required|unique:menu,orderNumber,'.$id.',menuId',
+
+        ];
+
+        $messages = [
+            // 'dimensions' => 'Image dimention should be over 800px',
+        ];
+
+        $validator = Validator::make($request->all(), $rules,$messages)->validate();
+
+        $menu=Menu::findOrFail($id);
+
+        $menu->menuName=$request->menuName;
+        $menu->parentId=$request->parentId;
+        $menu->postId=$request->postId;
+        $menu->menuType=$request->menuType;
+        $menu->menuStatus=$request->menuStatus;
+        $menu->orderNumber=$request->orderNumber;
+//        $menu->insertedBy=Auth::user()->name;
+        $menu->lastModifiedBy=Auth::user()->name;
+//        $menu->insertedDate=date(now());
+        $menu->lastModifiedDate=date(now());
+
+        $menu->save();
+
+        Session::flash('message', 'Menu Updated successfully');
+
+        return back();
+
     }
 
     /**
@@ -132,8 +169,11 @@ class MenuController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+
+    public function delete(Request $request)
     {
-        //
+        $menu=Menu::findOrFail($request->id);
+        $menu->menuStatus='Deleted';
+        $menu->save();
     }
 }

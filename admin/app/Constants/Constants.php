@@ -1,5 +1,5 @@
 <?php
-define('Status',array("Active","Inactive"));
+define('Status',array("Active","Inactive","Deleted"));
 
 
 

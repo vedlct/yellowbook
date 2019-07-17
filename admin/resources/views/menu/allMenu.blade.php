@@ -70,17 +70,18 @@
                 },
                 columns: [
 
-                    { data: 'menuName', name: 'menu.menuName' },
-                    { data: 'menuType', name: 'menu.menuType' },
+                    { data: 'menuName', name: 'menuName' },
+                    { data: 'menuType', name: 'menuType' },
                     { data: 'parentMenu', name: 'parentMenu' },
-                    { data: 'menuStatus', name: 'menu.menuStatus' },
+                    { data: 'menuStatus', name: 'menuStatus' },
                     { data: 'orderNumber', name: 'orderNumber' },
-                    { data: 'insertedBy', name: 'menu.insertedBy' },
-                    { data: 'lastModifiedBy', name: 'menu.lastModifiedBy' },
-                    { data: 'lastModifiedDate', name: 'menu.lastModifiedDate' },
+                    { data: 'insertedBy', name: 'insertedBy' },
+                    { data: 'lastModifiedBy', name: 'lastModifiedBy' },
+                    { data: 'lastModifiedDate', name: 'lastModifiedDate' },
 
                     { "data": function(data){
-                        return '<a style="cursor: pointer; color: #4881ecfa" data-panel-id="'+data.menuId+'"onclick="editMenu(this)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>';},
+                        return '<a style="cursor: pointer; color: #4881ecfa" data-panel-id="'+data.menuId+'"onclick="editMenu(this)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>' +
+                            '&nbsp;<a style="cursor: pointer; color: #4881ecfa" data-panel-id="'+data.menuId+'"onclick="deleteMenu(this)"><i class="fa fa-trash-o" aria-hidden="true"></i></a>';},
                         "orderable": false, "searchable":false, "name":"action" }
 
 
@@ -96,6 +97,51 @@
             //alert(url);
             var newUrl=url.replace(':id', btn);
             window.location.href = newUrl;
+        }
+        function deleteMenu(x)
+        {
+
+
+            $.confirm({
+                title: 'Confirm!',
+                content: 'Are you sure To delete this?',
+                icon: 'fa fa-warning',
+                type: 'red',
+                typeAnimated: true,
+                buttons: {
+                    tryAgain: {
+                        text: 'Yes',
+                        btnClass: 'btn-red',
+                        action: function(){
+                            var id = $(x).data('panel-id');
+                            $.ajax({
+                                type: "POST",
+                                url: '{{route('menu.delete')}}',
+                                data: {id: id},
+                                success: function (data) {
+                                    $.alert({
+                                        title: 'Success!',
+                                        type: 'green',
+                                        content: 'Menu Deleted successfully',
+                                        buttons: {
+                                            tryAgain: {
+                                                text: 'Ok',
+                                                btnClass: 'btn-green',
+                                                action: function () {
+
+                                                }
+                                            }
+                                        }
+                                    });
+                                },
+                            });
+                        }
+                    },
+                    No: function () {
+                    },
+                }
+            });
+
         }
 
     </script>
