@@ -17,8 +17,8 @@
                 <div class="card-body" style="padding: 1%;">
 
                     <div align="center" style="margin-bottom: 3%;">
-                        <h2 style="color: #989898;"><b>All Menu</b></h2>
-                        <a style="float:right;cursor: pointer" href="{{route('menu.addMenu')}}" class="btn btn-info">Add Menu</a>
+                        <h2 style="color: #989898;"><b>All Category</b></h2>
+                        <a style="float:right;cursor: pointer" href="{{route('category.addCategory')}}" class="btn btn-info">Add Category</a>
                     </div>
 
                     <div class="table table-responsive">
@@ -27,7 +27,7 @@
                             <tr>
                                 <th>Name</th>
                                 <th>Type</th>
-                                <th>Parent Menu</th>
+                                <th>Parent Category</th>
                                 <th>Status</th>
                                 <th>Order number</th>
                                 <th>inserted By</th>
@@ -69,7 +69,7 @@
                 serverSide: true,
                 stateSave: true,
                 "ajax":{
-                    "url": "{!! route('menu.showinfo') !!}",
+                    "url": "{!! route('category.showinfo') !!}",
                     "type": "POST",
                     data:function (d){
                         d._token="{{csrf_token()}}";
@@ -77,18 +77,18 @@
                 },
                 columns: [
 
-                    { data: 'menuName', name: 'menuName' },
-                    { data: 'menuType', name: 'menuType' },
-                    { data: 'parentMenu', name: 'parentMenu' },
-                    { data: 'menuStatus', name: 'menuStatus' },
+                    { data: 'categoryName', name: 'categoryName' },
+                    { data: 'categoryType', name: 'categoryType' },
+                    { data: 'parentCategory', name: 'parentCategory' },
+                    { data: 'categoryStatus', name: 'categoryStatus' },
                     { data: 'orderNumber', name: 'orderNumber' },
                     { data: 'insertedBy', name: 'insertedBy' },
                     { data: 'lastModifiedBy', name: 'lastModifiedBy' },
                     { data: 'lastModifiedDate', name: 'lastModifiedDate' },
 
                     { "data": function(data){
-                        return '<a style="cursor: pointer; color: #4881ecfa" data-panel-id="'+data.menuId+'"onclick="editMenu(this)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>' +
-                            '&nbsp;&nbsp;<a style="cursor: pointer; color: #4881ecfa" data-panel-id="'+data.menuId+'"onclick="deleteMenu(this)"><i class="fa fa-trash-o" aria-hidden="true"></i></a>';},
+                        return '<a style="cursor: pointer; color: #4881ecfa" data-panel-id="'+data.categoryId+'"onclick="editCategory(this)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>' +
+                            '&nbsp;&nbsp;<a style="cursor: pointer; color: #4881ecfa" data-panel-id="'+data.categoryId+'"onclick="deleteCategory(this)"><i class="fa fa-trash-o" aria-hidden="true"></i></a>';},
                         "orderable": false, "searchable":false, "name":"action" }
 
 
@@ -98,14 +98,14 @@
 
         });
 
-        function editMenu(x) {
+        function editCategory(x) {
             btn = $(x).data('panel-id');
-            var url = '{{route("menu.edit", ":id") }}';
+            var url = '{{route("category.edit", ":id") }}';
             //alert(url);
             var newUrl=url.replace(':id', btn);
             window.location.href = newUrl;
         }
-        function deleteMenu(x)
+        function deleteCategory(x)
         {
 
 
@@ -123,13 +123,13 @@
                             var id = $(x).data('panel-id');
                             $.ajax({
                                 type: "POST",
-                                url: '{{route('menu.delete')}}',
+                                url: '{{route('category.delete')}}',
                                 data: {id: id,},
                                 success: function (data) {
                                     $.alert({
                                         title: 'Success!',
                                         type: 'green',
-                                        content: 'Menu Deleted successfully',
+                                        content: 'Category Deleted successfully',
                                         buttons: {
                                             tryAgain: {
                                                 text: 'Ok',

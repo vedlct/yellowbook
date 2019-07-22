@@ -29,8 +29,9 @@ class MenuController extends Controller
     {
         $menuInfo = Menu::select('menu.menuId','menu.menuName','menu.menuType','menu.insertedBy','menu.lastModifiedBy',
             'menu.lastModifiedDate', 'menu.menuStatus','menu.orderNumber','newMenu.menuName as parentMenu')
-            ->leftJoin('menu as newMenu', 'newMenu.parentId', '=', 'menu.menuId')
+            ->leftJoin('menu as newMenu', 'newMenu.menuId', '=', 'menu.parentId')
             ->orderBy('menu.menuId','desc')
+            ->where('menu.menuStatus','!=','Deleted')
             ->get();
         $datatables = Datatables::of($menuInfo);
         return $datatables->make(true);
@@ -72,8 +73,18 @@ class MenuController extends Controller
 
         $menu=new Menu();
         $menu->menuName=$request->menuName;
-        $menu->parentId=$request->parentId;
-        $menu->postId=$request->postId;
+        if ($request->parentId == ""){
+
+        }else{
+            $menu->parentId=$request->parentId;
+        }
+        if ($request->postId == ""){
+
+        }else{
+            $menu->postId=$request->postId;
+        }
+
+
         $menu->menuType=$request->menuType;
         $menu->menuStatus=$request->menuStatus;
         $menu->orderNumber=$request->orderNumber;
@@ -113,7 +124,7 @@ class MenuController extends Controller
         $lastOrderNumber=Menu::max('orderNumber');
         $menu= Menu::select('menu.menuId','menu.menuName','menu.menuType','menu.insertedBy','menu.lastModifiedBy',
             'menu.lastModifiedDate', 'menu.menuStatus','menu.orderNumber','newMenu.menuName as parentMenu','menu.postId')
-            ->leftJoin('menu as newMenu', 'newMenu.parentId', '=', 'menu.menuId')
+            ->leftJoin('menu as newMenu', 'newMenu.menuId', '=', 'menu.parentId')
             ->leftJoin('posts', 'posts.postId', '=', 'menu.postId')
             ->findOrFail($id);
 
@@ -145,8 +156,16 @@ class MenuController extends Controller
         $menu=Menu::findOrFail($id);
 
         $menu->menuName=$request->menuName;
-        $menu->parentId=$request->parentId;
-        $menu->postId=$request->postId;
+        if ($request->parentId == ""){
+
+        }else{
+            $menu->parentId=$request->parentId;
+        }
+        if ($request->postId == ""){
+
+        }else{
+            $menu->postId=$request->postId;
+        }
         $menu->menuType=$request->menuType;
         $menu->menuStatus=$request->menuStatus;
         $menu->orderNumber=$request->orderNumber;

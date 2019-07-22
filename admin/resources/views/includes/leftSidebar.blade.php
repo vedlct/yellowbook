@@ -11,10 +11,10 @@
                     <a href="{{route('menu.index')}}"><i class="mdi mdi-gauge"></i><span class="hide-menu">Menu</span></a>
 
                 </li>
-                {{--<li>--}}
-                    {{--<a href="{{route('product.add')}}" ><i class="fa fa-plus"></i><span class="hide-menu">Enter New Product</span></a>--}}
+                <li>
+                    <a href="{{route('category.index')}}" ><i class="fa fa-plus"></i><span class="hide-menu">Category</span></a>
 
-                {{--</li>--}}
+                </li>
 
 
                 {{--<li>--}}
