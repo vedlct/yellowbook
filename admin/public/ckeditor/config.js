@@ -7,7 +7,7 @@
 CKEDITOR.editorConfig = function( config ) {
 
 
-    var base_url ="http://localhost/Stock/awstocks/public/";
+    var base_url ="http://localhost/yellowbook/admin/public/";
       //var base_url =ckBaseUrl+"public/";
 
 

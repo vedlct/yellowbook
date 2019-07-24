@@ -17,15 +17,15 @@
                 </li>
 
 
-                {{--<li>--}}
-                    {{--<a href="{{route('product.list')}}"><i class="fa fa-list-alt"></i><span class="hide-menu">Product List</span></a>--}}
+                <li>
+                    <a href="{{route('company.index')}}"><i class="fa fa-list-alt"></i><span class="hide-menu">Company</span></a>
 
-                {{--</li>--}}
+                </li>
 
-                {{--<li>--}}
-                    {{--<a href="{{route('offer.bulkOffer')}}"><i class="fa fa-plus-square"></i><span class="hide-menu">Bulk Offer Update</span></a>--}}
+                <li>
+                    <a href="{{route('post.index')}}"><i class="fa fa-plus-square"></i><span class="hide-menu">Posts</span></a>
 
-                {{--</li>--}}
+                </li>
 
                 {{--<li>--}}
                     {{--<a href="{{route('offer.add')}}"><i class="fa fa-plus"></i><span class="hide-menu">Enter Offer Details</span></a>--}}
