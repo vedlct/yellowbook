@@ -14,6 +14,19 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/newHome', function () {
-    return view('newHome');
-});
+//Route::get('/newHome', function () {
+//    return view('newHome');
+//});
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/company', 'companyController@index')->name('add.company');
+Route::get('/advertise', 'advertiseController@index')->name('advertise');
+Route::get('/contact', 'contactController@index')->name('contact');
+Route::get('/invest', 'investController@index')->name('invest');
+Route::get('/bangladesh', 'bangladeshController@index')->name('bangladesh');
+Route::get('/travel', 'travelController@index')->name('travel');
+Route::get('/tuition', 'tuitionController@index')->name('tuition');
+Route::get('/matrimony', 'matrimonyController@index')->name('matrimony');
+
+
+

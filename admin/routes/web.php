@@ -79,3 +79,7 @@ Route::post('/post-insert', 'PostController@store')->name('post.insert');
 Route::get('/post-edit/{id}', 'PostController@edit')->name('post.edit');
 Route::post('/post-update/{id}', 'PostController@update')->name('post.update');
 Route::post('/post-delete', 'PostController@delete')->name('post.delete');
+
+/* blog */
+//Route::get('/blog', 'BlogController@index')->name('blog.index');
+//Route::post('/blog-insert', 'BlogController@store')->name('blog.insert');

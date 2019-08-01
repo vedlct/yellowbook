@@ -1,0 +1,86 @@
+/*
+*************************************************
+Asim Tarafder
+Tamima Binte Mannan
+Sharah Zabin Eshita
+<info@bdtradeinfo.com>
+https://www.bdtradeinfo.com/
+
+*************************************************
+
+/*alphabet-advance part popup*/
+
+@media screen and (min-width: 0px) and (max-width: 700px) {
+        #div-mobile {    display: block; margin-top: -10px; margin-bottom: -10px; text-align: center; }
+        #div-desktop {    display: none;  }
+        }
+
+        @media screen and (min-width: 701px) and (max-width: 3000px) {
+        #div-mobile {    display: none;  }
+        #div-desktop {    display: block;  }
+
+          }
+          #myDIV {
+                display: none;
+                width: 100%;
+                text-align: center;
+                margin-top: 20px;
+              }
+              .icon-bar {
+                position: fixed;
+                z-index: 9990;
+                top: 170px;
+                -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+              }
+
+              .icon-bar a {
+                display: block;
+                text-align: left;
+                margin-left: -10px;
+              }
+                .modal {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1;  /*Sit on top */
+                padding-top: 100px; /* Location of the box */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                overflow: auto; /* Enable scroll if needed */
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+              }
+
+              /* Modal Content */
+              .modal-content {
+                position: relative;
+                background-color: #fefefe;
+                margin: auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 80%;
+              }
+
+              /* The Close Button */
+              .close {
+
+                color: #aaaaaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+              }
+
+              .close:hover,
+              .close:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+              }
+/*-----------------------------*/
+              
+
+
+        

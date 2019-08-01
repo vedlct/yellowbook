@@ -28,6 +28,11 @@
                 </li>
 
                 {{--<li>--}}
+                    {{--<a href="{{route('blog.index')}}"><i class="fa fa-plus-square"></i><span class="hide-menu">Blogs</span></a>--}}
+
+                {{--</li>--}}
+
+                {{--<li>--}}
                     {{--<a href="{{route('offer.add')}}"><i class="fa fa-plus"></i><span class="hide-menu">Enter Offer Details</span></a>--}}
 
                 {{--</li>--}}
