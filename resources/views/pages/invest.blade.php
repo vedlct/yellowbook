@@ -5,7 +5,7 @@
 
 
 <!--top address bar-->
-<div class="margin-bottom-10 padding-top-bottom-10 bg-ash"> <!--matri #ff6666   tuition #D8D8FA  Bangladesh  #009900   travel #ffcccc  biz #cccccc  yp  #FFBA53-->
+<div class="margin-bottom-10 padding-top-bottom-10 bg-ash" style="background-color: #F2EBD3;"> <!--matri #ff6666   tuition #D8D8FA  Bangladesh  #009900   travel #ffcccc  biz #cccccc  yp  #FFBA53-->
     <div class="container">
         <div class="col-md-2 col-sm-4 border-right title address-bar">Business & Investment</div>
         <div class="col-md-10 col-sm-8 padding-top-6">
@@ -28,7 +28,7 @@
                 <!--left category menu-->
                 <div class="col-md-12 leftmenu-grid">
                     <div class="width-100 bg-ash2 padding-6 border-radius-top-5 margin-top-10 text-center left-menu-heading">
-                        <h4>Investment Info</h4>
+                        <h4 style="color: #FD9F5B;">Investment Info</h4>
                     </div>
                     <div class="width-100 leftnav border-top-dashed" id="myTopnav1">
                         <a href="javascript:void(0);" class="icon margin-top-7-minus" onclick="myFunction1()" style="text-align: center;">Explore Business Opportunities &nbsp; <h2>&#9776;</h2></a>
@@ -40,7 +40,7 @@
                         <a href="invest_climate.html">Investment Climate</a>
 
                         <a href="#">&nbsp;</a>
-                        <a class="nav4txt" style="text-align: center; background-color: #f2f2f2;" href="#"><h4>Government Policies</h4></a>
+                        <a class="nav4txt" style="text-align: center; background-color: #f2f2f2;" href="#"><h4 style="color: #FD9F5B;">Government Policies</h4></a>
 
                         <!--        <a href="#">
                                     <div class="width-100 bg-ash2 padding-6 border-radius-top-5 margin-top-15">
@@ -53,7 +53,7 @@
                         <a href="industrial_policy.html">Industrial Policy</a>
 
                         <a href="#">&nbsp;</a>
-                        <a style="text-align: center; background-color: #f2f2f2;" href="#"><h4>Business Tips</h4></a>
+                        <a style="text-align: center; background-color: #f2f2f2;" href="#"><h4 style="color: #FD9F5B;">Business Tips</h4></a>
                         <!--        <div class="width-100 bg-ash2 padding-6 border-radius-top-5 margin-top-15">
                                     <h4>Business Tips</h4>
                                 </div>-->
@@ -71,7 +71,7 @@
 
                         <a href="#">
                             <div class="width-100 bg-ash2 padding-6 border-radius-top-5 margin-top-15">
-                                <h4>Guide Lines</h4>
+                                <h4 style="color: #FD9F5B;">Guide Lines</h4>
                             </div>
                         </a>
 
@@ -112,7 +112,7 @@
                 <div class="row" >
                     <div class="col-md-12 col-xs-12 div_style3">
                         <div class="col-md-12 col-xs-12 mainbody-grid div_style4">
-                            <h1>Introduction</h1>
+                            <h1 style="color: #459E5B;">Introduction</h1>
                         </div>
                         <div class="main_content2">
                             <p>

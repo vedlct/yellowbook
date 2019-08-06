@@ -87,7 +87,6 @@
                     { data: 'lastModifiedDate', name: 'lastModifiedDate' },
 
                     { "data": function(data){
-
                         return '<a style="cursor: pointer; color: #4881ecfa" data-panel-id="'+data.categoryId+'"onclick="editCategory(this)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>' +
                             '&nbsp;&nbsp;<a style="cursor: pointer; color: #4881ecfa" data-panel-id="'+data.categoryId+'"onclick="deleteCategory(this)"><i class="fa fa-trash-o" aria-hidden="true"></i></a>';},
                         "orderable": false, "searchable":false, "name":"action" }

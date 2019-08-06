@@ -5,7 +5,7 @@
 
 
 <!--top address bar-->
-<div class="margin-bottom-10 padding-top-bottom-10 bg-peace"> <!--matri #ff6666   tuition #D8D8FA  Bangladesh  #009900   travel #ffcccc  biz #cccccc  yp  #FFBA53-->
+<div class="margin-bottom-10 padding-top-bottom-10 bg-peace" style="background-color: #F2EBD3;"> <!--matri #ff6666   tuition #D8D8FA  Bangladesh  #009900   travel #ffcccc  biz #cccccc  yp  #FFBA53-->
     <div class="container">
         <div class="col-md-2 col-sm-3 border-right title address-bar">Travel & Tourism </div>
         <div class="col-md-10 col-sm-9 padding-top-6">
@@ -28,7 +28,7 @@
                 <!--left category menu-->
                 <div class="col-md-12 leftmenu-grid">
                     <div class="width-100 bg-ash2 padding-6 border-radius-top-5 margin-top-10 text-center left-menu-heading">
-                        <h4>Basic Travel Info</h4>
+                        <h4 style="color: #FD9F5B;">Basic Travel Info</h4>
                     </div>
                     <div class="width-100 leftnav border-top-dashed" id="myTopnav1">
                         <a href="javascript:void(0);" class="icon margin-top-7-minus" onclick="myFunction1()" style="text-align: center;">Travel & Discover Bangladesh &nbsp; <h2>&#9776;</h2></a>
@@ -46,7 +46,7 @@
 
                         <a href="#">
                             <div class="width-100 bg-ash2 padding-6 border-radius-top-5 margin-top-15">
-                                <h4>Tourist Attraction</h4>
+                                <h4 style="color: #FD9F5B;">Tourist Attraction</h4>
                             </div>
                         </a>
 
@@ -94,7 +94,7 @@
                 <div class="row" >
                     <div class="col-md-12 col-xs-12 div_style3">
                         <div class="col-md-12 col-xs-12 mainbody-grid div_style4">
-                            <h1>Places for Visit</h1>
+                            <h1 style="color: #459E5B;">Places for Visit</h1>
                         </div>
                         <div class="col-md-12">
                             <div class="row">
@@ -142,7 +142,7 @@
                 <div class="row" >
                     <div class="col-md-12 col-xs-12 div_style3">
                         <div class="col-md-12 col-xs-12 mainbody-grid div_style4">
-                            <h1>Information your may Require During Tour Planning</h1>
+                            <h1 style="color: #459E5B;">Information your may Require During Tour Planning</h1>
                         </div>
                         <div class="col-md-12">
                             <div class="row">
@@ -164,42 +164,7 @@
                                         <a href="resorts.html" class="text-light text-medium">Resorts & Picnic Spots</a>
                                     </div>
                                 </div>
-                                <div class="box3 text-center">
-                                    <a href="food.html"><img src="{{url('public')}}/images/food.png" alt="Food and Beverage" title="Food and Beverage"></a><br/>
-                                    <div  class="padding-top-6">
-                                        <a href="food.html" class="text-light text-medium">Food and Beverage</a>
-                                    </div>
-                                </div>
-                                <div class="box3 text-center">
-                                    <a href="shopping.html"><img src="{{url('public')}}/images/shopping.png" alt="Shopping" title="Shopping"></a><br/>
-                                    <div  class="padding-top-6">
-                                        <a href="shopping.html" class="text-light text-medium">Shopping</a>
-                                    </div>
-                                </div>
-                                <div class="box3 text-center">
-                                    <a href="tour_operator.html"><img src="{{url('public')}}/images/tour_operator.png" alt="Tour Operator" title="Tour Operator"></a><br/>
-                                    <div  class="padding-top-6">
-                                        <a href="tour_operator.html" class="text-light text-medium">Tour Operator</a>
-                                    </div>
-                                </div>
-                                <div class="box3 text-center">
-                                    <a href="../yellowpages/des_data1c3d.html?subcategory_id=758"><img src="{{url('public')}}/images/travel_agent.png" alt="Tour Operator" title="Tour Operator"></a><br/>
-                                    <div  class="padding-top-6">
-                                        <a href="../yellowpages/des_data1c3d.html?subcategory_id=758" class="text-light text-medium">Travel Agent</a>
-                                    </div>
-                                </div>
-                                <div class="box3 text-center">
-                                    <a href="../yellowpages/des_dataa112.html?subcategory_id=754"><img src="{{url('public')}}/images/rentacar.png" alt="Tour Operator" title="Tour Operator"></a><br/>
-                                    <div  class="padding-top-6">
-                                        <a href="../yellowpages/des_dataa112.html?subcategory_id=754" class="text-light text-medium">Rent a Car</a>
-                                    </div>
-                                </div>
-                                <div class="box3 text-center">
-                                    <img src="../images/apps_car.png" alt="Tour Operator" title="Tour Operator"><br/>
-                                    <div  class="padding-top-6">
-                                        <span class="text-light text-medium">Apps for Instant Ride</span>
-                                    </div>
-                                </div>
+
                                 <div class="clearfix"></div>
                             </div>
                         </div>
@@ -227,22 +192,6 @@
                 <div class="col-lg-12 col-md-12 col-sm-4 col-xs-4 text-center margin-top-bottom-10">
                     <a href="../yellowpages/goadurlcdfa.html?idn=288" target="_blank"><img src="{{url('public')}}/saimg/ad_ts_left.gif" class="img-panel" alt="Know Bangladesh - Travel Bangladesh" title="Know Bangladesh - Travel Bangladesh"></a>
                 </div>
-
-                <div class="col-lg-12 col-md-12 col-sm-4 col-xs-4 text-center margin-top-bottom-10">
-                    <a href="../yellowpages/goadurl25cc.html?idn=22" target="_blank"><img src="{{url('public')}}/saimg/ad_ts_142x100.jpg" class="img-panel" alt="T-Series Solutions - Website, Software, Domain, Hosting" title="T-Series Solutions - Website, Software, Domain, Hosting"></a>
-                </div>
-
-
-                <div class="col-lg-12 col-md-12 col-sm-4 col-xs-4 text-center margin-top-bottom-10">
-                    <a href="../yellowpages/goadurl31e8.html?idn=" target="_blank"><img src="{{url('public')}}/saimg/ad_ts_right.gif" class="img-panel" alt="Advertise with bdtradeinfo.com" title="Advertise with bdtradeinfo.com"></a>
-                </div>
-
-
-
-
-
-
-
 
                 <!--right panel Google search and Facebook -->
                 <div class="clearfix"></div>

@@ -25,11 +25,14 @@ class categoryController extends Controller
     }
     public function index()
     {
-        return view('category.allCategory');
+//        echo 'hello';
+//        exit();
+
+        return view('category.allCategorys');
     }
     public function showAllMenuInfo()
     {
-        $categoryInfo = Category::select('category.categoryId','category.categoryName','category.categoryType','category.insertedBy','category.lastModifiedBy',
+        $categoryInfo = Category::select('category.categoryId','category.top_category','category.categoryName','category.categoryType','category.insertedBy','category.lastModifiedBy',
             'category.lastModifiedDate', 'category.categoryStatus','category.orderNumber','newcategory.categoryName as parentCategory')
             ->leftJoin('category as newcategory', 'newcategory.parentId', '=', 'category.categoryId')
             ->orderBy('category.categoryId','desc')
@@ -89,6 +92,7 @@ class categoryController extends Controller
 
 
 //        $category->menuType=$request->menuType;
+
         $category->categoryStatus=$request->categoryStatus;
         $category->orderNumber=$request->orderNumber;
         $category->insertedBy=Auth::user()->name;
@@ -96,6 +100,7 @@ class categoryController extends Controller
         $category->insertedDate=date(now());
 //        $menu->lastModifiedDate=date(now());
         //$menu->LastExportedBy=Auth::user()->name;
+
         $category->save();
 
         Session::flash('message', 'Category Inserted successfully');
@@ -204,5 +209,23 @@ class categoryController extends Controller
         $category=Category::findOrFail($request->id);
         $category->categoryStatus='Deleted';
         $category->save();
+    }
+
+    function topCategorychecked(Request $r){
+
+        $categoryId =$r->id;
+
+        $category = Category::where('categoryId', $categoryId)
+            ->update(['top_category' => 1]);
+
+    }
+
+    function topCategoryunchecked(Request $r){
+
+        $categoryId =$r->id;
+
+        $category = Category::where('categoryId', $categoryId)
+            ->update(['top_category' => 0]);
+
     }
 }

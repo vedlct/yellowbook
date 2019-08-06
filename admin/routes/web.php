@@ -55,6 +55,10 @@ Route::post('/category-update/{id}', 'categoryController@update')->name('categor
 
 Route::post('/category-delete', 'categoryController@delete')->name('category.delete');
 
+Route::post('/topcategorychecked', 'categoryController@topCategorychecked')->name('category.topcategorychecked');
+Route::post('/topcategoryunchecked', 'categoryController@topCategoryunchecked')->name('category.topcategoryunchecked');
+
+
 
 /*Company */
 Route::get('/company', 'CompanyController@index')->name('company.index');

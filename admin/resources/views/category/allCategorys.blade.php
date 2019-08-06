@@ -33,6 +33,7 @@
                                 <th>inserted By</th>
                                 <th>Modified By</th>
                                 <th>Modified Date</th>
+                                <th>Top Category</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
@@ -85,9 +86,20 @@
                     { data: 'insertedBy', name: 'insertedBy' },
                     { data: 'lastModifiedBy', name: 'lastModifiedBy' },
                     { data: 'lastModifiedDate', name: 'lastModifiedDate' },
-
                     { "data": function(data){
 
+                    if(data.top_category==1){
+                        return '<input type="checkbox" id="checkbox"  data-panel-id="'+data.categoryId+'"onclick="topcategory(this)" checked></input>'
+                    }else{
+                        return '<input type="checkbox" id="checkbox"  data-panel-id="'+data.categoryId+'"onclick="topcategory(this)" unchecked></input>'
+                    }
+
+                     },
+                        "orderable": false, "searchable":false, "name":"action" },
+
+
+
+                    { "data": function(data){
                         return '<a style="cursor: pointer; color: #4881ecfa" data-panel-id="'+data.categoryId+'"onclick="editCategory(this)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>' +
                             '&nbsp;&nbsp;<a style="cursor: pointer; color: #4881ecfa" data-panel-id="'+data.categoryId+'"onclick="deleteCategory(this)"><i class="fa fa-trash-o" aria-hidden="true"></i></a>';},
                         "orderable": false, "searchable":false, "name":"action" }
@@ -98,7 +110,36 @@
             });
 
         });
+        function topcategory(x) {
+           btn = $(x).data('panel-id');
 
+           if ($('#checkbox').is(':checked')){
+               $.ajax({
+                   type: 'POST',
+                   url: "{!! route('category.topcategorychecked') !!}",
+                   cache: false,
+                   data: {_token: "{{csrf_token()}}",'id': btn},
+                   success: function (data) {
+//                    console.log(data);
+
+                   }
+               });
+
+           }else {
+//
+               $.ajax({
+                   type: 'POST',
+                   url: "{!! route('category.topcategoryunchecked') !!}",
+                   cache: false,
+                   data: {_token: "{{csrf_token()}}",'id': btn},
+                   success: function (data) {
+//                    console.log(data);
+
+                   }
+               });
+           }
+
+        }
         function editCategory(x) {
             btn = $(x).data('panel-id');
             var url = '{{route("category.edit", ":id") }}';

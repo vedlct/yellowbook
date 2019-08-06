@@ -36,9 +36,9 @@
     <script type="text/javascript" src = "includes/gglAnaCods.js"></script>
 
     <!-- for ShareThis code   -->
-    <script type="text/javascript">var switchTo5x=true;</script>
-    <script type="text/javascript" src="../w.sharethis.com/button/buttons.js"></script>
-    <script type="text/javascript" src="../s.sharethis.com/loader.js"></script>
+    {{--<script type="text/javascript">var switchTo5x=true;</script>--}}
+    {{--<script type="text/javascript" src="../w.sharethis.com/button/buttons.js"></script>--}}
+    {{--<script type="text/javascript" src="../s.sharethis.com/loader.js"></script>--}}
     <!-- end ShareThis code   -->
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
@@ -53,24 +53,24 @@
 
 
 <!-- top menu -->
-<div class="topnav" id="myTopnav">
+<div class="topnav" id="myTopnav" style="background-color: #F0D717;">
     <div class="navbar-left">
-        <a href="{{route('home')}}">Home</a>
-        <a href="#" target="_blank">About Us</a>
-        <a href="{{route('add.company')}}">Add Your Company Listing</a>
-        <a href="{{route('advertise')}}">Advertise with Us</a>
-        <a href="{{route('contact')}}">Contact</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">Menu &#9776;</a>
+        {{--<a href="{{route('home')}}">Home</a>--}}
+        <a href="#" style="color: #2B2B2B;">About Us</a>
+        <a href="{{route('add.company')}}" style="color: #2B2B2B;">Add Your Company Listing</a>
+        <a href="{{route('advertise')}}" style="color: #2B2B2B;">Advertise With Us</a>
+        <a href="{{route('contact')}}" style="color: #2B2B2B;">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()" style="color: #2B2B2B;">Menu &#9776;</a>
     </div>
 
     <div class="navbar-right">
         <a href="#"></a>
-        <a href="#" target="_blank">Stall 24</a>
-        <a href="{{route('invest')}}" target="_blank">Biz & Invest</a>
-        <a href="{{route('bangladesh')}}" target="_blank">Bangladesh</a>
-        <a href="{{route('travel')}}" target="_blank">Travel</a>
-        <a href="{{route('tuition')}}" target="_blank">Tuition</a>
-        <a href="{{route('matrimony')}}" target="_blank">Matrimony</a>
+        {{--<a href="#" target="_blank">Stall 24</a>--}}
+        <a href="{{route('invest')}}" style="color: #2B2B2B;" target="_blank">INFO</a>
+        <a href="{{route('bangladesh')}}" style="color: #2B2B2B;" target="_blank">LINKS</a>
+        <a href="{{route('travel')}}" style="color: #2B2B2B;" target="_blank">FORMS</a>
+        {{--<a href="{{route('tuition')}}" target="_blank">Tuition</a>--}}
+        {{--<a href="{{route('matrimony')}}" target="_blank">Matrimony</a>--}}
     </div>
 </div>
 <script>
@@ -91,7 +91,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-lg-offset-0 col-md-5 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 padding-top-bottom-5 logo">
-                <a href="index.html"><img src="{{url('public')}}/images/logo_bdtradeinfo_yp.png" alt="Bangladesh Trade Info" title="Bangladesh Trade Info"></a><br/>
+                <a href="{{route('home')}}"><img src="{{url('public')}}/images/logo_bdtradeinfo_yp.png" alt="Bangladesh Trade Info" title="Bangladesh Trade Info"></a><br/>
                 <small>Mega Search Engine & Online Business Directory of Bangladesh</small>
             </div>
             <div class="col-lg-6 col-lg-offset-2 col-md-6 col-md-offset-1 col-sm-12 col-xs-12 padding-top-bottom-5 upper">

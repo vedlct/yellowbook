@@ -4,7 +4,7 @@
 
 
 <!--top address bar-->
-<div class="margin-bottom-10 padding-top-bottom-10 bg-skyblue"> <!--matri #ff6666   tuition #D8D8FA  Bangladesh  #009900   travel #ffcccc  biz #cccccc  yp  #FFBA53-->
+<div class="margin-bottom-10 padding-top-bottom-10 bg-skyblue" style="background-color: #F2EBD3;"> <!--matri #ff6666   tuition #D8D8FA  Bangladesh  #009900   travel #ffcccc  biz #cccccc  yp  #FFBA53-->
     <div class="container">
         <div class="col-md-2 col-sm-3 border-right title address-bar">General info </div>
         <div class="col-md-10 col-sm-9 padding-top-6">
@@ -25,7 +25,7 @@
                 <!--left category menu-->
                 <div class="col-md-12 leftmenu-grid">
                     <div class="width-100 bg-ash2 padding-6 border-radius-top-5 margin-top-10 text-center left-menu-heading">
-                        <h4>General Menu</h4>
+                        <h4 style="color: #FD9F5B;">General Menu</h4>
                     </div>
                     <div class="width-100 leftnav border-top-dashed" id="myTopnav1">
                         <a href="javascript:void(0);" class="icon margin-top-7-minus" onclick="myFunction1()" style="text-align: center;">General & Service Info &nbsp; <h2>&#9776;</h2></a>
@@ -42,7 +42,7 @@
 
                         <a href="#">
                             <div class="width-100 bg-ash2 padding-6 border-radius-top-5 margin-top-15 text-center">
-                                <h4>Our Services</h4>
+                                <h4 style="color: #FD9F5B;">Our Services</h4>
                             </div>
                         </a>
 
@@ -87,7 +87,7 @@
                 <div class="row" >
                     <div class="col-md-12 col-xs-12 div_style3">
                         <div class="col-md-12 col-xs-12 mainbody-grid div_style4">
-                            <h1>Contact Us</h1>
+                            <h1 style="color: #459E5B;">Contact Us</h1>
                         </div>
                         <div class="main_content2">
                             <div class="col-md-6 col-sm-6 col-xs-12 margin-top-bottom-10 padding-bottom-5 text-left">

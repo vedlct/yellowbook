@@ -1,10 +1,10 @@
 <!--footer-->
 <footer>
-    <div class="footer-bottom">
+    <div class="footer-bottom" style="background-color: #444444;">
         <div class="container text-center">
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 padding-bottom-20 padding-top-20 text-left">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 padding-bottom-20 padding-top-20 text-left">
                 <div class="padding-bottom-10 margin-bottom-10 border-bottom-gray">
-                    <h4 class="text-orange">Quick Links</h4>
+                    <h4 class="text-orange" style="color: #48A05D;">Quick Links</h4>
                 </div>
                 <span class="glyphicon glyphicon-home"></span><a href="index.html">Home</a><br>
                 <span class="glyphicon glyphicon-eye-open"></span><a href="tseries/index.html" target="_blank">About Us</a><br>
@@ -18,9 +18,9 @@
                 <span class="glyphicon glyphicon-phone-alt"></span><a href="general/contact.html">Contact Us</a>
 
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 padding-bottom-20 padding-top-20 text-left">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 padding-bottom-20 padding-top-20 text-left">
                 <div class="padding-bottom-10 margin-bottom-10 border-bottom-gray">
-                    <h4 class="text-orange">Major Sections</h4>
+                    <h4 class="text-orange" style="color: #48A05D;">Major Sections</h4>
                 </div>
                 <span class="glyphicon glyphicon-chevron-right"></span><a href="yellowpages/index.html" target="_blank">Yellow Pages</a><br>
                 <span class="glyphicon glyphicon-chevron-right"></span><a href="business-investment/index.html" target="_blank">Business Invest</a><br>
@@ -32,22 +32,10 @@
                 <span class="glyphicon glyphicon-chevron-right"></span><a href="bangladesh-profile/bd_district.html" target="_blank">District Info</a>
                 <!--                        <span class="glyphicon glyphicon-chevron-right"></span><a href="./tradeleads/index.php">Trade Leads</a>-->
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 padding-bottom-20 padding-top-20 text-left">
-                <div class="padding-bottom-10 margin-bottom-10 border-bottom-gray">
-                    <h4 class="text-orange">Service</h4>
-                </div>
-                <span class="glyphicon glyphicon-search"></span><a href="general/services.html">Our Services</a><br>
-                <span class="glyphicon glyphicon-list"></span><a href="general/classified.html">Add Company Listing</a><br>
-                <span class="glyphicon glyphicon-dashboard"></span><a href="general/adwithus.html">Advertise with Us</a><br><br>
 
-                <div class="padding-bottom-10 margin-bottom-10 border-bottom-gray"></div>
-                <a href="https://play.google.com/store/apps/details?id=com.bdtrade.app" target="_blank"><img src="{{url('public')}}/images/icon_google_play.png" alt="Download Android Mobile Apps from Google Play Store" title="Download Android Mobile Apps from Google Play Store" class="padding-top-10"></a>
-                <a href="http://www.visitorsdetective.com/profile/bdtradeinfo.com/en/" target="_blank"><img src="{{url('public')}}/images/icon_web_trafic.png" alt="Check number of daily visitots" title="Check number of daily visitots" class="padding-top-10"></a>
-
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 padding-bottom-20 padding-top-20 text-left">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 padding-bottom-20 padding-top-20 text-left">
                 <div class="padding-bottom-10 margin-bottom-10 border-bottom-gray">
-                    <h4 class="text-orange">Social Links</h4>
+                    <h4 class="text-orange" style="color: #48A05D;">Social Links</h4>
                 </div>
                 <a href="https://www.facebook.com/bdtradeinfo/"><img src="{{url('public')}}/images/facebook.png" alt="Facebook" title="Facebook"></a>
                 <a href="https://twitter.com/bdtradeinfo"><img src="{{url('public')}}/images/twitter.png" class="padding-left-right-5" alt="Twitter" title="Twitter"></a>
@@ -61,47 +49,50 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                    <div class="padding-left-10">
-                        <br/>
-                        <a href="#">&copy; 2002-2019</a><br/>
-                        <a href="index-2.html">T-Series Solutions </a>
-                        <small class="text-lighter">All Rights Reserved</small>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 text-center">
-                    <br/>
-                    <small class="text-lighter"> Strategic Partner :</small> &nbsp; <a href="#"><img src="{{url('public')}}/images/e2000era.png" alt="E2000Era" title="E2000Era"></a>
-                </div>
-
-                <div class="col-lg-3 col-md-3 col-sm-2 col-xs-4 text-center padding-top-10">
-                    <br/>
-                    <small class="text-lighter">Member : &nbsp; </small><a href="http://www.basis.org.bd/"><img src="{{url('public')}}/images/basis_logo.png" alt="BASIS" title="BASIS"></a>
-                </div>
-
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-8 text-center">
-                    <br/>
-                    <div class="float-right bg-ash border-radius-5 margin-right-20 padding-6">
-                        <div id="google_translate_element"></div>
-                        <script>
-                            function googleTranslateElementInit() {
-                                new google.translate.TranslateElement({
-                                    pageLanguage: 'en'
-                                }, 'google_translate_element');
-                            }
-                        </script>
-                        <script src="../translate.google.com/translate_a/elementa0d8.html?cb=googleTranslateElementInit"></script>
-                    </div>
-                </div>
-                <br/><br/>
-            </div>
+        <div class="container text-center">
+            <a href="#">&copy;Tech Cloud Ltd.</a>
         </div>
     </div>
+    {{--<div class="footer" style="background-color: #555555;">--}}
+        {{--<div class="container">--}}
+            {{--<div class="row">--}}
+                {{--<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">--}}
+                    {{--<div class="padding-left-10">--}}
+                        {{--<br/>--}}
+                        {{--<a href="#">&copy; 2002-2019</a><br/>--}}
+                        {{--<a href="index-2.html">T-Series Solutions </a>--}}
+                        {{--<small class="text-lighter">All Rights Reserved</small>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+
+                {{--<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 text-center">--}}
+                    {{--<br/>--}}
+                    {{--<small class="text-lighter"> Strategic Partner :</small> &nbsp; <a href="#"><img src="{{url('public')}}/images/e2000era.png" alt="E2000Era" title="E2000Era"></a>--}}
+                {{--</div>--}}
+
+                {{--<div class="col-lg-3 col-md-3 col-sm-2 col-xs-4 text-center padding-top-10">--}}
+                    {{--<br/>--}}
+                    {{--<small class="text-lighter">Member : &nbsp; </small><a href="http://www.basis.org.bd/"><img src="{{url('public')}}/images/basis_logo.png" alt="BASIS" title="BASIS"></a>--}}
+                {{--</div>--}}
+
+                {{--<div class="col-lg-3 col-md-3 col-sm-4 col-xs-8 text-center">--}}
+                    {{--<br/>--}}
+                    {{--<div class="float-right bg-ash border-radius-5 margin-right-20 padding-6">--}}
+                        {{--<div id="google_translate_element"></div>--}}
+                        {{--<script>--}}
+                            {{--function googleTranslateElementInit() {--}}
+                                {{--new google.translate.TranslateElement({--}}
+                                    {{--pageLanguage: 'en'--}}
+                                {{--}, 'google_translate_element');--}}
+                            {{--}--}}
+                        {{--</script>--}}
+                        {{--<script src="../translate.google.com/translate_a/elementa0d8.html?cb=googleTranslateElementInit"></script>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<br/><br/>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
 </footer>
 <!--footer-->
 

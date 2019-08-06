@@ -4,7 +4,7 @@
 
 
 <!--top address bar-->
-<div class="margin-bottom-10 padding-top-bottom-10 bg-skyblue"> <!--matri #ff6666   tuition #D8D8FA  Bangladesh  #009900   travel #ffcccc  biz #cccccc  yp  #FFBA53-->
+<div class="margin-bottom-10 padding-top-bottom-10 bg-skyblue" style="background-color: #F2EBD3;"> <!--matri #ff6666   tuition #D8D8FA  Bangladesh  #009900   travel #ffcccc  biz #cccccc  yp  #FFBA53-->
     <div class="container">
         <div class="col-md-2 col-sm-3 border-right title address-bar">General info </div>
         <div class="col-md-10 col-sm-9 padding-top-6">
@@ -25,7 +25,7 @@
                 <!--left category menu-->
                 <div class="col-md-12 leftmenu-grid">
                     <div class="width-100 bg-ash2 padding-6 border-radius-top-5 margin-top-10 text-center left-menu-heading">
-                        <h4>General Menu</h4>
+                        <h4 style="color: #FD9F5B;">General Menu</h4>
                     </div>
                     <div class="width-100 leftnav border-top-dashed" id="myTopnav1">
                         <a href="javascript:void(0);" class="icon margin-top-7-minus" onclick="myFunction1()" style="text-align: center;">General & Service Info &nbsp; <h2>&#9776;</h2></a>
@@ -42,7 +42,7 @@
 
                         <a href="#">
                             <div class="width-100 bg-ash2 padding-6 border-radius-top-5 margin-top-15 text-center">
-                                <h4>Our Services</h4>
+                                <h4 style="color: #FD9F5B;">Our Services</h4>
                             </div>
                         </a>
 
@@ -87,7 +87,7 @@
                 <div class="row" >
                     <div class="col-md-12 col-xs-12 div_style3">
                         <div class="col-md-12 col-xs-12 mainbody-grid div_style4">
-                            <h1>Advertise with us</h1>
+                            <h1 style="color: #459E5B;">Advertise with us</h1>
                         </div>
                         <div class="main_content2">
                             <p>bdtradeinfo.com has several BANNERs & PANELs for advertisement. Ad design is made with Animation. Therefore, it catches the eyes of visitors easily. On click the ad, your website or home page will be appeared. So, take the advantage of online marketing promotion through bdtradeinfo.com. Advertisement rates & details are provided below:</p>
@@ -178,157 +178,6 @@
 
 
                             <div class="col-md-6 col-xs-12 margin-top-10">
-                                <table class="table-striped table-bordered">
-                                    <tr>
-                                        <td colspan="3" class="text-center"><span class="oswald_black">Left Panel</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="3" class="text-center">
-                                            <div class="oswald_meroon1">Ad Size : W-156 x H-100 pixel / W-55 x H-35 mm</div></td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="oswald_black1">Price</span></td>
-                                        <td><span class="oswald_black1">(USD/Year)</span></td>
-                                        <td><span class="oswald_black1">(BDT/Year)</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Home page</td>
-                                        <td>355</td>
-                                        <td>30,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Search page</td>
-                                        <td>175</td>
-                                        <td>15,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Data page</td>
-                                        <td>175</td>
-                                        <td>15,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>General page</td>
-                                        <td>118</td>
-                                        <td>10,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="3" class="text-center"><a href="ad_order.html" class="nav7txt">Click here to order now</a></td>
-                                    </tr>
-                                </table>
-                                <br/>
-                            </div>
-                            <div class="col-md-6 col-xs-12 margin-top-10">
-                                <table class="table-striped table-bordered">
-                                    <tr>
-                                        <td colspan="3" class="text-center"><span class="oswald_black">Right Panel</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="3" class="text-center">
-                                            <div class="oswald_meroon1">Ad Size : W-142 x H-100 pixel / W-50 x H-35 mm</div></td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="oswald_black1">Price</span></td>
-                                        <td><span class="oswald_black1">(USD/Year)</span></td>
-                                        <td><span class="oswald_black1">(BDT/Year)</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Home page</td>
-                                        <td>355</td>
-                                        <td>30,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Search page</td>
-                                        <td>175</td>
-                                        <td>15,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Data page</td>
-                                        <td>175</td>
-                                        <td>15,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>General page</td>
-                                        <td>118</td>
-                                        <td>10,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="3" class="text-center"><a href="ad_order.html" class="nav7txt">Click here to order now</a></td>
-                                    </tr>
-                                </table>
-                                <br/>
-                            </div>
-
-
-                            <div class="col-md-6 col-xs-12 margin-top-10">
-                                <table class="table-striped table-bordered">
-                                    <tr>
-                                        <td colspan="3" class="text-center"><span class="oswald_black">Bottom Banner</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="3" class="text-center">
-                                            <div class="oswald_meroon1">Ad Size: W-520 x H-60 pixel / W-183 x H-21 mm</div></td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="oswald_black1">Price</span></td>
-                                        <td><span class="oswald_black1">(USD/Year)</span></td>
-                                        <td><span class="oswald_black1">(BDT/Year)</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Home page</td>
-                                        <td>295</td>
-                                        <td>25,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Search page</td>
-                                        <td>94</td>
-                                        <td>8,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Data page</td>
-                                        <td>94</td>
-                                        <td>8,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>General page</td>
-                                        <td>70</td>
-                                        <td>6,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="3" class="text-center"><a href="ad_order.html" class="nav7txt">Click here to order now</a></td>
-                                    </tr>
-                                </table>
-                                <br/>
-                            </div>
-                            <div class="col-md-6 col-xs-12 margin-top-10">
-                                <table class="table-striped table-bordered">
-                                    <tr>
-                                        <td colspan="2" class="text-center"><span class="sub_ttl_blue">Terms &amp; Conditions</span> </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2">&nbsp;1. Ad design or design matter must be supplied and approved within 7 days after contract or work order. <br/>
-                                            &nbsp;2. Full payment is payable in advance.
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2" class="text-center"><span class="sub_ttl_blue">Special Promotion</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2" class="sub_ttl_yellow text-center">
-                                            Special Discount on Multiple ad Booking</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Booking for 2 ads</td>
-                                        <td>20%</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Booking for 5 ads</td>
-                                        <td>30%</td>
-                                    </tr>
-                                </table>
-                            </div>
-
-
-                            <div class="col-md-6 col-xs-12 margin-top-10">
                                     <span class="body"><span class="text1"><em>* All Advertisement positions are subject to availability <br/>
                                     * Sizes for banners &amp; panels on home page are different <br/>
                                     * Rates may be changed at anytime without prior notice<br/><br/></em></span></span></div>
@@ -351,22 +200,7 @@
                     <a href="../yellowpages/goadurl328d.html?idn=317" target="_blank"><img src="{{url('public')}}/saimg/ad_ts_travel.gif" class="img-panel" alt="Travel Bangladesh, Discover Bangladesh" title="Travel Bangladesh, Discover Bangladesh"></a>
                 </div>
 
-                <div class="col-lg-12 col-md-12 col-sm-4 col-xs-4 text-center margin-top-bottom-10">
-                    <a href="../yellowpages/goadurl74d5.html?idn=27" target="_blank"><img src="{{url('public')}}/saimg/ad_ts_domain.gif" class="img-panel" alt="Domain registration and dot bd domain by T-series Solutions" title="Domain registration and dot bd domain by T-series Solutions"></a>
-                </div>
 
-                <div class="col-lg-12 col-md-12 col-sm-4 col-xs-4 text-center margin-top-bottom-10">
-                    <a href="../yellowpages/goadurlcdfa.html?idn=288" target="_blank"><img src="{{url('public')}}/saimg/ad_ts_left.gif" class="img-panel" alt="Know Bangladesh - Travel Bangladesh" title="Know Bangladesh - Travel Bangladesh"></a>
-                </div>
-
-                <div class="col-lg-12 col-md-12 col-sm-4 col-xs-4 text-center margin-top-bottom-10">
-                    <a href="../yellowpages/goadurl25cc.html?idn=22" target="_blank"><img src="{{url('public')}}/saimg/ad_ts_142x100.jpg" class="img-panel" alt="T-Series Solutions - Website, Software, Domain, Hosting" title="T-Series Solutions - Website, Software, Domain, Hosting"></a>
-                </div>
-
-
-                <div class="col-lg-12 col-md-12 col-sm-4 col-xs-4 text-center margin-top-bottom-10">
-                    <a href="../yellowpages/goadurl31e8.html?idn=" target="_blank"><img src="{{url('public')}}/saimg/ad_ts_right.gif" class="img-panel" alt="Advertise with bdtradeinfo.com" title="Advertise with bdtradeinfo.com"></a>
-                </div>
 
 
                 <!--right panel Google search and Facebook -->

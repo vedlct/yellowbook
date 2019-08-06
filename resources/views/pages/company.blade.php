@@ -6,7 +6,7 @@
 
 
 <!--top address bar-->
-<div class="margin-bottom-10 padding-top-bottom-10 bg-skyblue"> <!--matri #ff6666   tuition #D8D8FA  Bangladesh  #009900   travel #ffcccc  biz #cccccc  yp  #FFBA53-->
+<div class="margin-bottom-10 padding-top-bottom-10 bg-skyblue" style="background-color: #F2EBD3;"> <!--matri #ff6666   tuition #D8D8FA  Bangladesh  #009900   travel #ffcccc  biz #cccccc  yp  #FFBA53-->
     <div class="container">
         <div class="col-md-2 col-sm-3 border-right title address-bar">General info </div>
         <div class="col-md-10 col-sm-9 padding-top-6">
@@ -27,7 +27,7 @@
                 <!--left category menu-->
                 <div class="col-md-12 leftmenu-grid">
                     <div class="width-100 bg-ash2 padding-6 border-radius-top-5 margin-top-10 text-center left-menu-heading">
-                        <h4>General Menu</h4>
+                        <h4 style="color: #FD9F5B;">General Menu</h4>
                     </div>
                     <div class="width-100 leftnav border-top-dashed" id="myTopnav1">
                         <a href="javascript:void(0);" class="icon margin-top-7-minus" onclick="myFunction1()" style="text-align: center;">General & Service Info &nbsp; <h2>&#9776;</h2></a>
@@ -44,7 +44,7 @@
 
                         <a href="#">
                             <div class="width-100 bg-ash2 padding-6 border-radius-top-5 margin-top-15 text-center">
-                                <h4>Our Services</h4>
+                                <h4 style="color: #FD9F5B;">Our Services</h4>
                             </div>
                         </a>
 
@@ -89,7 +89,7 @@
                 <div class="row" >
                     <div class="col-md-12 col-xs-12 div_style3">
                         <div class="col-md-12 col-xs-12 mainbody-grid div_style4">
-                            <h1>Classified Listing  (Silver Member)</h1>
+                            <h1 style="color: #459E5B;">Classified Listing  (Silver Member)</h1>
                         </div>
                         <div class="main_content2">
                             <div><span class="sub_ttl_blue">For classified Listing we charge as follows </span><br/><br/>
@@ -103,27 +103,33 @@
                             </div>
 
 
-                            <form class="form-horizontal" name="form2" id="form2" method="post" action="https://www.bdtradeinfo.com/general/ad_order_conf.php" enctype="multipart/form-data">
+                            <form class="form-horizontal" name="form2" id="form2" method="post" action="{{route('company.insert')}}" enctype="multipart/form-data">
+                                {{csrf_field()}}
                                 <table class="table-responsive table-bordered">
-                                    <tr>
-                                        <td class="text-right">Business Category:<span class="sub_ttl_yellow">*</span> </td>
-                                        <td class="text-left">
-                                            <input class="form-control" type="text" name="trade_cata" id="trade_cata" value="" required="">
-                                            Ex: Web site design and development
-                                        </td>
-                                    </tr>
                                     <tr>
                                         <td class="text-right">Organization:<span class="sub_ttl_yellow">*</span> </td>
                                         <td class="text-left">
-                                            <input class="form-control" type="text" name="organization" id="organization" value="" required="">
-                                            Ex: T-Series Solutions
+                                            <input class="form-control" type="text" name="companyName" id="organization" value="" required="">
+                                            {{--Ex: T-Series Solutions--}}
                                         </td>
                                     </tr>
+
+                                    <tr>
+                                        <td class="text-right">Category:<span class="sub_ttl_yellow">*</span> </td>
+                                        <td class="text-left">
+                                            {{--<input class="form-control" type="text" name="category" id="trade_cata" value="" required="">--}}
+                                            <select class="form-control" name="category" id="wanted" required="">
+                                                <option value="Tutor">Tuition</option>
+                                                <option value="Tuition">Tutor</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+
                                     <tr>
                                         <td class="text-right">Address:<span class="sub_ttl_yellow">*</span> </td>
                                         <td class="text-left">
                                             <input class="form-control" type="text" name="address" id="address" value="" required="">
-                                            Ex: Rose View Plaza (7th floor), 185 Elephant Road, Hatirpool
+                                            {{--Ex: Rose View Plaza (7th floor), 185 Elephant Road, Hatirpool--}}
                                         </td>
                                     </tr>
                                     <tr>
@@ -152,7 +158,7 @@
                                         <td class="text-right">Telephone:<span class="sub_ttl_yellow">*</span> </td>
                                         <td class="text-left">
                                             <input class="form-control" type="text" name="telephone" id="telephone" value="" required="">
-                                            Ex: 880-2-9676369, 9667598
+                                            {{--Ex: 880-2-9676369, 9667598--}}
                                         </td>
                                     </tr>
                                     <tr>
@@ -170,82 +176,69 @@
                                         <td class="text-right"> E-mail:<span class="sub_ttl_yellow">*</span> </td>
                                         <td class="text-left">
                                             <input class="form-control" type="email" name="email" id="email" value="" required="">
-                                            Ex: info@bdtradeinfo.com
+                                            {{--Ex: info@bdtradeinfo.com--}}
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td class="text-right"> E-mail 2: </td>
-                                        <td class="text-left">
-                                            <input class="form-control" type="email" name="email2" id="email2" value="">
-                                            Ex: info@bdtradeinfo.com
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-right"> E-mail 3: </td>
-                                        <td class="text-left">
-                                            <input class="form-control" type="email" name="email3" id="email3" value="">
-                                            Ex: info@bdtradeinfo.com
-                                        </td>
-                                    </tr>
+
                                     <tr>
                                         <td class="text-right">Website: </td>
                                         <td class="text-left">
-                                            <input class="form-control" type="url" name="web_address" id="web_address" value="">
+                                            <input class="form-control" type="url" name="website" id="web_address" value="">
                                             Ex: http://www.bdtradeinfo.com
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="text-right">Facebook Page: </td>
                                         <td class="text-left">
-                                            <input class="form-control" type="url" name="facebook" id="facebook" value="">
+                                            <input class="form-control" type="url" name="facebookPage" id="facebook" value="">
                                             Ex: http://www.bdtradeinfo.com
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="text-right">Contact person:<span class="sub_ttl_yellow">*</span> </td>
                                         <td class="text-left">
-                                            <input class="form-control" type="text" name="contact_person" id="contact_person" value="" required="">
+                                            <input class="form-control" type="number" name="phone" id="contact_person" value="" required="">
                                             Ex: Mr. Asim Tarafder
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td class="text-right">Key words: </td>
-                                        <td class="text-left">
+                                    {{--<tr>--}}
+                                        {{--<td class="text-right">Key words: </td>--}}
+                                        {{--<td class="text-left">--}}
 
-                                            <textarea class="form-control" name="keywords" id="keywords" onKeyDown="textCounter(document.form2.keywords,document.form2.remLen1,255)"
-                                                      onKeyUp="textCounter(document.form2.keywords,document.form2.remLen1,255)">                                            </textarea>
-                                            <br/>
-                                            <div class="col-md-2 col-sm-2 col-xs-5">
-                                                <input class="form-control" readonly type="text" name="remLen1" size="3" maxlength="3" value="255">
-                                            </div>
-                                            <div class="col-md-3 col-sm-3 col-xs-7">
-                                                <span class="text_darkgray1">characters left </span>
-                                            </div>
-                                            <div class="col-md-7 col-sm-7 col-xs-12">
-                                                Ex: Website, Software, Web based software, Domain, Hosting, Out Sourcing... <br/>
-                                                <span class="text-orange">[NOT OVER 255 CHARECTERS] </span></div> </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-right">Security Code :<span class="sub_ttl_yellow">*</span></td>
-                                        <td class="text-left">
-                                            <div class="col-md-2 col-sm-3 col-xs-5 text-center">
-                                                <b>5 + 7 =</b>
-                                            </div>
-                                            <div class="col-md-2 col-sm-3 col-xs-7">
-                                                <input class="form-control" name="ran" type="text" id="ran" size="2" required="">
-                                            </div>
-                                            [ Example: 6 + 11 = 17 ]<br/>
-                                            <em class="text_blue">just write the result of addition of two numbers </em></td>
-                                    </tr>
+                                            {{--<textarea class="form-control" name="keywords" id="keywords" onKeyDown="textCounter(document.form2.keywords,document.form2.remLen1,255)"--}}
+                                                      {{--onKeyUp="textCounter(document.form2.keywords,document.form2.remLen1,255)">                                            </textarea>--}}
+                                            {{--<br/>--}}
+                                            {{--<div class="col-md-2 col-sm-2 col-xs-5">--}}
+                                                {{--<input class="form-control" readonly type="text" name="remLen1" size="3" maxlength="3" value="255">--}}
+                                            {{--</div>--}}
+                                            {{--<div class="col-md-3 col-sm-3 col-xs-7">--}}
+                                                {{--<span class="text_darkgray1">characters left </span>--}}
+                                            {{--</div>--}}
+                                            {{--<div class="col-md-7 col-sm-7 col-xs-12">--}}
+                                                {{--Ex: Website, Software, Web based software, Domain, Hosting, Out Sourcing... <br/>--}}
+                                                {{--<span class="text-orange">[NOT OVER 255 CHARECTERS] </span></div> </td>--}}
+                                    {{--</tr>--}}
+                                    {{--<tr>--}}
+                                        {{--<td class="text-right">Security Code :<span class="sub_ttl_yellow">*</span></td>--}}
+                                        {{--<td class="text-left">--}}
+                                            {{--<div class="col-md-2 col-sm-3 col-xs-5 text-center">--}}
+                                                {{--<b>5 + 7 =</b>--}}
+                                            {{--</div>--}}
+                                            {{--<div class="col-md-2 col-sm-3 col-xs-7">--}}
+                                                {{--<input class="form-control" name="ran" type="text" id="ran" size="2" required="">--}}
+                                            {{--</div>--}}
+                                            {{--[ Example: 6 + 11 = 17 ]<br/>--}}
+                                            {{--<em class="text_blue">just write the result of addition of two numbers </em></td>--}}
+                                    {{--</tr>--}}
                                     <tr>
                                         <td colspan="2" class="text-center">
-                                            <div>
-                                                <input name="ran1" type="hidden" id="ran1" value="5">
-                                                <input name="ran2" type="hidden" id="ran2" value="7">
-                                                <input type="hidden" name="fid" id="fid" value="CL">
-                                                <input type="submit" class="btn btn-info" value="SUBMIT (I am agreed to pay)" name="Add" id="Add">
-                                                <input type="reset" class="btn btn-warning" value="Reset" name="B2">
-                                            </div>
+                                            {{--<div>--}}
+                                                {{--<input name="ran1" type="hidden" id="ran1" value="5">--}}
+                                                {{--<input name="ran2" type="hidden" id="ran2" value="7">--}}
+                                                {{--<input type="hidden" name="fid" id="fid" value="CL">--}}
+                                                <input type="submit" class="btn btn-info" value="SUBMIT">
+                                                {{--<input type="reset" class="btn btn-warning" value="Reset" name="B2">--}}
+                                            {{--</div>--}}
                                             <div class="text-center"><span class="text1"><br/><em>* Rates may be changed at anytime without prior notice</em></span></div>
                                         </td>
                                     </tr>
