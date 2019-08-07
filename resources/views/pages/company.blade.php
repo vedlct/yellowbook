@@ -6,8 +6,8 @@
 
 
 <!--top address bar-->
-<div class="margin-bottom-10 padding-top-bottom-10 bg-skyblue" style="background-color: #F2EBD3;"> <!--matri #ff6666   tuition #D8D8FA  Bangladesh  #009900   travel #ffcccc  biz #cccccc  yp  #FFBA53-->
-    <div class="container">
+<div class="margin-bottom-10 padding-top-bottom-10 bg-skyblue" style="background-color: #FFFFFF;"> <!--matri #ff6666   tuition #D8D8FA  Bangladesh  #009900   travel #ffcccc  biz #cccccc  yp  #FFBA53-->
+    <div class="container" style="background-color: #F2EBD3;padding-top: 10px;padding-bottom: 10px;">
         <div class="col-md-2 col-sm-3 border-right title address-bar">General info </div>
         <div class="col-md-10 col-sm-9 padding-top-6">
             <a href="../index.html"><i class="glyphicon glyphicon-home"></i></a>

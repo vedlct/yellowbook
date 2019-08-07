@@ -54,6 +54,136 @@
                         </div>
 
                         <div class="form-group row">
+                            <label class="col-sm-2 form-control-label">Category<span style="color: red" class="required">*</span></label>
+                            <div class="col-sm-10">
+
+                                <select name="category" class="form-control form-control-warning" required>
+
+                                    {{--<option value="{{$company->companyId}}">{{$company->category}}</option>--}}
+                                    <option value="test1"  @if($company->category=="test1") selected @endif>test1</option>
+                                    <option value="test2"  @if($company->category=="test2") selected @endif>test2</option>
+
+                                </select>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 form-control-label">Address<span style="color: red" class="required">*</span></label>
+                            <div class="col-sm-10">
+                                <input  maxlength="255" placeholder="Address" id="inputHorizontalSuccess" type="text" value="{{ $company->address }}" name="address"  class="form-control form-control-success" required>
+
+                                @if ($errors->has('address'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('address') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 form-control-label">City<span style="color: red" class="required">*</span></label>
+                            <div class="col-sm-10">
+                                <input  maxlength="255" placeholder="City" id="inputHorizontalSuccess" type="text" value="{{ $company->city }}" name="city"  class="form-control form-control-success" required>
+
+                                @if ($errors->has('city'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('city') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 form-control-label">Country<span style="color: red" class="required">*</span></label>
+                            <div class="col-sm-10">
+                                <input  maxlength="255" placeholder="Country" id="inputHorizontalSuccess" type="text" value="{{ $company->country }}" name="country"  class="form-control form-control-success" required>
+
+                                @if ($errors->has('country'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('country') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 form-control-label">Telephone<span style="color: red" class="required">*</span></label>
+                            <div class="col-sm-10">
+                                <input  maxlength="255" placeholder="Telephone" id="inputHorizontalSuccess" type="text" value="{{ $company->telephone }}" name="telephone"  class="form-control form-control-success" required>
+
+                                @if ($errors->has('telephone'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('telephone') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 form-control-label">Fax</label>
+                            <div class="col-sm-10">
+                                <input  maxlength="255" placeholder="Fax" id="inputHorizontalSuccess" type="text" value="{{ $company->fax }}" name="fax"  class="form-control form-control-success">
+
+                                @if ($errors->has('fax'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('fax') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 form-control-label">Email<span style="color: red" class="required">*</span></label>
+                            <div class="col-sm-10">
+                                <input  maxlength="255" placeholder="Email" id="inputHorizontalSuccess" type="email" value="{{ $company->email }}" name="email"  class="form-control form-control-success">
+
+                                @if ($errors->has('fax'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('fax') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 form-control-label">Website</label>
+                            <div class="col-sm-10">
+                                <input  maxlength="255" placeholder="Website" id="inputHorizontalSuccess" type="url" value="{{ $company->website }}" name="website"  class="form-control form-control-success">
+
+                                @if ($errors->has('website'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('website') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 form-control-label">Facebook Page</label>
+                            <div class="col-sm-10">
+                                <input  maxlength="255" placeholder="Facebook Page" id="inputHorizontalSuccess" type="url" value="{{ $company->facebookPage }}" name="facebookPage"  class="form-control form-control-success">
+
+                                @if ($errors->has('facebookPage'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('facebookPage') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 form-control-label">Phone Number<span style="color: red" class="required">*</span></label>
+                            <div class="col-sm-10">
+                                <input id="inputHorizontalWarning" type="number"  maxlength="11" onkeypress="return isNumberKey(event)" placeholder="11 characters maximum" value="{{ $company->phone }}" name="phone"  class="form-control form-control-warning" required>
+                                @if ($errors->has('phone'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('phone') }}</strong>
+                                    </span>
+                                @endif
+                                {{--<span style="color: forestgreen">last order number was {{$lastOrderNumber}}</span>--}}
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <div class="col-sm-10 offset-sm-3">
                                 <input type="submit" value="Update" class="btn btn-primary">
                             </div>

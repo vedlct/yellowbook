@@ -60,6 +60,13 @@ class CompanyController extends Controller
         $rules=[
             'companyName' => 'required|max:255',
             'companyStatus' => 'required|max:50',
+            'category' => 'required|max:50',
+            'address' => 'required|max:50',
+            'city' => 'required|max:50',
+            'country' => 'required|max:50',
+            'telephone' => 'required|max:50',
+            'email' => 'required|max:50',
+            'phone' =>'required|max:11',
 
 
         ];
@@ -80,12 +87,22 @@ class CompanyController extends Controller
 //        if ($request->postId == ""){
 //
 //        }else{
-//            $category->postId=$request->postId;
+//            $category->postId=$request->postId
 //        }
 
 
 //        $category->menuType=$request->menuType;
         $company->companyStatus=$request->companyStatus;
+        $company->category=$request->category;
+        $company->address=$request->address;
+        $company->city=$request->city;
+        $company->country=$request->country;
+        $company->telephone=$request->telephone;
+        $company->fax=$request->fax;
+        $company->email=$request->email;
+        $company->website=$request->website;
+        $company->facebookPage=$request->facebookPage;
+        $company->phone=$request->phone;
 
         $company->insertedBy=Auth::user()->name;
         // $menu->lastModifiedBy=$r->lastModifiedBy;
@@ -138,6 +155,12 @@ class CompanyController extends Controller
         $rules=[
             'companyName' => 'required|max:255',
             'companyStatus' => 'required|max:50',
+            'address' => 'required|max:50',
+            'city' => 'required|max:50',
+            'country' => 'required|max:50',
+            'telephone' => 'required|max:50',
+            'email' => 'required|max:50',
+            'phone' =>'required|max:11',
 
 
         ];
@@ -149,10 +172,20 @@ class CompanyController extends Controller
         $validator = Validator::make($request->all(), $rules,$messages)->validate();
 
         $company=Company::findOrFail($id);
-
         $company->companyName=$request->companyName;
 
         $company->companyStatus=$request->companyStatus;
+        $company->category=$request->category;
+        $company->address=$request->address;
+        $company->city=$request->city;
+        $company->country=$request->country;
+        $company->telephone=$request->telephone;
+        $company->fax=$request->fax;
+        $company->email=$request->email;
+        $company->website=$request->website;
+        $company->facebookPage=$request->facebookPage;
+        $company->phone=$request->phone;
+
 
 //        $menu->insertedBy=Auth::user()->name;
         $company->lastModifiedBy=Auth::user()->name;

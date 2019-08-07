@@ -25,13 +25,16 @@
                         <table id="menuInfo" class="table table-hover"  >
                             <thead>
                             <tr>
-                                <th>Name</th>
+                                <th>Company Name</th>
 
+                                <th>Category</th>
+                                <th>Phone Number</th>
+                                <th>Email</th>
                                 <th>Status</th>
 
-                                <th>inserted By</th>
-                                <th>Modified By</th>
-                                <th>Modified Date</th>
+                                {{--<th>inserted By</th>--}}
+                                {{--<th>Modified By</th>--}}
+                                {{--<th>Modified Date</th>--}}
                                 <th>Action</th>
                             </tr>
                             </thead>
@@ -77,12 +80,14 @@
                 columns: [
 
                     { data: 'companyName', name: 'companyName' },
-
+                    { data: 'category', name: 'category' },
+                    { data: 'phone', name: 'phone' },
+                    { data: 'email', name: 'email' },
                     { data: 'companyStatus', name: 'companyStatus' },
 
-                    { data: 'insertedBy', name: 'insertedBy' },
-                    { data: 'lastModifiedBy', name: 'lastModifiedBy' },
-                    { data: 'lastModifiedDate', name: 'lastModifiedDate' },
+//                    { data: 'insertedBy', name: 'insertedBy' },
+//                    { data: 'lastModifiedBy', name: 'lastModifiedBy' },
+//                    { data: 'lastModifiedDate', name: 'lastModifiedDate' },
 
                     { "data": function(data){
                         return '<a style="cursor: pointer; color: #4881ecfa" data-panel-id="'+data.companyId+'"onclick="editCompany(this)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>' +
