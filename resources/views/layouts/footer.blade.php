@@ -1,6 +1,6 @@
 <!--footer-->
 <footer>
-    <div class="footer-bottom" style="background-color: #F0D717;">
+    <div class="footer-bottom" style="background-color: #FFB310;">
         <div class="container text-center">
             {{--<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 padding-bottom-20 padding-top-20 text-left">--}}
                 {{--<div class="padding-bottom-10 margin-bottom-10 border-bottom-gray">--}}

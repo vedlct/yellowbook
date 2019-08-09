@@ -10,11 +10,11 @@
         <div id="myModal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <div class="padding-top-15 padding-bottom-5 bg-lightsky" style="background-color: #F0D717;">
+                <div class="padding-top-15 padding-bottom-5 bg-lightsky" style="background-color: #FFB310;">
                     <div class="container">
                         <div class="row">
 
-                            <div class="col-md-2 col-md-offset-0 col-sm-5 col-sm-offset-1 col-xs-10 col-xs-offset-1 border-radius-10 padding-bottom-5 text-center bg-yellow margin-bottom-10" style="background-color: #F0D717;">
+                            <div class="col-md-2 col-md-offset-0 col-sm-5 col-sm-offset-1 col-xs-10 col-xs-offset-1 border-radius-10 padding-bottom-5 text-center bg-yellow margin-bottom-10" style="background-color: #FFB310;">
                                 {{--<a href="yellowpages/index.html"><h4><div class="text-orange padding-top-6"><img src="{{url('public')}}/images/apps_logo.png" alt="YP" title="YP" class="logo2"> Yellow Pages</div></h4></a>--}}
                             <h3>Search Company</h3>
                             </div>
@@ -108,9 +108,9 @@
     <div id="div-desktop">
         <div class="padding-top-15 padding-bottom-5 bg-lightsky" style="background-color: #FFFFFF;">
             <div class="container">
-                <div class="row" style="background-color: #F0D717;">
+                <div class="row" style="background-color: #FFB310;">
 
-                    <div class="col-md-2 col-md-offset-0 col-sm-5 col-sm-offset-1 col-xs-10 col-xs-offset-1 border-radius-10 padding-bottom-5 text-center bg-yellow margin-bottom-10" id="header" style="background-color: #F0D717;margin-top: 1%;">
+                    <div class="col-md-2 col-md-offset-0 col-sm-5 col-sm-offset-1 col-xs-10 col-xs-offset-1 border-radius-10 padding-bottom-5 text-center bg-yellow margin-bottom-10" id="header" style="background-color: #FFB310;margin-top: 1%;">
                         {{--<a href="yellowpages/index.html"><h4><div class="text-orange padding-top-6"><img src="{{url('public')}}/images/apps_logo.png" alt="YP" title="YP" class="logo2"> Yellow Pages</div></h4></a>--}}
                         <h2 id="header">Search Company</h2>
                     </div>

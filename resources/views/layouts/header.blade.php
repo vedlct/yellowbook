@@ -53,10 +53,10 @@
 
 
 <!-- top menu -->
-<div class="topnav" id="myTopnav" style="background-color: #F0D717;">
+<div class="topnav" id="myTopnav" style="background-color: #FFB310;">
     <div class="navbar-left">
         {{--<a href="{{route('home')}}">Home</a>--}}
-        <a href="#" style="color: #2B2B2B;">About Us</a>
+        <a href="{{route('matrimony')}}" style="color: #2B2B2B;">About Us</a>
         <a href="{{route('add.company')}}" style="color: #2B2B2B;">Add Your Company Listing</a>
         <a href="{{route('advertise')}}" style="color: #2B2B2B;">Advertise With Us</a>
         <a href="{{route('contact')}}" style="color: #2B2B2B;">Contact</a>
@@ -92,7 +92,7 @@
         <div class="row">
             <div class="col-lg-4 col-lg-offset-0 col-md-5 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 padding-top-bottom-5 logo">
                 {{--<a href="{{route('home')}}"><img src="{{url('public')}}/images/logo_bdtradeinfo_yp.png" alt="Yellowbook" title="Yellowbook"></a><br/>--}}
-                <a href="{{route('home')}}"><span style="color:#FECE02;font-size: 30px;font-weight: bold;">Yellowbook</span></a><br/>
+                <a href="{{route('home')}}"><span style="color:#FFB310;font-size: 30px;font-weight: bold;">Yellowbook</span></a><br/>
                 <small></small>
             </div>
             <div class="col-lg-6 col-lg-offset-2 col-md-6 col-md-offset-1 col-sm-12 col-xs-12 padding-top-bottom-5 upper">
