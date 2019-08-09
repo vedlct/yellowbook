@@ -10,11 +10,11 @@
         <div id="myModal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <div class="padding-top-15 padding-bottom-5 bg-lightsky" style="background-color: #F2EBD3;">
+                <div class="padding-top-15 padding-bottom-5 bg-lightsky" style="background-color: #F0D717;">
                     <div class="container">
                         <div class="row">
 
-                            <div class="col-md-2 col-md-offset-0 col-sm-5 col-sm-offset-1 col-xs-10 col-xs-offset-1 border-radius-10 padding-bottom-5 text-center bg-yellow margin-bottom-10" style="background-color: #F2EBD3;">
+                            <div class="col-md-2 col-md-offset-0 col-sm-5 col-sm-offset-1 col-xs-10 col-xs-offset-1 border-radius-10 padding-bottom-5 text-center bg-yellow margin-bottom-10" style="background-color: #F0D717;">
                                 {{--<a href="yellowpages/index.html"><h4><div class="text-orange padding-top-6"><img src="{{url('public')}}/images/apps_logo.png" alt="YP" title="YP" class="logo2"> Yellow Pages</div></h4></a>--}}
                             <h3>Search Company</h3>
                             </div>
@@ -61,7 +61,7 @@
                                         <div class="col-md-6">
                                             <input name="search" type="text" id="search" class="searchbox" placeholder="Keyword" value="" required=""/>
                                         </div>
-                                            <input name="submit" class="btn btn-info" type="submit" style="background-color: #62AD74;" value="Go">
+                                            <input name="submit" class="btn btn-default" type="submit" style="background-color: #333333;color: white;" value="Go">
                                     </form>
                                 </div>
                             </div>
@@ -108,9 +108,9 @@
     <div id="div-desktop">
         <div class="padding-top-15 padding-bottom-5 bg-lightsky" style="background-color: #FFFFFF;">
             <div class="container">
-                <div class="row" style="background-color: #F2EBD3;">
+                <div class="row" style="background-color: #F0D717;">
 
-                    <div class="col-md-2 col-md-offset-0 col-sm-5 col-sm-offset-1 col-xs-10 col-xs-offset-1 border-radius-10 padding-bottom-5 text-center bg-yellow margin-bottom-10" id="header" style="background-color: #F2EBD3;margin-top: 1%;">
+                    <div class="col-md-2 col-md-offset-0 col-sm-5 col-sm-offset-1 col-xs-10 col-xs-offset-1 border-radius-10 padding-bottom-5 text-center bg-yellow margin-bottom-10" id="header" style="background-color: #F0D717;margin-top: 1%;">
                         {{--<a href="yellowpages/index.html"><h4><div class="text-orange padding-top-6"><img src="{{url('public')}}/images/apps_logo.png" alt="YP" title="YP" class="logo2"> Yellow Pages</div></h4></a>--}}
                         <h2 id="header">Search Company</h2>
                     </div>
@@ -155,7 +155,7 @@
                                 <div class="col-md-5" id="search-bar">
                                     <input name="search"  type="text" id="search" class="searchbox" placeholder="Keyword" value="" style="margin-left: -28%;" required=""/>
                                 </div>
-                                <input name="submit" class="btn btn-info" type="submit"  style="margin-left: -22%;background-color: #62AD74;"  value="Go">
+                                <input name="submit" class="btn btn-default" type="submit"  style="margin-left: -22%;background-color: #333333; height:45px;width: 80px;font-size: 24px;color: white;"  value="Go">
                                 </div>
                             </form>
 
@@ -175,28 +175,28 @@
 
                     <!--ad left-->
                     <div class="col-lg-12 col-md-12 col-sm-3 col-xs-4 text-center margin-top-bottom-10">
-                        <a href="yellowpages/goadurl23a3.html?idn=196" target="_blank"><img src="{{url('public')}}/saimg/ad_resgroup.gif" alt="RES Group" title="RES Group" class="img-left-hp1"></a>
+                        <a href="#" target="_blank"><img src="{{url('public')}}/saimg/4.gif" alt="Call For Add" title="Call For Add" class="img-left-hp1"></a>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-3 col-xs-4 text-center margin-top-bottom-10">
-                        <a href="yellowpages/goadurlb33d.html?idn=558" target="_blank"><img src="{{url('public')}}/saimg/ad_allsolution.gif" alt="All Solution" title="All Solution" class="img-left-hp"></a>
+                        <a href="#" target="_blank"><img src="{{url('public')}}/saimg/4.gif" alt="Call For Add" title="Call For Add" class="img-left-hp"></a>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-3 col-xs-4 text-center margin-top-bottom-10">
-                        <a href="yellowpages/goadurl2381.html?idn=484" target="_blank"><img src="{{url('public')}}/saimg/ad_itts.gif" alt="International Trade Transaction Solution" title="International Trade Transaction Solution" class="img-left-hp"></a>
+                        <a href="#" target="_blank"><img src="{{url('public')}}/saimg/4.gif" alt="Call For Add" title="Call For Add" class="img-left-hp"></a>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-3 col-xs-4 text-center margin-top-bottom-10">
-                        <a href="yellowpages/goadurl79e4.html?idn=51" target="_blank"><img src="{{url('public')}}/saimg/ad_alam_hp.gif" alt="Alam Fiber Impex" title="Alam Fiber Impex" class="img-left-hp"></a>
+                        <a href="#" target="_blank"><img src="{{url('public')}}/saimg/4.gif" alt="Call For Add" title="Call For Add" class="img-left-hp"></a>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-3 col-xs-4 text-center margin-top-bottom-10">
-                        <a href="yellowpages/goadurl961c.html?idn=580" target="_blank"><img src="{{url('public')}}/saimg/ad_waogroup.gif" alt="Wao Group" title="Wao Group" class="img-left-hp"></a>
+                        <a href="#" target="_blank"><img src="{{url('public')}}/saimg/4.gif" alt="Call For Add" title="Call For Add" class="img-left-hp"></a>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-3 col-xs-4 text-center margin-top-bottom-10">
-                        <a href="yellowpages/goadurldc84.html?idn=511" target="_blank"><img src="{{url('public')}}/saimg/ad_astonafa_ac.gif" alt="Astonafa Air Conditioner" title="Astonafa Air Conditioner" class="img-left-hp"></a>
+                        <a href="#" target="_blank"><img src="{{url('public')}}/saimg/4.gif" alt="Call For Add" title="Call For Add" class="img-left-hp"></a>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-3 col-xs-4 text-center margin-top-bottom-10">
-                        <a href="yellowpages/goadurld46d.html?idn=515" target="_blank"><img src="{{url('public')}}/saimg/ad_beatific.gif" alt="BEATiFiC Brand Management (BBM)" title="BEATiFiC Brand Management (BBM)" class="img-left-hp"></a>
+                        <a href="#" target="_blank"><img src="{{url('public')}}/saimg/4.gif" alt="Call For Add" title="Call For Add" class="img-left-hp"></a>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-3 col-xs-4 text-center margin-top-bottom-10">
-                        <a href="yellowpages/goadurlfb58.html?idn=250" target="_blank"><img src="{{url('public')}}/saimg/ad_gyangriho.gif" alt="Gyangriha Prokashoni" title="Gyangriha Prokashoni" class="img-left-hp"></a>
+                        <a href="#" target="_blank"><img src="{{url('public')}}/saimg/4.gif" alt="Call For Add" title="Call For Add" class="img-left-hp"></a>
                     </div>
 
                     <div class="clearfix"></div>
@@ -209,10 +209,10 @@
                 <div class="row margin-top-10">
                     <!--ad classic & classic mini-->
                     <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 margin-bottom-7">
-                        <a href="http://www.royalinspectionbd.net/" target="_blank"><img src="{{url('public')}}/saimg/ad_royal.gif" alt="Royal Inspection International Ltd." title="Royal Inspection International Ltd." class="img-classic-hp"></a>
+                        <a href="#" target="_blank"><img src="{{url('public')}}/saimg/1.gif" alt="Call For Add" title="Call For Add" class="img-classic-hp"></a>
                     </div>
                     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right margin-bottom-7">
-                        <a href="yellowpages/goadurl9070.html?idn=469" target="_blank"><img src="{{url('public')}}/saimg/ad_tigerpestcontrol_homeclassic.gif" alt="Tiger Pest Control Co." title="Tiger Pest Control Co." class="img-classic-hp2"></a>
+                        <a href="#" target="_blank"><img src="{{url('public')}}/saimg/2.gif" alt="Call For Add" title="Call For Add." class="img-classic-hp2"></a>
                     </div>
                     <!--ad classic & classic mini-->
                 </div>
@@ -248,48 +248,48 @@
                 {{--</div>--}}
                 <div class="div_style2">
                     <div class="row">
-                        <div class="col-md-10 col-sm-12 col-xs-12 div_style3h padding-bottom-5">
+                        <div class="col-md-6 col-sm-6 col-xs-12 div_style3h padding-bottom-5">
                             <div class="col-md-12 col-xs-12 div_style4h">
-                                <h1 style="color: #48A05D;">Browse Categories</h1>
+                                <h1 style="color: #33332B;">Browse Categories</h1>
                             </div>
                             <div class="alphabet">
-                                <a href="yellowpages/alpha_subcat9ba6.html?alphabet_id=A" >A</a>
-                                <a href="yellowpages/alpha_subcat4587.html?alphabet_id=B" >B</a>
-                                <a href="yellowpages/alpha_subcatb439.html?alphabet_id=C" >C</a>
-                                <a href="yellowpages/alpha_subcat82f1.html?alphabet_id=D" >D</a>
-                                <a href="yellowpages/alpha_subcat8d59.html?alphabet_id=E" >E</a>
-                                <a href="yellowpages/alpha_subcat7dc3.html?alphabet_id=F" >F</a>
-                                <a href="yellowpages/alpha_subcat8545.html?alphabet_id=G" >G</a>
-                                <a href="yellowpages/alpha_subcat9d44.html?alphabet_id=H" >H</a>
-                                <a href="yellowpages/alpha_subcatd243.html?alphabet_id=I" >I</a>
-                                <a href="yellowpages/alpha_subcat499b.html?alphabet_id=J" >J</a>
-                                <a href="yellowpages/alpha_subcat45ce.html?alphabet_id=K" >K</a>
-                                <a href="yellowpages/alpha_subcatb23b.html?alphabet_id=L" >L</a>
-                                <a href="yellowpages/alpha_subcat80f0.html?alphabet_id=M" >M</a>
-                                <a href="yellowpages/alpha_subcat574f.html?alphabet_id=N" >N</a>
-                                <a href="yellowpages/alpha_subcatec63.html?alphabet_id=O" >O</a>
-                                <a href="yellowpages/alpha_subcat38fb.html?alphabet_id=P" >P</a>
-                                <a href="yellowpages/alpha_subcat0400.html?alphabet_id=Q" >Q</a>
-                                <a href="yellowpages/alpha_subcate21b.html?alphabet_id=R" >R</a>
-                                <a href="yellowpages/alpha_subcat8920.html?alphabet_id=S" >S</a>
-                                <a href="yellowpages/alpha_subcat73dc.html?alphabet_id=T" >T</a>
-                                <a href="yellowpages/alpha_subcate629.html?alphabet_id=U" >U</a>
-                                <a href="yellowpages/alpha_subcat0f68.html?alphabet_id=V" >V</a>
-                                <a href="yellowpages/alpha_subcat6298.html?alphabet_id=W" >W</a>
-                                <a href="yellowpages/alpha_subcatee3f.html?alphabet_id=X" >X</a>
-                                <a href="yellowpages/alpha_subcatc424.html?alphabet_id=Y" >Y</a>
-                                <a href="yellowpages/alpha_subcatcc65.html?alphabet_id=Z" >Z</a>
+                                <a href="#" >A</a>
+                                <a href="#" >B</a>
+                                <a href="#" >C</a>
+                                <a href="#" >D</a>
+                                <a href="#" >E</a>
+                                <a href="#" >F</a>
+                                <a href="#" >G</a>
+                                <a href="#" >H</a>
+                                <a href="#" >I</a>
+                                <a href="#" >J</a>
+                                <a href="#" >K</a>
+                                <a href="#" >L</a>
+                                <a href="#" >M</a>
+                                <a href="#" >N</a>
+                                <a href="#" >O</a>
+                                <a href="#" >P</a>
+                                <a href="#" >Q</a>
+                                <a href="#" >R</a>
+                                <a href="#" >S</a>
+                                <a href="#" >T</a>
+                                <a href="#" >U</a>
+                                <a href="#" >V</a>
+                                <a href="#" >W</a>
+                                <a href="#" >X</a>
+                                <a href="#" >Y</a>
+                                <a href="#" >Z</a>
                             </div>
                         </div>
 
                         <div class="col-md-10 col-sm-12 col-xs-12 div_style3h padding-bottom-5">
                             <div class="col-md-12 col-xs-12 div_style4h">
-                                <h1 style="color: #48A05D;">Top Categories</h1>
+                                <h1 style="color: #33332B;">Top Categories</h1>
                             </div>
                             <!--<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">-->
                             @foreach($top_category as $top_category)
                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 seg2 padding-top-bottom-5">
-                                <img src="{{url('public')}}/images/icon_pest.png" alt="ps" title="ps"> <a href="yellowpages/des_datab683.html?subcategory_id=497" class="text-light text-medium">{{$top_category->categoryName}}</a>
+                                <img src="{{url('public')}}/images/icon_pest.png" alt="ps" title="ps"> <a href="#" class="text-light text-medium">{{$top_category->categoryName}}</a>
                             </div>
                             @endforeach
                         </div>
@@ -299,19 +299,19 @@
 
                                 <!--ad right-->
                                 <div class="col-lg-12 col-md-12 col-sm-2 col-xs-4 text-center margin-top-bottom-10">
-                                    <a href="yellowpages/goadurl19df.html?idn=544" target="_blank"><img src="{{url('public')}}/saimg/ad_gcnc.gif" alt="Gulshan Clean and Care" title="Gulshan Clean and Care" class="img-midright-hp"></a>
+                                    <a href="#" target="_blank"><img src="{{url('public')}}/saimg/3.gif" alt="Call For Add" title="Call For Add" class="img-midright-hp"></a>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-2 col-xs-4 text-center margin-top-bottom-10">
-                                    <a href="yellowpages/goadurlac0c.html?idn=403" target="_blank"><img src="{{url('public')}}/saimg/ad_aquapurebd.gif" alt="Aqua Pure Technology Ltd." title="Aqua Pure Technology Ltd." class="img-midright-hp"></a>
+                                    <a href="#" target="_blank"><img src="{{url('public')}}/saimg/3.gif" alt="Call For Add" title="Call For Add" class="img-midright-hp"></a>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-2 col-xs-4 text-center margin-top-bottom-10">
-                                    <a href="yellowpages/goadurlada9.html?idn=514" target="_blank"><img src="{{url('public')}}/saimg/ad_meemwater.gif" alt="Meem Water Technology" title="Meem Water Technology" class="img-midright-hp"></a>
+                                    <a href="#" target="_blank"><img src="{{url('public')}}/saimg/3.gif" alt="Call For Add" title="Call For Add" class="img-midright-hp"></a>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-2 col-xs-4 text-center margin-top-bottom-10">
-                                    <a href="yellowpages/goadurlda23.html?idn=440" target="_blank"><img src="{{url('public')}}/saimg/ad_waterworld.gif" alt="Water World Engineering" title="Water World Engineering" class="img-midright-hp"></a>
+                                    <a href="#" target="_blank"><img src="{{url('public')}}/saimg/3.gif" alt="Call For Add" title="Call For Add" class="img-midright-hp"></a>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-2 col-xs-4 text-center margin-top-bottom-10">
-                                    <a href="yellowpages/goadurlda23.html?idn=440" target="_blank"><img src="{{url('public')}}/saimg/ad_waterworld.gif" alt="Water World Engineering" title="Water World Engineering" class="img-midright-hp"></a>
+                                    <a href="#" target="_blank"><img src="{{url('public')}}/saimg/3.gif" alt="Call For Add" title="Call For Add" class="img-midright-hp"></a>
                                 </div>
                                 <div class="clearfix"></div>
                                 <!--ad right-->
@@ -487,25 +487,25 @@
 
                     <!--ad right-->
                     <div class="col-lg-12 col-md-12 col-sm-3 col-xs-4 text-center margin-top-bottom-10">
-                        <a href="yellowpages/goadurl6e0d.html?idn=300" target="_blank"><img src="{{url('public')}}/saimg/ad_rifats.gif" alt="Rifat's Dental & Prognos Centre" title="Rifat's Dental & Prognos Centre" class="img-panel2"></a>
+                        <a href="#" target="_blank"><img src="{{url('public')}}/saimg/4.gif" alt="Call For Add" title="Call For Add" class="img-panel2"></a>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-3 col-xs-4 text-center margin-top-bottom-10">
-                        <a href="yellowpages/goadurl1af0.html?idn=489" target="_blank"><img src="{{url('public')}}/saimg/ad_cleanheart_hp.gif" alt="Clean Heart" title="Clean Heart" class="img-right-hp"></a>
+                        <a href="#" target="_blank"><img src="{{url('public')}}/saimg/4.gif" alt="Call For Add" title="Call For Add" class="img-right-hp"></a>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-3 col-xs-4 text-center margin-top-bottom-10">
-                        <a href="yellowpages/goadurle979.html?idn=395" target="_blank"><img src="{{url('public')}}/saimg/ad-108x60px-single.gif" alt="Website, Software, Domain, Hosting and other IT services in Bangladesh" title="Website, Software, Domain, Hosting and other IT services in Bangladesh" class="img-right-hp"></a>
+                        <a href="#" target="_blank"><img src="{{url('public')}}/saimg/4.gif" alt="Call For Add" title="Call For Add" class="img-right-hp"></a>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-3 col-xs-4 text-center margin-top-bottom-10">
-                        <a href="yellowpages/goadurl1a6a.html?idn=371" target="_blank"><img src="{{url('public')}}/aimg/ad_rmet.gif" alt="R M Engineering & Technology" title="R M Engineering & Technology" class="img-right-hp"></a>
+                        <a href="#" target="_blank"><img src="{{url('public')}}/saimg/4.gif" alt="Call For Add" title="Call For Add" class="img-right-hp"></a>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-3 col-xs-4 text-center margin-top-bottom-10">
-                        <a href="yellowpages/goadurl2296.html?idn=626" target="_blank"><img src="{{url('public')}}/saimg/ad_cleantech1.gif" alt="CleanTech Engineering" title="CleanTech Engineering" class="img-right-hp"></a>
+                        <a href="#" target="_blank"><img src="{{url('public')}}/saimg/4.gif" alt="Call For Add" title="Call For Add" class="img-right-hp"></a>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-3 col-xs-4 text-center margin-top-bottom-10">
-                        <a href="yellowpages/goadurlfa45.html?idn=443" target="_blank"><img src="{{url('public')}}/saimg/ad_astonafa.gif" alt="Astonafa Engineering Ltd." title="Astonafa Engineering Ltd." class="img-right-hp"></a>
+                        <a href="#" target="_blank"><img src="{{url('public')}}/saimg/4.gif" alt="Call For Add" title="Call For Add" class="img-right-hp"></a>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-3 col-xs-4 text-center margin-top-bottom-10">
-                        <a href="yellowpages/goadurlaeb4.html?idn=608" target="_blank"><img src="{{url('public')}}/saimg/ad_firetrade.gif" alt="Fire Trade" title="Fire Trade" class="img-right-hp"></a>
+                        <a href="#" target="_blank"><img src="{{url('public')}}/saimg/4.gif" alt="Call For Add" title="Call For Add" class="img-right-hp"></a>
                     </div>
 
 

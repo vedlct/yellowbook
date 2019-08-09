@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 
-    <link rel="icon" type="image/x-icon" href="{{url('public')}}/images/bdtrade.ico" /><link rel="shortcut icon" type="image/x-icon" href="{{url('public')}}/images/bdtrade.ico" /><link rel="apple-touch-icon" type="image/x-icon" href="{{url('public')}}/images/bdtrade.ico" />
+    {{--<link rel="icon" type="image/x-icon" href="{{url('public')}}/images/bdtrade.ico" /><link rel="shortcut icon" type="image/x-icon" href="{{url('public')}}/images/bdtrade.ico" /><link rel="apple-touch-icon" type="image/x-icon" href="{{url('public')}}/images/bdtrade.ico" />--}}
 
     <a href="index.html"></a>
-    <title>Bangladesh Trade Info - the largest business portal of Bangladesh</title>
+    <title>Yellowbook</title>
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -91,11 +91,12 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-lg-offset-0 col-md-5 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 padding-top-bottom-5 logo">
-                <a href="{{route('home')}}"><img src="{{url('public')}}/images/logo_bdtradeinfo_yp.png" alt="Bangladesh Trade Info" title="Bangladesh Trade Info"></a><br/>
-                <small>Mega Search Engine & Online Business Directory of Bangladesh</small>
+                {{--<a href="{{route('home')}}"><img src="{{url('public')}}/images/logo_bdtradeinfo_yp.png" alt="Yellowbook" title="Yellowbook"></a><br/>--}}
+                <a href="{{route('home')}}"><span style="color:#FECE02;font-size: 30px;font-weight: bold;">Yellowbook</span></a><br/>
+                <small></small>
             </div>
             <div class="col-lg-6 col-lg-offset-2 col-md-6 col-md-offset-1 col-sm-12 col-xs-12 padding-top-bottom-5 upper">
-                <a href="yellowpages/goadurl4950.html?idn=661" target="_blank"><img src="{{url('public')}}/saimg/ad_0pest_iqbal.gif" alt="Zero Pest - Ultimate Pest Control & Cleaning Services" title="Zero Pest - Ultimate Pest Control & Cleaning Services"></a>
+                <a href="#" target="_blank"><img src="{{url('public')}}/saimg/1.gif" alt="Zero Pest - Ultimate Pest Control & Cleaning Services" title="Call For Add"></a>
             </div>
         </div>
         <div class="clearfix"></div>
