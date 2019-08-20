@@ -59,14 +59,14 @@ class CompanyController extends Controller
     {
         $rules=[
             'companyName' => 'required|max:255',
-            'companyStatus' => 'required|max:50',
-            'category' => 'required|max:50',
-            'address' => 'required|max:50',
-            'city' => 'required|max:50',
-            'country' => 'required|max:50',
-            'telephone' => 'required|max:50',
-            'email' => 'required|max:50',
-            'phone' =>'required|max:11',
+            'companyStatus' => 'required|max:255',
+            'category' => 'required|max:255',
+            'address' => 'required|max:255',
+            'city' => 'required|max:255',
+            'country' => 'required|max:255',
+            'telephone' => 'required|max:255',
+            'email' => 'required|max:255',
+
 
 
         ];
@@ -154,13 +154,12 @@ class CompanyController extends Controller
     {
         $rules=[
             'companyName' => 'required|max:255',
-            'companyStatus' => 'required|max:50',
-            'address' => 'required|max:50',
-            'city' => 'required|max:50',
-            'country' => 'required|max:50',
-            'telephone' => 'required|max:50',
-            'email' => 'required|max:50',
-            'phone' =>'required|max:11',
+            'companyStatus' => 'required|max:255',
+            'address' => 'required|max:255',
+            'city' => 'required|max:255',
+            'country' => 'required|max:255',
+            'telephone' => 'required|max:255',
+            'email' => 'required|max:255',
 
 
         ];
