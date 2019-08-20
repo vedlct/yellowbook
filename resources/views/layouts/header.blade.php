@@ -29,6 +29,14 @@
     <link rel="stylesheet" href="{{url('public')}}/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="{{url('public')}}/css/style.css" />
     <link rel="stylesheet" type="text/css" href="{{url('public')}}/css/sticky_btn_popup.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    {{--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>--}}
+    {{--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />--}}
+    {{--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>--}}
+    {{--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">--}}
 
 
     <!--    <script type="text/javascript" src="./includes/search.js" ></script>-->
@@ -60,15 +68,18 @@
         <a href="{{route('add.company')}}" style="color: #2B2B2B;">Add Your Company Listing</a>
         <a href="{{route('advertise')}}" style="color: #2B2B2B;">Advertise With Us</a>
         <a href="{{route('contact')}}" style="color: #2B2B2B;">Contact</a>
+        <a href="{{route('invest')}}" style="color: #2B2B2B;" target="_blank">INFO</a>
+        <a href="{{route('bangladesh')}}" style="color: #2B2B2B;" target="_blank">LINKS</a>
+        <a href="{{route('travel')}}" style="color: #2B2B2B;" target="_blank">FORMS</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()" style="color: #2B2B2B;">Menu &#9776;</a>
     </div>
 
     <div class="navbar-right">
         <a href="#"></a>
         {{--<a href="#" target="_blank">Stall 24</a>--}}
-        <a href="{{route('invest')}}" style="color: #2B2B2B;" target="_blank">INFO</a>
-        <a href="{{route('bangladesh')}}" style="color: #2B2B2B;" target="_blank">LINKS</a>
-        <a href="{{route('travel')}}" style="color: #2B2B2B;" target="_blank">FORMS</a>
+        {{--<a href="{{route('invest')}}" style="color: #2B2B2B;" target="_blank">INFO</a>--}}
+        {{--<a href="{{route('bangladesh')}}" style="color: #2B2B2B;" target="_blank">LINKS</a>--}}
+        {{--<a href="{{route('travel')}}" style="color: #2B2B2B;" target="_blank">FORMS</a>--}}
         {{--<a href="{{route('tuition')}}" target="_blank">Tuition</a>--}}
         {{--<a href="{{route('matrimony')}}" target="_blank">Matrimony</a>--}}
     </div>

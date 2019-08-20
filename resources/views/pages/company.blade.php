@@ -109,8 +109,8 @@
                                         <td class="text-left">
                                             {{--<input class="form-control" type="text" name="category" id="trade_cata" value="" required="">--}}
                                             <select class="form-control" name="category" id="wanted" required="">
-                                                <option value="Tutor">Tuition</option>
-                                                <option value="Tuition">Tutor</option>
+                                                <option value="test1">test1</option>
+                                                <option value="test2">test2</option>
                                             </select>
                                         </td>
                                     </tr>
@@ -122,15 +122,25 @@
                                             {{--Ex: Rose View Plaza (7th floor), 185 Elephant Road, Hatirpool--}}
                                         </td>
                                     </tr>
+                                    {{--<tr>--}}
+                                        {{--<td class="text-right">City:<span class="sub_ttl_yellow">*</span> </td>--}}
+                                        {{--<td class="text-left">--}}
+                                            {{--<div class="row">--}}
+                                                {{--<div class="col-md-5">--}}
+                                                    {{--<input class="form-control" type="text" name="city" id="city" value="" required="">--}}
+                                                {{--</div>--}}
+
+                                            {{--</div>--}}
+                                        {{--</td>--}}
+                                    {{--</tr>--}}
                                     <tr>
                                         <td class="text-right">City:<span class="sub_ttl_yellow">*</span> </td>
                                         <td class="text-left">
-                                            <div class="row">
-                                                <div class="col-md-5">
-                                                    <input class="form-control" type="text" name="city" id="city" value="" required="">
-                                                </div>
-                                                <div class="col-md-5">Ex: Dhaka-1205</div>
-                                            </div>
+                                            {{--<input class="form-control" type="text" name="category" id="trade_cata" value="" required="">--}}
+                                            <select class="form-control" name="city" id="wanted" required="">
+                                                <option value="dhaka">dhaka</option>
+                                                <option value="rajshahi">rajshahi</option>
+                                            </select>
                                         </td>
                                     </tr>
                                     <tr>
@@ -140,7 +150,6 @@
                                                 <div class="col-md-5">
                                                     <input class="form-control" type="text" name="country" id="country" value="" required="">
                                                 </div>
-                                                <div class="col-md-5">Ex: Bangladesh</div>
                                             </div>
                                         </td>
                                     </tr>
@@ -158,7 +167,6 @@
                                                 <div class="col-md-5">
                                                     <input class="form-control" type="text" name="fax" id="fax" value="">
                                                 </div>
-                                                <div class="col-md-5">Ex: 880-2-9667598</div>
                                             </div>
                                         </td>
                                     </tr>
@@ -174,21 +182,21 @@
                                         <td class="text-right">Website: </td>
                                         <td class="text-left">
                                             <input class="form-control" type="url" name="website" id="web_address" value="">
-                                            Ex: http://www.bdtradeinfo.com
+
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="text-right">Facebook Page: </td>
                                         <td class="text-left">
                                             <input class="form-control" type="url" name="facebookPage" id="facebook" value="">
-                                            Ex: http://www.bdtradeinfo.com
+
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="text-right">Contact person:<span class="sub_ttl_yellow">*</span> </td>
                                         <td class="text-left">
                                             <input class="form-control" type="number" name="phone" id="contact_person" value="" required="">
-                                            Ex: Mr. Asim Tarafder
+
                                         </td>
                                     </tr>
                                     {{--<tr>--}}

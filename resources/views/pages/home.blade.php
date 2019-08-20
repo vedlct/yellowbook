@@ -56,7 +56,7 @@
                                 <div class="col-md-12">
                                     <form action="https://www.bdtradeinfo.com/yellowpages/search.php" method="post" enctype="multipart/form-data" name="form9" id="form9" onSubmit="return searchForm();">
                                         <div class="col-md-6">
-                                        <input name="search" type="text" id="search" class="searchbox" placeholder="Location" value="" required=""/>
+                                        <input name="companyName" type="text" id="search" class="searchbox" placeholder="Location" value="" required=""/>
                                         </div>
                                         <div class="col-md-6">
                                             <input name="search" type="text" id="search" class="searchbox" placeholder="Keyword" value="" required=""/>
@@ -150,12 +150,13 @@
                             <form action="https://www.bdtradeinfo.com/yellowpages/search.php" method="post" enctype="multipart/form-data" name="form9" id="form9" onSubmit="return searchForm();">
                                 <div class="col-md-12" id="search-bar" style="margin-top: 1%;">
                                 <div class="col-md-5">
-                                <input name="search" type="text" id="search" class="searchbox" placeholder="Location" value=""  required=""/>
+                                <input name="cityName" type="text" id="tags" class="searchbox" placeholder="Location" value=""  required=""/>
                                 </div>
                                 <div class="col-md-5" id="search-bar">
                                     <input name="search"  type="text" id="search" class="searchbox" placeholder="Keyword" value="" style="margin-left: -28%;" required=""/>
                                 </div>
                                 <input name="submit" class="btn btn-default" type="submit"  style="margin-left: -22%;background-color: #333333; height:45px;width: 80px;font-size: 24px;color: white;"  value="Go">
+                                    {{--{{ csrf_field() }}--}}
                                 </div>
                             </form>
 
@@ -519,4 +520,92 @@
         <div class="clearfix"></div>
     </div>
 
- @endsection
+    {{--<script>--}}
+        {{--$(document).ready(function() {--}}
+            {{--$( "#search" ).autocomplete({--}}
+
+                {{--source: function(request, response) {--}}
+                    {{--$.ajax({--}}
+                        {{--url: "{{url('autocomplete')}}",--}}
+                        {{--method:"GET",--}}
+                        {{--data: {--}}
+                            {{--term : request.term--}}
+                        {{--},--}}
+{{--//                        data: {address: address,},--}}
+                        {{--dataType: "json",--}}
+                        {{--success: function(data){--}}
+                            {{--var resp = $.map(data,function(obj){--}}
+{{--//                                console.log(obj.address);--}}
+                                {{--return obj.name;--}}
+                            {{--});--}}
+
+                            {{--response(resp);--}}
+                        {{--}--}}
+                    {{--});--}}
+                {{--},--}}
+                {{--minLength: 1--}}
+            {{--});--}}
+        {{--});--}}
+
+    {{--</script>--}}
+    {{--<script>--}}
+        {{--$(document).ready(function(){--}}
+
+            {{--$('#search').keyup(function(){--}}
+                {{--var query = $(this).val();--}}
+                {{--if(query != '')--}}
+                {{--{--}}
+                    {{--var _token = $('input[name="_token"]').val();--}}
+                    {{--$.ajax({--}}
+                        {{--url:"{{ route('autocomplete.fetch') }}",--}}
+                        {{--method:"POST",--}}
+                        {{--data:{query:query, _token:_token},--}}
+                        {{--success:function(data){--}}
+                            {{--$('#addressList').fadeIn();--}}
+                            {{--$('#addressList').html(data);--}}
+                        {{--}--}}
+                    {{--});--}}
+                {{--}--}}
+            {{--});--}}
+
+            {{--$(document).on('click', 'li', function(){--}}
+                {{--$('#address').val($(this).text());--}}
+                {{--$('#addressList').fadeOut();--}}
+            {{--});--}}
+
+        {{--});--}}
+    {{--</script>--}}
+
+    <script>
+        $( function() {
+//            var availableTags = [
+//                "ActionScript",
+//                "AppleScript",
+//                "Asp",
+//                "BASIC",
+//                "C",
+//                "C++",
+//                "Clojure",
+//                "COBOL",
+//                "ColdFusion",
+//                "Erlang",
+//                "Fortran",
+//                "Groovy",
+//                "Haskell",
+//                "Java",
+//                "JavaScript",
+//                "Lisp",
+//                "Perl",
+//                "PHP",
+//                "Python",
+//                "Ruby",
+//                "Scala",
+//                "Scheme"
+//            ];
+            $( "#tags" ).autocomplete({
+                source: availableTags
+            });
+        } );
+    </script>
+
+@endsection

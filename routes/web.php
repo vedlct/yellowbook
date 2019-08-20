@@ -19,6 +19,8 @@
 //});
 
 Route::get('/', 'HomeController@index')->name('home');
+//Route::get('/autocomplete', 'HomeController@search')->name('autocomplete');
+//Route::post('/autocomplete/fetch', 'HomeController@fetch')->name('autocomplete.fetch');
 Route::get('/company', 'companyController@index')->name('add.company');
 Route::get('/advertise', 'advertiseController@index')->name('advertise');
 Route::get('/contact', 'contactController@index')->name('contact');

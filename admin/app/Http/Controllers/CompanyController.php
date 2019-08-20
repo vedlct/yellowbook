@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Company;
+use App\City;
 use Illuminate\Http\Request;
 use App\Menu;
 use App\Post;
 use Session;
-
+use db;
 use Illuminate\Support\Facades\Auth;
 use Yajra\DataTables\DataTables;
 use Illuminate\Support\Facades\Validator;
@@ -30,6 +31,7 @@ class CompanyController extends Controller
     }
     public function showAllCompanyInfo()
     {
+
         $companyInfo = Company::orderBy('companyId','desc')
             ->where('companyStatus','!=','Deleted')
             ->get();
@@ -44,8 +46,8 @@ class CompanyController extends Controller
      */
     public function create()
     {
-
-
+//        $categoryInfo = Category::all();
+//        return view('company.addCompany', ['company' => $categoryInfo]);
         return view('company.addCompany');
     }
 

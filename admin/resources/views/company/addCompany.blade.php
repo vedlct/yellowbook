@@ -38,12 +38,24 @@
                             </div>
                         </div>
 
+                        {{--<div class="form-group row">--}}
+                            {{--<label class="col-sm-2 form-control-label">Category<span style="color: red" class="required">*</span></label>--}}
+                            {{--<div class="col-sm-10">--}}
+                                {{--<select name="category" class="form-control form-control-warning" required>--}}
+                                    {{--<option selected value="test1">test1</option>--}}
+                                    {{--<option selected value="test2">test2</option>--}}
+
+                                {{--</select>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+
                         <div class="form-group row">
                             <label class="col-sm-2 form-control-label">Category<span style="color: red" class="required">*</span></label>
                             <div class="col-sm-10">
-                                <select name="category" class="form-control form-control-warning" required>
-                                    <option selected value="test1">test1</option>
-                                    <option selected value="test2">test2</option>
+                                <select name="categoryId" class="form-control form-control-warning" required>
+                                    @foreach($categoryInfo as $categoryInfo)
+                                        <option value="{{$categoryInfo->categoryId}}">{{$categoryInfo->categoryName}}</option>
+                                    @endforeach
 
                                 </select>
                             </div>
@@ -61,16 +73,26 @@
                                 @endif
                             </div>
                         </div>
+                        {{--<div class="form-group row">--}}
+                            {{--<label class="col-sm-2 form-control-label">City<span style="color: red" class="required">*</span></label>--}}
+                            {{--<div class="col-sm-10">--}}
+                                {{--<input  maxlength="255" placeholder="City" id="inputHorizontalSuccess" type="text" value="{{ old('city') }}" name="city"  class="form-control form-control-success" required>--}}
+
+                                {{--@if ($errors->has('city'))--}}
+                                    {{--<span class="help-block">--}}
+                                        {{--<strong>{{ $errors->first('city') }}</strong>--}}
+                                    {{--</span>--}}
+                                {{--@endif--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
                         <div class="form-group row">
                             <label class="col-sm-2 form-control-label">City<span style="color: red" class="required">*</span></label>
                             <div class="col-sm-10">
-                                <input  maxlength="255" placeholder="City" id="inputHorizontalSuccess" type="text" value="{{ old('city') }}" name="city"  class="form-control form-control-success" required>
+                                <select name="city" class="form-control form-control-warning" required>
+                                    <option selected value="dhaka">dhaka</option>
+                                    <option selected value="rajshahi">rajshahi</option>
 
-                                @if ($errors->has('city'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('city') }}</strong>
-                                    </span>
-                                @endif
+                                </select>
                             </div>
                         </div>
                         <div class="form-group row">

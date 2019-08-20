@@ -80,16 +80,30 @@
                                 @endif
                             </div>
                         </div>
+                        {{--<div class="form-group row">--}}
+                            {{--<label class="col-sm-2 form-control-label">City<span style="color: red" class="required">*</span></label>--}}
+                            {{--<div class="col-sm-10">--}}
+                                {{--<input  maxlength="255" placeholder="City" id="inputHorizontalSuccess" type="text" value="{{ $company->city }}" name="city"  class="form-control form-control-success" required>--}}
+
+                                {{--@if ($errors->has('city'))--}}
+                                    {{--<span class="help-block">--}}
+                                        {{--<strong>{{ $errors->first('city') }}</strong>--}}
+                                    {{--</span>--}}
+                                {{--@endif--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
                         <div class="form-group row">
                             <label class="col-sm-2 form-control-label">City<span style="color: red" class="required">*</span></label>
                             <div class="col-sm-10">
-                                <input  maxlength="255" placeholder="City" id="inputHorizontalSuccess" type="text" value="{{ $company->city }}" name="city"  class="form-control form-control-success" required>
 
-                                @if ($errors->has('city'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('city') }}</strong>
-                                    </span>
-                                @endif
+                                <select name="city" class="form-control form-control-warning" required>
+
+                                    {{--<option value="{{$company->companyId}}">{{$company->category}}</option>--}}
+                                    <option value="dhaka"  @if($company->city=="dhaka") selected @endif>dhaka</option>
+                                    <option value="rajshahi"  @if($company->city=="dhaka") selected @endif>rajshahi</option>
+
+                                </select>
+
                             </div>
                         </div>
                         <div class="form-group row">

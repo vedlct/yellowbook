@@ -105,6 +105,8 @@
     var options={ "publisher": "72258ac7-a61b-45f9-b96c-d42454da06aa", "logo": { "visible": true, "url": "https://www.bdtradeinfo.com", "img": "https://www.bdtradeinfo.com/images/bdtradeinfo200x40A.png", "height": 35}, "ad": { "visible": false, "openDelay": "5", "closeDelay": "0"}, "livestream": { "domain": "", "type": "sharethis"}, "ticker": { "visible": false, "domain": "", "title": "", "type": "sharethis"}, "facebook": { "visible": false, "profile": "http://www.facebook.com/bdtradeinfo"}, "fblike": { "visible": true, "url": "http://www.facebook.com/bdtradeinfo"}, "twitter": { "visible": false, "user": "sharethis"}, "twfollow": { "visible": true, "url": "http://www.twitter.com/#!/bdtradeinfo"}, "custom": [{ "visible": true, "title": "Advertise with us", "url": "http://bdtradeinfo.com/general/advertisers.php", "img": "", "popup": false, "popupCustom": { "width": 300, "height": 250}}, { "visible": true, "title": "Classified Listing with us", "url": "http://bdtradeinfo.com/general/classified.php", "img": "", "popup": false, "popupCustom": { "width": 300, "height": 250}}, { "visible": true, "title": "About us & our Services", "url": "http://bdtradeinfo.com/tseries", "img": "", "popup": false, "popupCustom": { "width": 300, "height": 250}}], "chicklets": { "items": ["facebook", "twitter", "linkedin", "googleplus", "blogger", "email", "sharethis"]}};
     var st_bar_widget = new sharethis.widgets.sharebar(options);
 </script>
+{{--<script src="https://code.jquery.com/jquery-1.12.4.js"></script>--}}
+{{--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>--}}
 <!-- end ShareThis code   -->
 </body>
 </html>
