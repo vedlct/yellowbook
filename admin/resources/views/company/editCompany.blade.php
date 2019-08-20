@@ -161,7 +161,7 @@
                         <div class="form-group row">
                             <label class="col-sm-2 form-control-label">Website</label>
                             <div class="col-sm-10">
-                                <input  maxlength="255" placeholder="Website" id="inputHorizontalSuccess" type="url" value="{{ $company->website }}" name="website"  class="form-control form-control-success">
+                                <input  maxlength="255" placeholder="Website" id="inputHorizontalSuccess" type="text" value="{{ $company->website }}" name="website"  class="form-control form-control-success">
 
                                 @if ($errors->has('website'))
                                     <span class="help-block">
@@ -174,7 +174,7 @@
                         <div class="form-group row">
                             <label class="col-sm-2 form-control-label">Facebook Page</label>
                             <div class="col-sm-10">
-                                <input  maxlength="255" placeholder="Facebook Page" id="inputHorizontalSuccess" type="url" value="{{ $company->facebookPage }}" name="facebookPage"  class="form-control form-control-success">
+                                <input  maxlength="255" placeholder="Facebook Page" id="inputHorizontalSuccess" type="text" value="{{ $company->facebookPage }}" name="facebookPage"  class="form-control form-control-success">
 
                                 @if ($errors->has('facebookPage'))
                                     <span class="help-block">
