@@ -80,7 +80,7 @@
                 columns: [
 
                     { data: 'companyName', name: 'companyName' },
-                    { data: 'category', name: 'category' },
+                    { data: 'categoryName', name: 'categoryName' },
                     { data: 'phone', name: 'phone' },
                     { data: 'email', name: 'email' },
                     { data: 'companyStatus', name: 'companyStatus' },

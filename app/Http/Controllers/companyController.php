@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Category;
+use App\Company;
+use App\City;
+use App\States;
+
 use DB;
 
 class companyController extends Controller
@@ -21,7 +25,10 @@ class companyController extends Controller
 
     public function index()
     {
-        return view('pages.company');
+        $categoryInfo = Category::all();
+        $cityInfo = City::all();
+        $stateInfo = States::all();
+        return view('pages.company',compact('categoryInfo','cityInfo','stateInfo'));
     }
     public function store(Request $request)
     {
@@ -37,9 +44,9 @@ class companyController extends Controller
         DB::table('company')->insert([
 
             "companyName" => $request->companyName,
-            "category" => $request->category,
+            "categoryId" => $request->categoryId,
             "address" => $request->address,
-            "city" => $request->city,
+            "cityId" => $request->cityId,
             "country" => $request->country,
             "telephone" => $request->telephone,
             "email" => $request->email,
@@ -52,4 +59,10 @@ class companyController extends Controller
 
         echo "<script>alert('Submitted Successfully');window.open(`".route('add.company')."`, `_self`);</script>";
     }
+
+//    public function getCity($id)
+//    {
+//        $cityInfo = City::where('ID_STATE',$id)->get();
+//        return $cityInfo;
+//    }
 }

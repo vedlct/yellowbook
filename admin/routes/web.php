@@ -74,6 +74,7 @@ Route::get('/company-edit/{id}', 'CompanyController@edit')->name('company.edit')
 Route::post('/company-update/{id}', 'CompanyController@update')->name('company.update');
 
 Route::post('/company-delete', 'CompanyController@delete')->name('company.delete');
+Route::get('/get-cities/{id}', 'companyController@getCity');
 
 /* post */
 Route::get('/post', 'PostController@index')->name('post.index');
@@ -87,3 +88,4 @@ Route::post('/post-delete', 'PostController@delete')->name('post.delete');
 /* blog */
 //Route::get('/blog', 'BlogController@index')->name('blog.index');
 //Route::post('/blog-insert', 'BlogController@store')->name('blog.insert');
+

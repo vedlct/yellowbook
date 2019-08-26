@@ -31,6 +31,7 @@ Route::get('/tuition', 'tuitionController@index')->name('tuition');
 Route::get('/matrimony', 'matrimonyController@index')->name('matrimony');
 
 Route::post('/company', 'companyController@store')->name('company.insert');
+//Route::get('/allCity/{id}', 'HomeController@getCity');
 
 
 

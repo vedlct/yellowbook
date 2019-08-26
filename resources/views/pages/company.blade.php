@@ -3,8 +3,6 @@
 @section('content')
 
 
-
-
 <!--top address bar-->
 <div class="margin-bottom-10 padding-top-bottom-10 bg-skyblue" style="background-color: #FFFFFF;"> <!--matri #ff6666   tuition #D8D8FA  Bangladesh  #009900   travel #ffcccc  biz #cccccc  yp  #FFBA53-->
     <div class="container" style="background-color: #FFB310;padding-top: 10px;padding-bottom: 10px;">
@@ -107,13 +105,15 @@
                                     <tr>
                                         <td class="text-right">Category:<span class="sub_ttl_yellow">*</span> </td>
                                         <td class="text-left">
-                                            {{--<input class="form-control" type="text" name="category" id="trade_cata" value="" required="">--}}
-                                            <select class="form-control" name="category" id="wanted" required="">
-                                                <option value="test1">test1</option>
-                                                <option value="test2">test2</option>
+                                            <select class="form-control" name="categoryId" id="wanted" required="">
+                                                <option>Select Category</option>
+                                                @foreach($categoryInfo as $v_category)
+                                                    <option value="{{$v_category->categoryId}}">{{$v_category->categoryName}}</option>
+                                                @endforeach
                                             </select>
                                         </td>
                                     </tr>
+
 
                                     <tr>
                                         <td class="text-right">Address:<span class="sub_ttl_yellow">*</span> </td>
@@ -133,13 +133,32 @@
                                             {{--</div>--}}
                                         {{--</td>--}}
                                     {{--</tr>--}}
+
+                                    <tr>
+                                        <td class="text-right">US States:<span class="sub_ttl_yellow">*</span> </td>
+                                        <td class="text-left">
+                                            <select class="form-control form-control-warning select" name="ID" id="states" onchange="usState()"  required="">
+                                                <option>Select States</option>
+                                                @foreach($stateInfo as $v_state)
+
+                                                    { ?>
+                                                    <option @if(old('ID')==$v_state->ID )selected @endif value="{{$v_state->ID}}">{{$v_state->STATE_NAME}}</option>
+                                                @endforeach
+                                            </select>
+                                        </td>
+                                    </tr>
+
                                     <tr>
                                         <td class="text-right">City:<span class="sub_ttl_yellow">*</span> </td>
                                         <td class="text-left">
                                             {{--<input class="form-control" type="text" name="category" id="trade_cata" value="" required="">--}}
-                                            <select class="form-control" name="city" id="wanted" required="">
-                                                <option value="dhaka">dhaka</option>
-                                                <option value="rajshahi">rajshahi</option>
+                                            <select class="form-control" name="cityId" id="city" required="">
+                                                <option>Select City</option>
+                                                {{--@foreach($cityInfo as $v_city)--}}
+
+                                                    {{--{ ?>--}}
+                                                    {{--<option value="{{$v_city->cityId}}">{{$v_city->cityName}}</option>--}}
+                                                {{--@endforeach--}}
                                             </select>
                                         </td>
                                     </tr>
@@ -333,6 +352,27 @@
     <div class="container">
     </div>
 </div>
+
+    <script>
+        function usState() {
+            var x = document.getElementById("states").value;
+            $.ajax({
+                type: "GET",
+                url: '{{url('/get-cities').'/'}}'+x,
+                success: function (data) {
+//                    data.forEach(function(element) {
+//                        console.log(data.length);
+//                    });
+                    for (i = 0; i < data.length; i++) {
+//                        text += cars[i] + "<br>";
+//                        console.log(data[i].cityName);
+                        $("#city").append("<option value='"+data[i].cityId+"'>"+data[i].cityName+"</option>");
+                    }
+                },
+            });
+
+        }
+    </script>
 
 
 @endsection

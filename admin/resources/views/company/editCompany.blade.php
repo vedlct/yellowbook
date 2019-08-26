@@ -53,20 +53,46 @@
                             </div>
                         </div>
 
+                        {{--<div class="form-group row">--}}
+                            {{--<label class="col-sm-2 form-control-label">Category<span style="color: red" class="required">*</span></label>--}}
+                            {{--<div class="col-sm-10">--}}
+
+                                {{--<select name="category" class="form-control form-control-warning" required>--}}
+
+                                    {{--<option value="{{$company->companyId}}">{{$company->category}}</option>--}}
+                                    {{--<option value="test1"  @if($company->category=="test1") selected @endif>test1</option>--}}
+                                    {{--<option value="test2"  @if($company->category=="test2") selected @endif>test2</option>--}}
+
+                                {{--</select>--}}
+
+                            {{--</div>--}}
+                        {{--</div>--}}
+
                         <div class="form-group row">
                             <label class="col-sm-2 form-control-label">Category<span style="color: red" class="required">*</span></label>
                             <div class="col-sm-10">
+                                <select name="categoryId" class="form-control form-control-warning select" required>
+                                    <option>Select Category</option>
+                                    @foreach($categoryInfo as $v_category)
 
-                                <select name="category" class="form-control form-control-warning" required>
-
-                                    {{--<option value="{{$company->companyId}}">{{$company->category}}</option>--}}
-                                    <option value="test1"  @if($company->category=="test1") selected @endif>test1</option>
-                                    <option value="test2"  @if($company->category=="test2") selected @endif>test2</option>
-
+                                        <option value="{{$v_category->categoryId}}"
+                                                @if($company->categoryId == $v_category->categoryId)selected @endif
+                                        >{{$v_category->categoryName}}</option>
+                                    @endforeach
                                 </select>
-
                             </div>
                         </div>
+                        {{--<div class="form-group row">--}}
+                            {{--<label class="col-sm-2 form-control-label">Category</label>--}}
+                            {{--<div class="col-sm-10">--}}
+                                {{--<select name="categoryId" class="form-control form-control-warning select">--}}
+                                    {{--<option value="">Select Category</option>--}}
+                                    {{--@foreach($categoryInfo as $aC)--}}
+                                        {{--<option value="{{$aC->categoryId}}" @if(old('categoryId')==$aC->categoryId )selected @endif >{{$aC->categoryName}}</option>--}}
+                                    {{--@endforeach--}}
+                                {{--</select>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
 
                         <div class="form-group row">
                             <label class="col-sm-2 form-control-label">Address<span style="color: red" class="required">*</span></label>
@@ -92,18 +118,72 @@
                                 {{--@endif--}}
                             {{--</div>--}}
                         {{--</div>--}}
+                        {{--<div class="form-group row">--}}
+                            {{--<label class="col-sm-2 form-control-label">City<span style="color: red" class="required">*</span></label>--}}
+                            {{--<div class="col-sm-10">--}}
+
+                                {{--<select name="city" class="form-control form-control-warning" required>--}}
+
+                                    {{--<option value="{{$company->companyId}}">{{$company->category}}</option>--}}
+                                    {{--<option value="dhaka"  @if($company->city=="dhaka") selected @endif>dhaka</option>--}}
+                                    {{--<option value="rajshahi"  @if($company->city=="dhaka") selected @endif>rajshahi</option>--}}
+
+                                {{--</select>--}}
+
+                            {{--</div>--}}
+                        {{--</div>--}}
+                        {{--<div class="form-group row">--}}
+                            {{--<label class="col-sm-2 form-control-label">US States<span style="color: red" class="required">*</span></label>--}}
+                            {{--<div class="col-sm-10">--}}
+                                {{--<select name="cityId" class="form-control form-control-warning" required>--}}
+                                    {{--<option>Select States</option>--}}
+                                    {{--@foreach($cityInfo as $v_city)--}}
+
+                                        {{--<option value="{{$v_city->cityId}}"--}}
+                                                {{--@if($company->cityId == $v_city->cityId)selected @endif--}}
+                                        {{-->{{$v_city->ID_STATE}}</option>--}}
+                                    {{--@endforeach--}}
+                                {{--</select>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 form-control-label">US States</label>
+                            <div class="col-sm-10">
+                                <select name="ID" id="states" class="form-control form-control-warning select" onchange="usState()">
+                                    <option value="">Select States</option>
+                                    @if($company->ID == 0){
+                                    @foreach($stateInfo as $v_state)
+                                        <option @if(old('ID')==$v_state->ID )selected @endif value="{{$v_state->ID}}">{{$v_state->STATE_NAME}}</option>
+                                    @endforeach
+                                    }
+                                @else{
+                                    @foreach($stateInfo as $v_state)
+                                        <option value="{{$v_state->ID}}" @if($company->ID==$v_state->ID )selected @endif >{{$v_state->STATE_NAME}}</option>
+                                    @endforeach
+                                        }
+                                        @endif
+                                </select>
+                            </div>
+                        </div>
+
                         <div class="form-group row">
                             <label class="col-sm-2 form-control-label">City<span style="color: red" class="required">*</span></label>
                             <div class="col-sm-10">
+                                <select name="cityId" id="city" class="form-control form-control-warning select" required>
+                                    @if($company->cityId ==0){
+                                    <option>Select City</option>
+                                    }@else{
+                                    @foreach($cityInfo as $v_city)
 
-                                <select name="city" class="form-control form-control-warning" required>
-
-                                    {{--<option value="{{$company->companyId}}">{{$company->category}}</option>--}}
-                                    <option value="dhaka"  @if($company->city=="dhaka") selected @endif>dhaka</option>
-                                    <option value="rajshahi"  @if($company->city=="dhaka") selected @endif>rajshahi</option>
+                                        <option value="{{$v_city->cityId}}"
+                                                @if($company->cityId == $v_city->cityId)selected @endif
+                                        >{{$v_city->cityName}}</option>
+                                    @endforeach
+                                        }
+                                        @endif
 
                                 </select>
-
                             </div>
                         </div>
                         <div class="form-group row">
@@ -240,6 +320,26 @@
             $('.select').select2();
         });
     </SCRIPT>
+
+    <script>
+        function usState() {
+            var x = document.getElementById("states").value;
+            $.ajax({
+                type: "GET",
+                url: '{{url('/get-cities').'/'}}'+x,
+                success: function (data) {
+//                    data.forEach(function(element) {
+//                        console.log(data.length);
+//                    });
+                    for (i = 0; i < data.length; i++) {
+//                        text += cars[i] + "<br>";
+//                        console.log(data[i].cityName);
+                        $("#city").append("<option value='"+data[i].cityId+"'>"+data[i].cityName+"</option>");
+                    }
+                },
+            });
+        }
+    </script>
 
 
 

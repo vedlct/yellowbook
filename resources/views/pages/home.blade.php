@@ -150,7 +150,7 @@
                             <form action="https://www.bdtradeinfo.com/yellowpages/search.php" method="post" enctype="multipart/form-data" name="form9" id="form9" onSubmit="return searchForm();">
                                 <div class="col-md-12" id="search-bar" style="margin-top: 1%;">
                                 <div class="col-md-5">
-                                <input name="cityName" type="text" id="tags" class="searchbox" placeholder="Location" value=""  required=""/>
+                                <input name="cityName" type="text" id="tags" class="searchbox" placeholder="Location" value=""   required=""/>
                                 </div>
                                 <div class="col-md-5" id="search-bar">
                                     <input name="search"  type="text" id="search" class="searchbox" placeholder="Keyword" value="" style="margin-left: -28%;" required=""/>
@@ -578,34 +578,92 @@
 
     <script>
         $( function() {
-//            var availableTags = [
-//                "ActionScript",
-//                "AppleScript",
-//                "Asp",
-//                "BASIC",
-//                "C",
-//                "C++",
-//                "Clojure",
-//                "COBOL",
-//                "ColdFusion",
-//                "Erlang",
-//                "Fortran",
-//                "Groovy",
-//                "Haskell",
-//                "Java",
-//                "JavaScript",
-//                "Lisp",
-//                "Perl",
-//                "PHP",
-//                "Python",
-//                "Ruby",
-//                "Scala",
-//                "Scheme"
-//            ];
+
+
+            {{--var data = JSON.parse('{{ json_encode($cityName) }}');--}}
+            {{--var data = "{{ json_encode($cityName , JSON_NUMERIC_CHECK)}}";--}}
+            {{--var dataSet = JSON.parse({!!json_encode($cityName)!!});--}}
+            var dataset = "{{json_encode(($cityName), ENT_QUOTES)}}";
+            alert(dataset);
+
+            var availableTags = [
+                "ActionScript",
+                "AppleScript",
+                "Asp",
+                "BASIC",
+                "C",
+                "C++",
+                "Clojure",
+                "COBOL",
+                "ColdFusion",
+                "Erlang",
+                "Fortran",
+                "Groovy",
+                "Haskell",
+                "Java",
+                "JavaScript",
+                "Lisp",
+                "Perl",
+                "PHP",
+                "Python",
+                "Ruby",
+                "Scala",
+                "Scheme"
+            ];
             $( "#tags" ).autocomplete({
                 source: availableTags
             });
         } );
     </script>
+
+    {{--<script>--}}
+        {{--function allCity() {--}}
+            {{--var x = document.getElementById("city").value;--}}
+            {{--$.ajax({--}}
+                {{--type: "GET",--}}
+                {{--url: '{{url('/allCity').'/'}}'+x,--}}
+                {{--success: function (data) {--}}
+
+                    {{--for (i = 0; i < data.length; i++) {--}}
+{{--//                        console.log(data[i].cityName);--}}
+                        {{--$("#city").append("+data[i].cityName+");--}}
+                    {{--}--}}
+                {{--},--}}
+            {{--});--}}
+        {{--}--}}
+    {{--</script>--}}
+
+    {{--<script>--}}
+        {{--var searchRequest = null;--}}
+
+        {{--$(function () {--}}
+            {{--var minlength = 3;--}}
+
+            {{--$("#sample_search").keyup(function () {--}}
+                {{--var that = this,--}}
+                    {{--value = $(this).val();--}}
+
+                {{--if (value.length >= minlength ) {--}}
+                    {{--if (searchRequest != null)--}}
+                        {{--searchRequest.abort();--}}
+                    {{--searchRequest = $.ajax({--}}
+                        {{--type: "GET",--}}
+                        {{--url: "{{('/allCity')}}",--}}
+                        {{--data: {--}}
+                            {{--'search_keyword' : value--}}
+                        {{--},--}}
+                        {{--dataType: "text",--}}
+                        {{--success: function(msg){--}}
+                            {{--//we need to check if the value is the same--}}
+                            {{--if (value==$(that).val()) {--}}
+                                {{--//Receiving the result of search here--}}
+                            {{--}--}}
+                        {{--}--}}
+                    {{--});--}}
+                {{--}--}}
+            {{--});--}}
+        {{--});--}}
+    {{--</script>--}}
+
 
 @endsection

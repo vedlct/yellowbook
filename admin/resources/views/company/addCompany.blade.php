@@ -38,28 +38,40 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label class="col-sm-2 form-control-label">Category<span style="color: red" class="required">*</span></label>
-                            <div class="col-sm-10">
-                                <select name="category" class="form-control form-control-warning" required>
-                                    <option selected value="test1">test1</option>
-                                    <option selected value="test2">test2</option>
-
-                                </select>
-                            </div>
-                        </div>
-
                         {{--<div class="form-group row">--}}
                             {{--<label class="col-sm-2 form-control-label">Category<span style="color: red" class="required">*</span></label>--}}
                             {{--<div class="col-sm-10">--}}
-                                {{--<select name="categoryId" class="form-control form-control-warning" required>--}}
-                                    {{--@foreach($categoryInfo as $categoryInfo)--}}
-                                        {{--<option value="{{$categoryInfo->categoryId}}">{{$categoryInfo->categoryName}}</option>--}}
-                                    {{--@endforeach--}}
+                                {{--<select name="category" class="form-control form-control-warning" required>--}}
+                                    {{--<option selected value="test1">test1</option>--}}
+                                    {{--<option selected value="test2">test2</option>--}}
 
                                 {{--</select>--}}
                             {{--</div>--}}
                         {{--</div>--}}
+
+
+                        {{--<div class="form-group row">--}}
+                            {{--<label class="col-sm-2 form-control-label">Category<span style="color: red" class="required">*</span></label>--}}
+                            {{--<div class="col-sm-10">--}}
+                                {{--<select name="categoryId" id="setCategory" class="form-control form-control-warning" required>--}}
+                                    {{--<option>Select Category</option>--}}
+                                   {{--@foreach($categoryInfo as $v_category)--}}
+                                        {{--<option value="{{$v_category->categoryId}}">{{$v_category->categoryName}}</option>--}}
+                                    {{--@endforeach--}}
+                                {{--</select>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                        <div class="form-group row">
+                            <label class="col-sm-2 form-control-label">Category</label>
+                            <div class="col-sm-10">
+                                <select name="categoryId" class="form-control form-control-warning select">
+                                    <option value="">Select Category</option>
+                                    @foreach($categoryInfo as $aC)
+                                        <option @if(old('categoryId')==$aC->categoryId )selected @endif value="{{$aC->categoryId}}">{{$aC->categoryName}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
 
                         <div class="form-group row">
                             <label class="col-sm-2 form-control-label">Address<span style="color: red" class="required">*</span></label>
@@ -73,25 +85,39 @@
                                 @endif
                             </div>
                         </div>
+
                         {{--<div class="form-group row">--}}
                             {{--<label class="col-sm-2 form-control-label">City<span style="color: red" class="required">*</span></label>--}}
                             {{--<div class="col-sm-10">--}}
-                                {{--<input  maxlength="255" placeholder="City" id="inputHorizontalSuccess" type="text" value="{{ old('city') }}" name="city"  class="form-control form-control-success" required>--}}
+                                {{--<select name="cityId" class="form-control form-control-warning" required>--}}
+                                    {{--<option>Select City</option>--}}
+                                    {{--@foreach($cityInfo as $v_city)--}}
 
-                                {{--@if ($errors->has('city'))--}}
-                                    {{--<span class="help-block">--}}
-                                        {{--<strong>{{ $errors->first('city') }}</strong>--}}
-                                    {{--</span>--}}
-                                {{--@endif--}}
+                                    {{--{ ?>--}}
+                                    {{--<option value="{{$v_city->cityId}}">{{$v_city->cityName}}</option>--}}
+                                    {{--@endforeach--}}
+                                {{--</select>--}}
                             {{--</div>--}}
                         {{--</div>--}}
                         <div class="form-group row">
-                            <label class="col-sm-2 form-control-label">City<span style="color: red" class="required">*</span></label>
+                            <label class="col-sm-2 form-control-label">US States</label>
                             <div class="col-sm-10">
-                                <select name="city" class="form-control form-control-warning" required>
-                                    <option selected value="dhaka">dhaka</option>
-                                    <option selected value="rajshahi">rajshahi</option>
-
+                                <select name="ID" id="states" class="form-control form-control-warning select" onchange="usState()">
+                                    <option value="">Select States</option>
+                                    @foreach($stateInfo as $v_state)
+                                        <option @if(old('ID')==$v_state->ID )selected @endif value="{{$v_state->ID}}">{{$v_state->STATE_NAME}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 form-control-label">City</label>
+                            <div class="col-sm-10">
+                                <select name="cityId" id="city"  class="form-control form-control-warning select">
+                                    <option value="">Select City</option>
+                                    {{--@foreach($cityInfo as $v_city)--}}
+                                        {{--<option @if(old('cityId')==$v_city->cityId )selected @endif value="{{$v_city->cityId}}">{{$v_city->cityName}}</option>--}}
+                                    {{--@endforeach--}}
                                 </select>
                             </div>
                         </div>
@@ -280,6 +306,26 @@
         });
 
     </SCRIPT>
+
+    <script>
+        function usState() {
+            var x = document.getElementById("states").value;
+            $.ajax({
+                type: "GET",
+                url: '{{url('/get-cities').'/'}}'+x,
+                success: function (data) {
+//                    data.forEach(function(element) {
+//                        console.log(data.length);
+//                    });
+                    for (i = 0; i < data.length; i++) {
+//                        text += cars[i] + "<br>";
+//                        console.log(data[i].cityName);
+                        $("#city").append("<option value='"+data[i].cityId+"'>"+data[i].cityName+"</option>");
+                    }
+                },
+            });
+        }
+    </script>
 
 
 

@@ -8,6 +8,7 @@ use App\City;
 use Illuminate\Http\Request;
 use App\Menu;
 use App\Post;
+use App\States;
 use Session;
 use db;
 use Illuminate\Support\Facades\Auth;
@@ -29,15 +30,41 @@ class CompanyController extends Controller
     {
         return view('company.allCompany');
     }
+//    public function showAllCompanyInfo()
+//    {
+//
+//        $companyInfo = Company::orderBy('companyId','desc')
+//            ->where('companyStatus','!=','Deleted')
+//            ->get();
+//        $datatables = Datatables::of($companyInfo);
+//        return $datatables->make(true);
+//    }
+
     public function showAllCompanyInfo()
     {
 
-        $companyInfo = Company::orderBy('companyId','desc')
+        $companyInfo = Company::select('company.companyId','company.companyName','company.phone','company.email','company.companyStatus','category.categoryName')
+            ->leftJoin('category', 'category.categoryId', '=', 'company.categoryId')
+            ->orderBy('companyId','desc')
+
             ->where('companyStatus','!=','Deleted')
             ->get();
         $datatables = Datatables::of($companyInfo);
         return $datatables->make(true);
     }
+
+//    public function showAllCompanyInfo()
+//    {
+//
+//        $companyInfo = DB::table('company')
+//            ->join('category', 'category.categoryId', '=', 'company.categoryId')
+//            ->select('company.*', 'category.categoryName')
+//            ->orderBy('companyId','desc')
+//            ->where('companyStatus','!=','Deleted')
+//            ->get();
+//        $datatables = Datatables::of($companyInfo);
+//        return $datatables->make(true);
+//    }
 
     /**
      * Show the form for creating a new resource.
@@ -46,25 +73,26 @@ class CompanyController extends Controller
      */
     public function create()
     {
-//        $categoryInfo = Category::all();
+        $categoryInfo = Category::all();
+        $cityInfo = City::all();
+        $stateInfo = States::all();
 //        return view('company.addCompany', ['company' => $categoryInfo]);
-        return view('company.addCompany');
+        return view('company.addCompany',compact('categoryInfo','cityInfo','stateInfo'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    public function getCity($id)
+    {
+        $cityInfo = City::where('ID_STATE',$id)->get();
+        return $cityInfo;
+    }
     public function store(Request $request)
     {
         $rules=[
             'companyName' => 'required|max:255',
             'companyStatus' => 'required|max:255',
-            'category' => 'required|max:255',
+            'categoryId' => 'required|max:255',
             'address' => 'required|max:255',
-            'city' => 'required|max:255',
+            'cityId' => 'required|max:255',
             'country' => 'required|max:255',
             'telephone' => 'required|max:255',
             'email' => 'required|max:255',
@@ -95,9 +123,10 @@ class CompanyController extends Controller
 
 //        $category->menuType=$request->menuType;
         $company->companyStatus=$request->companyStatus;
-        $company->category=$request->category;
+        $company->categoryId=$request->categoryId;
         $company->address=$request->address;
-        $company->city=$request->city;
+        $company->cityId=$request->cityId;
+        $company->ID=$request->ID;
         $company->country=$request->country;
         $company->telephone=$request->telephone;
         $company->fax=$request->fax;
@@ -140,8 +169,11 @@ class CompanyController extends Controller
 
 
         $company= Company::findOrFail($id);
+        $categoryInfo = Category::all();
+        $cityInfo = City::all();
+        $stateInfo = States::all();
 
-        return view('company.editCompany',compact('company'));
+        return view('company.editCompany',compact('company','categoryInfo','cityInfo','stateInfo'));
 
     }
 
@@ -158,7 +190,8 @@ class CompanyController extends Controller
             'companyName' => 'required|max:255',
             'companyStatus' => 'required|max:255',
             'address' => 'required|max:255',
-            'city' => 'required|max:255',
+            'cityId' => 'required|max:255',
+            'categoryId' => 'required|max:255',
             'country' => 'required|max:255',
             'telephone' => 'required|max:255',
             'email' => 'required|max:255',
@@ -172,13 +205,14 @@ class CompanyController extends Controller
 
         $validator = Validator::make($request->all(), $rules,$messages)->validate();
 
-        $company=Company::findOrFail($id);
+        $company=Company::find($id);
         $company->companyName=$request->companyName;
 
         $company->companyStatus=$request->companyStatus;
-        $company->category=$request->category;
+        $company->categoryId=$request->categoryId;
         $company->address=$request->address;
-        $company->city=$request->city;
+        $company->cityId=$request->cityId;
+        $company->ID=$request->ID;
         $company->country=$request->country;
         $company->telephone=$request->telephone;
         $company->fax=$request->fax;
