@@ -31,6 +31,8 @@
     <link rel="stylesheet" type="text/css" href="{{url('public')}}/css/sticky_btn_popup.css" />
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
+    {{--<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />--}}
+
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     {{--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>--}}
@@ -68,9 +70,10 @@
         <a href="{{route('add.company')}}" style="color: #2B2B2B;">Add Your Company Listing</a>
         <a href="{{route('advertise')}}" style="color: #2B2B2B;">Advertise With Us</a>
         <a href="{{route('contact')}}" style="color: #2B2B2B;">Contact</a>
-        <a href="{{route('invest')}}" style="color: #2B2B2B;" target="_blank">INFO</a>
-        <a href="{{route('bangladesh')}}" style="color: #2B2B2B;" target="_blank">LINKS</a>
-        <a href="{{route('travel')}}" style="color: #2B2B2B;" target="_blank">FORMS</a>
+        {{--<a href="{{route('invest')}}" style="color: #2B2B2B;" target="_blank">INFO</a>--}}
+        <a href="{{route('invest')}}" style="color: #2B2B2B;">INFO</a>
+        <a href="{{route('bangladesh')}}" style="color: #2B2B2B;" >LINKS</a>
+        <a href="{{route('travel')}}" style="color: #2B2B2B;">FORMS</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()" style="color: #2B2B2B;">Menu &#9776;</a>
     </div>
 

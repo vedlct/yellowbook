@@ -16,6 +16,11 @@
 
                 </li>
 
+                <li>
+                    <a href="{{route('city.index')}}" ><i class="fa fa-plus"></i><span class="hide-menu">City</span></a>
+
+                </li>
+
 
                 <li>
                     <a href="{{route('company.index')}}"><i class="fa fa-list-alt"></i><span class="hide-menu">Company</span></a>

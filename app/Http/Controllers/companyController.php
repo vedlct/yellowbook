@@ -60,9 +60,9 @@ class companyController extends Controller
         echo "<script>alert('Submitted Successfully');window.open(`".route('add.company')."`, `_self`);</script>";
     }
 
-//    public function getCity($id)
-//    {
-//        $cityInfo = City::where('ID_STATE',$id)->get();
-//        return $cityInfo;
-//    }
+    public function getCity($id)
+    {
+        $cityInfo = City::where('ID_STATE',$id)->get();
+        return $cityInfo;
+    }
 }

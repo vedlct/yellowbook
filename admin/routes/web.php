@@ -58,6 +58,20 @@ Route::post('/category-delete', 'categoryController@delete')->name('category.del
 Route::post('/topcategorychecked', 'categoryController@topCategorychecked')->name('category.topcategorychecked');
 Route::post('/topcategoryunchecked', 'categoryController@topCategoryunchecked')->name('category.topcategoryunchecked');
 
+/*City*/
+Route::get('/city', 'cityController@index')->name('city.index');
+Route::post('/city-info', 'CityController@showAllCityInfo')->name('city.showinfo');
+Route::get('/city-add', 'CityController@create')->name('city.addCity');
+
+
+Route::post('/city-insert', 'CityController@store')->name('city.insert');
+
+Route::get('/city-edit/{id}', 'CityController@edit')->name('city.edit');
+
+Route::post('/city-update/{id}', 'CityController@update')->name('city.update');
+
+Route::post('/city-delete', 'CityController@delete')->name('city.delete');
+
 
 
 /*Company */

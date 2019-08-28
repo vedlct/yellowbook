@@ -19,6 +19,7 @@
 //});
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('products/{id}','HomeController@show');
 //Route::get('/autocomplete', 'HomeController@search')->name('autocomplete');
 //Route::post('/autocomplete/fetch', 'HomeController@fetch')->name('autocomplete.fetch');
 Route::get('/company', 'companyController@index')->name('add.company');
@@ -31,6 +32,7 @@ Route::get('/tuition', 'tuitionController@index')->name('tuition');
 Route::get('/matrimony', 'matrimonyController@index')->name('matrimony');
 
 Route::post('/company', 'companyController@store')->name('company.insert');
+Route::get('/get-cities/{id}', 'companyController@getCity');
 //Route::get('/allCity/{id}', 'HomeController@getCity');
 
 

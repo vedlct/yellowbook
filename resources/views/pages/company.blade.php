@@ -2,7 +2,7 @@
 
 @section('content')
 
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />
 <!--top address bar-->
 <div class="margin-bottom-10 padding-top-bottom-10 bg-skyblue" style="background-color: #FFFFFF;"> <!--matri #ff6666   tuition #D8D8FA  Bangladesh  #009900   travel #ffcccc  biz #cccccc  yp  #FFBA53-->
     <div class="container" style="background-color: #FFB310;padding-top: 10px;padding-bottom: 10px;">
@@ -105,7 +105,7 @@
                                     <tr>
                                         <td class="text-right">Category:<span class="sub_ttl_yellow">*</span> </td>
                                         <td class="text-left">
-                                            <select class="form-control" name="categoryId" id="wanted" required="">
+                                            <select class="form-control form-control-warning select" name="categoryId" id="wanted" required="">
                                                 <option>Select Category</option>
                                                 @foreach($categoryInfo as $v_category)
                                                     <option value="{{$v_category->categoryId}}">{{$v_category->categoryName}}</option>
@@ -152,7 +152,7 @@
                                         <td class="text-right">City:<span class="sub_ttl_yellow">*</span> </td>
                                         <td class="text-left">
                                             {{--<input class="form-control" type="text" name="category" id="trade_cata" value="" required="">--}}
-                                            <select class="form-control" name="cityId" id="city" required="">
+                                            <select class="form-control form-control-warning select" name="cityId" id="city" required="">
                                                 <option>Select City</option>
                                                 {{--@foreach($cityInfo as $v_city)--}}
 
@@ -352,6 +352,25 @@
     <div class="container">
     </div>
 </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+    <SCRIPT language=Javascript>
+
+
+        function isNumberKey(evt)
+        {
+            var charCode = (evt.which) ? evt.which : event.keyCode
+            if (charCode > 31 && (charCode < 48 || charCode > 57))
+                return false;
+
+            return true;
+        }
+
+        $(document).ready(function() {
+            $('.select').select2();
+        });
+
+    </SCRIPT>
 
     <script>
         function usState() {

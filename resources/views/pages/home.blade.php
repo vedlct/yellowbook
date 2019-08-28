@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- alphabets -->
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />
     <div id="div-mobile">
         <div class="icon-bar margin-top-40-minus">
             <img src="{{url('public')}}/images/icon_yp_menu_btn.png" alt="Yellow Pages Menu" title="Yellow Pages Menu" id="myBtn" onclick="myFunction1()">
@@ -149,9 +149,18 @@
 
                             <form action="https://www.bdtradeinfo.com/yellowpages/search.php" method="post" enctype="multipart/form-data" name="form9" id="form9" onSubmit="return searchForm();">
                                 <div class="col-md-12" id="search-bar" style="margin-top: 1%;">
-                                <div class="col-md-5">
-                                <input name="cityName" type="text" id="tags" class="searchbox" placeholder="Location" value=""   required=""/>
+                                <div class="col-md-5" style="margin-top: 1%;">
+
+                                            <select class="form-control form-control-warning select" name="cityId" style="width: 70%;"  required="">
+                                                <option>Select City</option>
+                                                @foreach($cityInfo as $v_city)
+                                                    <option value="{{$v_city->cityId}}">{{$v_city->cityName}}</option>
+                                                @endforeach
+                                            </select>
+
+                                {{--<input name="cityName" type="text" id="tags" class="searchbox" placeholder="Location" value=""   required=""/>--}}
                                 </div>
+
                                 <div class="col-md-5" id="search-bar">
                                     <input name="search"  type="text" id="search" class="searchbox" placeholder="Keyword" value="" style="margin-left: -28%;" required=""/>
                                 </div>
@@ -290,7 +299,7 @@
                             <!--<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">-->
                             @foreach($top_category as $top_category)
                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 seg2 padding-top-bottom-5">
-                                <img src="{{url('public')}}/images/icon_pest.png" alt="ps" title="ps"> <a href="#" class="text-light text-medium">{{$top_category->categoryName}}</a>
+                                <img src="{{url('public')}}/images/icon_pest.png" alt="ps" title="ps"> <a href="{{URL::to('/products/'.$top_category->categoryId)}}" class="text-light text-medium">{{$top_category->categoryName}}</a>
                             </div>
                             @endforeach
                         </div>
@@ -576,45 +585,45 @@
         {{--});--}}
     {{--</script>--}}
 
-    <script>
-        $( function() {
+    {{--<script>--}}
+        {{--$( function() {--}}
 
 
             {{--var data = JSON.parse('{{ json_encode($cityName) }}');--}}
             {{--var data = "{{ json_encode($cityName , JSON_NUMERIC_CHECK)}}";--}}
             {{--var dataSet = JSON.parse({!!json_encode($cityName)!!});--}}
-            var dataset = "{{json_encode(($cityName), ENT_QUOTES)}}";
-            alert(dataset);
+            {{--var dataset = "{{json_encode(($cityName), ENT_QUOTES)}}";--}}
+{{--//            alert(dataset);--}}
 
-            var availableTags = [
-                "ActionScript",
-                "AppleScript",
-                "Asp",
-                "BASIC",
-                "C",
-                "C++",
-                "Clojure",
-                "COBOL",
-                "ColdFusion",
-                "Erlang",
-                "Fortran",
-                "Groovy",
-                "Haskell",
-                "Java",
-                "JavaScript",
-                "Lisp",
-                "Perl",
-                "PHP",
-                "Python",
-                "Ruby",
-                "Scala",
-                "Scheme"
-            ];
-            $( "#tags" ).autocomplete({
-                source: availableTags
-            });
-        } );
-    </script>
+            {{--var availableTags = [--}}
+                {{--"ActionScript",--}}
+                {{--"AppleScript",--}}
+                {{--"Asp",--}}
+                {{--"BASIC",--}}
+                {{--"C",--}}
+                {{--"C++",--}}
+                {{--"Clojure",--}}
+                {{--"COBOL",--}}
+                {{--"ColdFusion",--}}
+                {{--"Erlang",--}}
+                {{--"Fortran",--}}
+                {{--"Groovy",--}}
+                {{--"Haskell",--}}
+                {{--"Java",--}}
+                {{--"JavaScript",--}}
+                {{--"Lisp",--}}
+                {{--"Perl",--}}
+                {{--"PHP",--}}
+                {{--"Python",--}}
+                {{--"Ruby",--}}
+                {{--"Scala",--}}
+                {{--"Scheme"--}}
+            {{--];--}}
+            {{--$( "#tags" ).autocomplete({--}}
+                {{--source: availableTags--}}
+            {{--});--}}
+        {{--} );--}}
+    {{--</script>--}}
 
     {{--<script>--}}
         {{--function allCity() {--}}
@@ -665,5 +674,22 @@
         {{--});--}}
     {{--</script>--}}
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+    <SCRIPT language=Javascript>
 
+
+        function isNumberKey(evt)
+        {
+            var charCode = (evt.which) ? evt.which : event.keyCode
+            if (charCode > 31 && (charCode < 48 || charCode > 57))
+                return false;
+
+            return true;
+        }
+
+        $(document).ready(function() {
+            $('.select').select2();
+        });
+
+    </SCRIPT>
 @endsection

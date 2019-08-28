@@ -25,26 +25,38 @@ class HomeController extends Controller
     {
         $top_category=DB::table('category')
             ->where('top_category',1)
-//            ->orderBy('categoryId','desc')
+            ->orderBy('categoryId','desc')
             ->get();
-        $allcity = City::select('cityName')->get();
-        $newarray = array();
-        foreach ($allcity as $alc){
-            array_push($newarray , $alc->cityName);
-        }
-        $array_final = preg_replace('/"([a-zA-Z_]+[a-zA-Z0-9_]*)":/','$1:',$newarray);
-        $cityName =$array_final;
+        $cityInfo = City::all();
+//        $allcity = City::select('cityName')->get();
+//        $newarray = array();
+//        foreach ($allcity as $alc){
+//            array_push($newarray , $alc->cityName);
+//        }
+//        $array_final = preg_replace('/"([a-zA-Z_]+[a-zA-Z0-9_]*)":/','$1:',$newarray);
+//        $cityName =$array_final;
 
 
         $home=view('pages.home')
             ->with('top_category',$top_category)
-            ->with('cityName',$cityName);
+            ->with('cityInfo',$cityInfo);
 
 
         return view('main')
             ->with('content',$home);
 
 //        return view('pages.home');
+    }
+
+    public function show($id){
+
+//        $top_category = DB::select('select * from category where categoryId = ?',[$id]);
+        $top_category=DB::table('category')
+            ->where('top_category',1)
+            ->where('categoryId',$id)
+            ->orderBy('categoryId','desc')
+            ->get();
+        return view('pages.products',['top_category'=>$top_category]);
     }
 
 //    public function getCity($id)
