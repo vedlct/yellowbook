@@ -3,6 +3,25 @@
 @section('content')
     <!-- alphabets -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />
+    <style>
+        .select2-container .select2-selection--single {
+            box-sizing: border-box;
+            cursor: pointer;
+            display: block;
+            height: 42px;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        .select2-container--default .select2-selection--single .select2-selection__rendered {
+            color: #444;
+            line-height: 24px;
+            font-size: 18px;
+            margin-top: 3%;
+        }
+    </style>
+
+
     <div id="div-mobile">
         <div class="icon-bar margin-top-40-minus">
             <img src="{{url('public')}}/images/icon_yp_menu_btn.png" alt="Yellow Pages Menu" title="Yellow Pages Menu" id="myBtn" onclick="myFunction1()">
@@ -56,7 +75,18 @@
                                 <div class="col-md-12">
                                     <form action="https://www.bdtradeinfo.com/yellowpages/search.php" method="post" enctype="multipart/form-data" name="form9" id="form9" onSubmit="return searchForm();">
                                         <div class="col-md-6">
-                                        <input name="companyName" type="text" id="search" class="searchbox" placeholder="Location" value="" required=""/>
+                                        {{--<input name="companyName" type="text" id="search" class="searchbox" placeholder="Location" value="" required=""/>--}}
+                                            <div class="col-md-5" style="margin-top: 1%;">
+
+                                                <select class="form-control form-control-warning select" name="cityId" style="width: 70%;"  required="">
+                                                    <option>Select City</option>
+                                                    @foreach($cityInfo as $v_city)
+                                                        <option value="{{$v_city->cityId}}">{{$v_city->cityName}}</option>
+                                                    @endforeach
+                                                </select>
+
+                                                {{--<input name="cityName" type="text" id="tags" class="searchbox" placeholder="Location" value=""   required=""/>--}}
+                                            </div>
                                         </div>
                                         <div class="col-md-6">
                                             <input name="search" type="text" id="search" class="searchbox" placeholder="Keyword" value="" required=""/>
@@ -147,9 +177,9 @@
 
                     <div class="col-md-9 col-md-offset-0 col-sm-9 col-sm-offset-1 col-xs-10 col-xs-offset-1 margin-bottom-10">
 
-                            <form action="https://www.bdtradeinfo.com/yellowpages/search.php" method="post" enctype="multipart/form-data" name="form9" id="form9" onSubmit="return searchForm();">
+                            <form action="" method="post" enctype="multipart/form-data" name="form9" id="form9" onSubmit="return searchForm();">
                                 <div class="col-md-12" id="search-bar" style="margin-top: 1%;">
-                                <div class="col-md-5" style="margin-top: 1%;">
+                                <div class="col-md-5" id="search-bar">
 
                                             <select class="form-control form-control-warning select" name="cityId" style="width: 70%;"  required="">
                                                 <option>Select City</option>
