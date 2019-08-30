@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use Illuminate\Http\Request;
 use App\City;
 use App\Company;
@@ -23,11 +24,15 @@ class HomeController extends Controller
 
     public function index()
     {
-        $top_category=DB::table('category')
-            ->where('top_category',1)
+//        $top_category=DB::table('category')
+//            ->where('top_category',1)
+//            ->orderBy('categoryId','desc')
+//            ->get();
+        $top_category = Category::where('top_category',1)
             ->orderBy('categoryId','desc')
             ->get();
         $cityInfo = City::all();
+//        $artists = Category::all();
 //        $allcity = City::select('cityName')->get();
 //        $newarray = array();
 //        foreach ($allcity as $alc){
@@ -37,13 +42,16 @@ class HomeController extends Controller
 //        $cityName =$array_final;
 
 
-        $home=view('pages.home')
-            ->with('top_category',$top_category)
-            ->with('cityInfo',$cityInfo);
+//        $home=view('pages.home')
+//            ->with('top_category',$top_category)
+//            ->with('cityInfo',$cityInfo);
+////            ->with('artists',$artists);
+//
+//
+//        return view('main')
+//            ->with('content',$home);
 
-
-        return view('main')
-            ->with('content',$home);
+        return view('pages.home',compact('top_category','cityInfo'));
 
 //        return view('pages.home');
     }
@@ -51,12 +59,18 @@ class HomeController extends Controller
     public function show($id){
 
 //        $top_category = DB::select('select * from category where categoryId = ?',[$id]);
-        $top_category=DB::table('category')
-            ->where('top_category',1)
+//        $top_category=DB::table('category')
+//            ->where('top_category',1)
+//            ->where('categoryId',$id)
+//            ->orderBy('categoryId','desc')
+//            ->get();
+//        return view('pages.products',['top_category'=>$top_category]);
+
+        $top_category = Category::where('top_category',1)
             ->where('categoryId',$id)
             ->orderBy('categoryId','desc')
             ->get();
-        return view('pages.products',['top_category'=>$top_category]);
+        return view('pages.products',compact('top_category'));
     }
 
 //    public function getCity($id)
@@ -66,38 +80,12 @@ class HomeController extends Controller
 //        return $cityInfo;
 //    }
 
-//    public function search(Request $request)
-//    {
-//        $search = $request->get('city');
-////        print_r($search);
-//
-//        $result = Company::where('city', 'LIKE', '%'. $search. '%')->get();
-//
-////         print_r($result);
-////         exit();
-//        return response()->json($result);
-//
-//    }
-
-//    function fetch(Request $request)
-//    {
-//        if($request->get('query'))
-//        {
-//            $query = $request->get('query');
-//            $data = DB::table('company')
-//                ->where('address', 'LIKE', "%{$query}%")
-//                ->get();
-//            $output = '<ul class="dropdown-menu" style="display:block; position:relative">';
-//            foreach($data as $row)
-//            {
-//                $output .= '
-//       <li><a href="#">'.$row->address.'</a></li>
-//       ';
-//            }
-//            $output .= '</ul>';
-//            echo $output;
-//        }
-//    }
+    public function showArtist($letter){
+        $cityInfo =City::all();
+        $artists = Category::where('categoryName', 'like', $letter.'%')->get();
+//        print_r($artists);
+        return view('pages.home',compact('artists','cityInfo'));
+    }
 
 
 }

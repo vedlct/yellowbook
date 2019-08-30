@@ -21,6 +21,17 @@
         }
     </style>
 
+    <script>
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $("p").hide();
+            });
+            $("#show").click(function(){
+                $("p").show();
+            });
+        });
+    </script>
+
 
     <div id="div-mobile">
         <div class="icon-bar margin-top-40-minus">
@@ -292,47 +303,65 @@
                             <div class="col-md-12 col-xs-12 div_style4h">
                                 <h1 style="color: #33332B;">Browse Categories</h1>
                             </div>
+                            {{--@foreach($artists as $artists)--}}
                             <div class="alphabet">
-                                <a href="#" >A</a>
-                                <a href="#" >B</a>
-                                <a href="#" >C</a>
-                                <a href="#" >D</a>
-                                <a href="#" >E</a>
-                                <a href="#" >F</a>
-                                <a href="#" >G</a>
-                                <a href="#" >H</a>
-                                <a href="#" >I</a>
-                                <a href="#" >J</a>
-                                <a href="#" >K</a>
-                                <a href="#" >L</a>
-                                <a href="#" >M</a>
-                                <a href="#" >N</a>
-                                <a href="#" >O</a>
-                                <a href="#" >P</a>
-                                <a href="#" >Q</a>
-                                <a href="#" >R</a>
-                                <a href="#" >S</a>
-                                <a href="#" >T</a>
-                                <a href="#" >U</a>
-                                <a href="#" >V</a>
-                                <a href="#" >W</a>
-                                <a href="#" >X</a>
-                                <a href="#" >Y</a>
-                                <a href="#" >Z</a>
-                            </div>
-                        </div>
 
+                                <a href="{{URL::to('/artists/A')}}">A</a>
+                                <a href="{{URL::to('/artists/B')}}" >B</a>
+                                <a href="{{URL::to('/artists/C')}}" >C</a>
+                                <a href="{{URL::to('/artists/D')}}" >D</a>
+                                <a href="{{URL::to('/artists/E')}}" >E</a>
+                                <a href="{{URL::to('/artists/F')}}" >F</a>
+                                <a href="{{URL::to('/artists/G')}}" >G</a>
+                                <a href="{{URL::to('/artists/H')}}" >H</a>
+                                <a href="{{URL::to('/artists/I')}}" >I</a>
+                                <a href="{{URL::to('/artists/J')}}" >J</a>
+                                <a href="{{URL::to('/artists/K')}}" >K</a>
+                                <a href="{{URL::to('/artists/L')}}" >L</a>
+                                <a href="{{URL::to('/artists/M')}}" >M</a>
+                                <a href="{{URL::to('/artists/N')}}" >N</a>
+                                <a href="{{URL::to('/artists/O')}}" >O</a>
+                                <a href="{{URL::to('/artists/P')}}" >P</a>
+                                <a href="{{URL::to('/artists/Q')}}" >Q</a>
+                                <a href="{{URL::to('/artists/R')}}" >R</a>
+                                <a href="{{URL::to('/artists/S')}}" >S</a>
+                                <a href="{{URL::to('/artists/T')}}" >T</a>
+                                <a href="{{URL::to('/artists/U')}}" >U</a>
+                                <a href="{{URL::to('/artists/V')}}" >V</a>
+                                <a href="{{URL::to('/artists/W')}}" >W</a>
+                                <a href="{{URL::to('/artists/X')}}" >X</a>
+                                <a href="{{URL::to('/artists/Y')}}" >Y</a>
+                                <a href="{{URL::to('/artists/Z')}}" >Z</a>
+
+                            </div>
+                                {{--@endforeach--}}
+                        </div>
+                        @if(!isset($artists))
                         <div class="col-md-10 col-sm-12 col-xs-12 div_style3h padding-bottom-5">
                             <div class="col-md-12 col-xs-12 div_style4h">
                                 <h1 style="color: #33332B;">Top Categories</h1>
                             </div>
                             <!--<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">-->
                             @foreach($top_category as $top_category)
-                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 seg2 padding-top-bottom-5">
-                                <img src="{{url('public')}}/images/icon_pest.png" alt="ps" title="ps"> <a href="{{URL::to('/products/'.$top_category->categoryId)}}" class="text-light text-medium">{{$top_category->categoryName}}</a>
-                            </div>
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 seg2 padding-top-bottom-5">
+                                    <img src="{{url('public')}}/images/icon_pest.png" alt="ps" title="ps"> <a href="{{URL::to('/products/'.$top_category->categoryId)}}" class="text-light text-medium">{{$top_category->categoryName}}</a>
+                                </div>
                             @endforeach
                         </div>
+                        @endif
+                        @if(isset($artists))
+                        <div class="col-md-10 col-sm-12 col-xs-12 div_style3h padding-bottom-5">
+                            <div class="col-md-12 col-xs-12 div_style4h">
+                                <h1 style="color: #33332B;">Browse Categories</h1>
+                            </div>
+                            <!--<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">-->
+                            @foreach($artists as $artists)
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 seg2 padding-top-bottom-5">
+                                    <img src="{{url('public')}}/images/icon_pest.png" alt="ps" title="ps"> <a href="{{URL::to('/products/'.$artists->categoryId)}}" class="text-light text-medium">{{$artists->categoryName}}</a>
+                                </div>
+                            @endforeach
+                        </div>
+                        @endif
 
                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" style="margin-top: -18%;">
                             <div class="row">
@@ -655,54 +684,7 @@
         {{--} );--}}
     {{--</script>--}}
 
-    {{--<script>--}}
-        {{--function allCity() {--}}
-            {{--var x = document.getElementById("city").value;--}}
-            {{--$.ajax({--}}
-                {{--type: "GET",--}}
-                {{--url: '{{url('/allCity').'/'}}'+x,--}}
-                {{--success: function (data) {--}}
 
-                    {{--for (i = 0; i < data.length; i++) {--}}
-{{--//                        console.log(data[i].cityName);--}}
-                        {{--$("#city").append("+data[i].cityName+");--}}
-                    {{--}--}}
-                {{--},--}}
-            {{--});--}}
-        {{--}--}}
-    {{--</script>--}}
-
-    {{--<script>--}}
-        {{--var searchRequest = null;--}}
-
-        {{--$(function () {--}}
-            {{--var minlength = 3;--}}
-
-            {{--$("#sample_search").keyup(function () {--}}
-                {{--var that = this,--}}
-                    {{--value = $(this).val();--}}
-
-                {{--if (value.length >= minlength ) {--}}
-                    {{--if (searchRequest != null)--}}
-                        {{--searchRequest.abort();--}}
-                    {{--searchRequest = $.ajax({--}}
-                        {{--type: "GET",--}}
-                        {{--url: "{{('/allCity')}}",--}}
-                        {{--data: {--}}
-                            {{--'search_keyword' : value--}}
-                        {{--},--}}
-                        {{--dataType: "text",--}}
-                        {{--success: function(msg){--}}
-                            {{--//we need to check if the value is the same--}}
-                            {{--if (value==$(that).val()) {--}}
-                                {{--//Receiving the result of search here--}}
-                            {{--}--}}
-                        {{--}--}}
-                    {{--});--}}
-                {{--}--}}
-            {{--});--}}
-        {{--});--}}
-    {{--</script>--}}
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
     <SCRIPT language=Javascript>

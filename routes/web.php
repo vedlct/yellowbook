@@ -20,6 +20,7 @@
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('products/{id}','HomeController@show');
+Route::get('/artists/{letter}', 'HomeController@showArtist')->where('letter', '[A-Za-z]+')->name('list');
 //Route::get('/autocomplete', 'HomeController@search')->name('autocomplete');
 //Route::post('/autocomplete/fetch', 'HomeController@fetch')->name('autocomplete.fetch');
 Route::get('/company', 'companyController@index')->name('add.company');
