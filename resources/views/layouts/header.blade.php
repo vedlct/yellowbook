@@ -31,6 +31,10 @@
     <link rel="stylesheet" type="text/css" href="{{url('public')}}/css/sticky_btn_popup.css" />
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
+
+
+
+
     {{--<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />--}}
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -44,6 +48,8 @@
     <!--    <script type="text/javascript" src="./includes/search.js" ></script>-->
 
     <script type="text/javascript" src = "includes/gglAnaCods.js"></script>
+
+{{--    <script src="//cdnjs.cloudflare.com/ajax/libs/select2/3.5.4/select2.min.js"></script>--}}
 
     <!-- for ShareThis code   -->
     {{--<script type="text/javascript">var switchTo5x=true;</script>--}}

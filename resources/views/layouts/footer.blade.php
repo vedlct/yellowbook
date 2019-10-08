@@ -96,7 +96,8 @@
 </footer>
 <!--footer-->
 
-
+<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.15.0/lodash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.8/js/select2.min.js" defer></script>
 <!-- for ShareThis code   -->
 <script type="text/javascript">
     stLight.options({publisher: "72258ac7-a61b-45f9-b96c-d42454da06aa", doNotHash: false, doNotCopy: false, hashAddressBar: false});

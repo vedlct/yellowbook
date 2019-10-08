@@ -67,7 +67,7 @@ class categoryController extends Controller
         $rules=[
             'categoryName' => 'required|max:255',
             'categoryStatus' => 'required|max:50',
-            'orderNumber' => 'required|unique:Category',
+            'orderNumber' => 'required|unique:category',
 
         ];
 
@@ -208,6 +208,7 @@ class categoryController extends Controller
     {
         $category=Category::findOrFail($request->id);
         $category->categoryStatus='Deleted';
+        $category->top_category='0';
         $category->save();
     }
 
