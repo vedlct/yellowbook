@@ -24,32 +24,14 @@ class HomeController extends Controller
 
     public function index()
     {
-//        $top_category=DB::table('category')
-//            ->where('top_category',1)
-//            ->orderBy('categoryId','desc')
-//            ->get();
+
         $top_category = Category::where('top_category',1)
             ->orderBy('categoryId','desc')
             ->get();
-        $cityInfo = City::all();
-//        $artists = Category::all();
-//        $allcity = City::select('cityName')->get();
-//        $newarray = array();
-//        foreach ($allcity as $alc){
-//            array_push($newarray , $alc->cityName);
-//        }
-//        $array_final = preg_replace('/"([a-zA-Z_]+[a-zA-Z0-9_]*)":/','$1:',$newarray);
-//        $cityName =$array_final;
+        $cityInfo = City::select('cityId','cityName')
+//                ->cursor();
+                   ->get();
 
-
-//        $home=view('pages.home')
-//            ->with('top_category',$top_category)
-//            ->with('cityInfo',$cityInfo);
-////            ->with('artists',$artists);
-//
-//
-//        return view('main')
-//            ->with('content',$home);
 
         return view('pages.home',compact('top_category','cityInfo'));
 
@@ -70,7 +52,12 @@ class HomeController extends Controller
             ->where('categoryId',$id)
             ->orderBy('categoryId','desc')
             ->get();
-        return view('pages.products',compact('top_category'));
+//        $companyInfo =Company::all();
+        $companyInfo = Company::select('city.cityName','us_states.STATE_NAME','company.companyId','company.companyName','company.address','company.telephone','company.facebookPage','company.email','company.fax','company.phone','company.website')
+            ->leftJoin('city', 'city.cityId', '=', 'company.cityId')
+            ->leftJoin('us_states', 'us_states.ID', '=', 'company.ID')
+        ->where('categoryId',$id)->get();
+        return view('pages.products',compact('top_category','companyInfo'));
     }
 
 //    public function getCity($id)
@@ -83,8 +70,15 @@ class HomeController extends Controller
     public function showArtist($letter){
         $cityInfo =City::all();
         $artists = Category::where('categoryName', 'like', $letter.'%')->get();
+        $companyInfo = Company::where('categoryId',$letter)->get();
 //        print_r($artists);
-        return view('pages.home',compact('artists','cityInfo'));
+        return view('pages.home',compact('artists','cityInfo','companyInfo'));
+    }
+
+    public function getCity($id)
+    {
+        $cityInfo = City::where('ID_STATE',$id)->get();
+        return $cityInfo;
     }
 
 

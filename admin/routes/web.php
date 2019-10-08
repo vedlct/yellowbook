@@ -99,6 +99,13 @@ Route::get('/post-edit/{id}', 'PostController@edit')->name('post.edit');
 Route::post('/post-update/{id}', 'PostController@update')->name('post.update');
 Route::post('/post-delete', 'PostController@delete')->name('post.delete');
 
+/*Request Company */
+Route::get('/request-company', 'RequestCompanyController@index')->name('request_company.index');
+Route::post('/request-company', 'RequestCompanyController@showAllCompanyInfo')->name('request_company.showinfo');
+Route::post('/statuschecked', 'RequestCompanyController@statusChecked')->name('request_company.statuschecked');
+Route::post('/statusunchecked', 'RequestCompanyController@statusUnchecked')->name('request_company.statusunchecked');
+
+
 /* blog */
 //Route::get('/blog', 'BlogController@index')->name('blog.index');
 //Route::post('/blog-insert', 'BlogController@store')->name('blog.insert');

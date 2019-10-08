@@ -19,6 +19,7 @@
 //});
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/get-cities/{id}', 'HomeController@getCity');
 Route::get('products/{id}','HomeController@show');
 Route::get('/artists/{letter}', 'HomeController@showArtist')->where('letter', '[A-Za-z]+')->name('list');
 //Route::get('/autocomplete', 'HomeController@search')->name('autocomplete');

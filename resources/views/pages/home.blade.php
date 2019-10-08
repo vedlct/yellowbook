@@ -2,7 +2,8 @@
 
 @section('content')
     <!-- alphabets -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />
+    {{--<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />--}}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css" rel="stylesheet" />
     <style>
         .select2-container .select2-selection--single {
             box-sizing: border-box;
@@ -20,6 +21,23 @@
             margin-top: 3%;
         }
     </style>
+    {{--<style>--}}
+        {{--.select2-container--default .select2-search--dropdown{--}}
+            {{--border: 1px solid #aaa;--}}
+        {{--}--}}
+        {{--.select2-search--dropdown {--}}
+            {{--padding: 4px;--}}
+            {{--width: 100%;--}}
+            {{--height:42px;--}}
+            {{--box-sizing: border-box;--}}
+        {{--}--}}
+        {{--.select2-search--dropdown {--}}
+            {{--display: block;--}}
+            {{--padding: 4px;--}}
+            {{--height: 43px;--}}
+        {{--}--}}
+
+    {{--</style>--}}
 
     <script>
         $(document).ready(function(){
@@ -87,10 +105,10 @@
                                     <form action="https://www.bdtradeinfo.com/yellowpages/search.php" method="post" enctype="multipart/form-data" name="form9" id="form9" onSubmit="return searchForm();">
                                         <div class="col-md-6">
                                         {{--<input name="companyName" type="text" id="search" class="searchbox" placeholder="Location" value="" required=""/>--}}
-                                            <div class="col-md-5" style="margin-top: 1%;">
+                                            <div class="col-md-6" style="margin-top: 1%;">
 
-                                                <select class="form-control form-control-warning select" name="cityId" style="width: 70%;"  required="">
-                                                    <option>Select City</option>
+                                                <select class="form-control form-control-warning select"  name="cityId" style="width: 70%;"  required="">
+                                                    <option>City</option>
                                                     @foreach($cityInfo as $v_city)
                                                         <option value="{{$v_city->cityId}}">{{$v_city->cityName}}</option>
                                                     @endforeach
@@ -192,7 +210,7 @@
                                 <div class="col-md-12" id="search-bar" style="margin-top: 1%;">
                                 <div class="col-md-5" id="search-bar">
 
-                                            <select class="form-control form-control-warning select" name="cityId" style="width: 70%;"  required="">
+                                            <select class="form-control form-control-warning select" id="city" name="cityId" style="width: 70%;"  required="">
                                                 <option>Select City</option>
                                                 @foreach($cityInfo as $v_city)
                                                     <option value="{{$v_city->cityId}}">{{$v_city->cityName}}</option>
@@ -299,39 +317,39 @@
                 {{--</div>--}}
                 <div class="div_style2">
                     <div class="row">
-                        <div class="col-md-6 col-sm-6 col-xs-12 div_style3h padding-bottom-5">
+                        <div class="col-md-10 col-sm-12 col-xs-12 div_style3h padding-bottom-5">
                             <div class="col-md-12 col-xs-12 div_style4h">
                                 <h1 style="color: #33332B;">Browse Categories</h1>
                             </div>
                             {{--@foreach($artists as $artists)--}}
                             <div class="alphabet">
 
-                                <a href="{{URL::to('/artists/A')}}">A</a>
-                                <a href="{{URL::to('/artists/B')}}" >B</a>
-                                <a href="{{URL::to('/artists/C')}}" >C</a>
-                                <a href="{{URL::to('/artists/D')}}" >D</a>
-                                <a href="{{URL::to('/artists/E')}}" >E</a>
-                                <a href="{{URL::to('/artists/F')}}" >F</a>
-                                <a href="{{URL::to('/artists/G')}}" >G</a>
-                                <a href="{{URL::to('/artists/H')}}" >H</a>
-                                <a href="{{URL::to('/artists/I')}}" >I</a>
-                                <a href="{{URL::to('/artists/J')}}" >J</a>
-                                <a href="{{URL::to('/artists/K')}}" >K</a>
-                                <a href="{{URL::to('/artists/L')}}" >L</a>
-                                <a href="{{URL::to('/artists/M')}}" >M</a>
-                                <a href="{{URL::to('/artists/N')}}" >N</a>
-                                <a href="{{URL::to('/artists/O')}}" >O</a>
-                                <a href="{{URL::to('/artists/P')}}" >P</a>
-                                <a href="{{URL::to('/artists/Q')}}" >Q</a>
-                                <a href="{{URL::to('/artists/R')}}" >R</a>
-                                <a href="{{URL::to('/artists/S')}}" >S</a>
-                                <a href="{{URL::to('/artists/T')}}" >T</a>
-                                <a href="{{URL::to('/artists/U')}}" >U</a>
-                                <a href="{{URL::to('/artists/V')}}" >V</a>
-                                <a href="{{URL::to('/artists/W')}}" >W</a>
-                                <a href="{{URL::to('/artists/X')}}" >X</a>
-                                <a href="{{URL::to('/artists/Y')}}" >Y</a>
-                                <a href="{{URL::to('/artists/Z')}}" >Z</a>
+                                <a href="{{URL::to('/artists/A')}}" style="margin-left:3%;">A</a>
+                                <a href="{{URL::to('/artists/B')}}" style="margin-left:3%;">B</a>
+                                <a href="{{URL::to('/artists/C')}}" style="margin-left:3%;">C</a>
+                                <a href="{{URL::to('/artists/D')}}" style="margin-left:3%;">D</a>
+                                <a href="{{URL::to('/artists/E')}}" style="margin-left:3%;">E</a>
+                                <a href="{{URL::to('/artists/F')}}" style="margin-left:3%;">F</a>
+                                <a href="{{URL::to('/artists/G')}}" style="margin-left:3%;">G</a>
+                                <a href="{{URL::to('/artists/H')}}" style="margin-left:3%;">H</a>
+                                <a href="{{URL::to('/artists/I')}}" style="margin-left:3%;">I</a>
+                                <a href="{{URL::to('/artists/J')}}" style="margin-left:3%;">J</a>
+                                <a href="{{URL::to('/artists/K')}}" style="margin-left:3%;">K</a>
+                                <a href="{{URL::to('/artists/L')}}" style="margin-left:3%;">L</a>
+                                <a href="{{URL::to('/artists/M')}}" style="margin-left:3%;">M</a>
+                                <a href="{{URL::to('/artists/N')}}" style="margin-left:4%;">N</a>
+                                <a href="{{URL::to('/artists/O')}}" style="margin-left:3%;">O</a>
+                                <a href="{{URL::to('/artists/P')}}" style="margin-left:3%;">P</a>
+                                <a href="{{URL::to('/artists/Q')}}" style="margin-left:3%;">Q</a>
+                                <a href="{{URL::to('/artists/R')}}" style="margin-left:3%;">R</a>
+                                <a href="{{URL::to('/artists/S')}}" style="margin-left:3%;">S</a>
+                                <a href="{{URL::to('/artists/T')}}" style="margin-left:3%;">T</a>
+                                <a href="{{URL::to('/artists/U')}}" style="margin-left:3%;">U</a>
+                                <a href="{{URL::to('/artists/V')}}" style="margin-left:3%;">V</a>
+                                <a href="{{URL::to('/artists/W')}}" style="margin-left:3%;">W</a>
+                                <a href="{{URL::to('/artists/X')}}" style="margin-left:3%;">X</a>
+                                <a href="{{URL::to('/artists/Y')}}" style="margin-left:3%;">Y</a>
+                                <a href="{{URL::to('/artists/Z')}}" style="margin-left:3%;">Z</a>
 
                             </div>
                                 {{--@endforeach--}}
@@ -363,192 +381,33 @@
                         </div>
                         @endif
 
-                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" style="margin-top: -18%;">
-                            <div class="row">
-
-                                <!--ad right-->
-                                <div class="col-lg-12 col-md-12 col-sm-2 col-xs-4 text-center margin-top-bottom-10">
-                                    <a href="#" target="_blank"><img src="{{url('public')}}/saimg/3.gif" alt="Call For Add" title="Call For Add" class="img-midright-hp"></a>
-                                </div>
-                                <div class="col-lg-12 col-md-12 col-sm-2 col-xs-4 text-center margin-top-bottom-10">
-                                    <a href="#" target="_blank"><img src="{{url('public')}}/saimg/3.gif" alt="Call For Add" title="Call For Add" class="img-midright-hp"></a>
-                                </div>
-                                <div class="col-lg-12 col-md-12 col-sm-2 col-xs-4 text-center margin-top-bottom-10">
-                                    <a href="#" target="_blank"><img src="{{url('public')}}/saimg/3.gif" alt="Call For Add" title="Call For Add" class="img-midright-hp"></a>
-                                </div>
-                                <div class="col-lg-12 col-md-12 col-sm-2 col-xs-4 text-center margin-top-bottom-10">
-                                    <a href="#" target="_blank"><img src="{{url('public')}}/saimg/3.gif" alt="Call For Add" title="Call For Add" class="img-midright-hp"></a>
-                                </div>
-                                <div class="col-lg-12 col-md-12 col-sm-2 col-xs-4 text-center margin-top-bottom-10">
-                                    <a href="#" target="_blank"><img src="{{url('public')}}/saimg/3.gif" alt="Call For Add" title="Call For Add" class="img-midright-hp"></a>
-                                </div>
-                                <div class="clearfix"></div>
-                                <!--ad right-->
-                            </div>
-                        </div>
-                    </div>
-
-                    {{--<div class="row" >--}}
-                        {{--<div class="col-md-10 col-xs-12 div_style3h padding-bottom-10">--}}
-                            {{--<div class="col-md-12 col-xs-12 div_style4h">--}}
-                                {{--<h1>Top Business Categories</h1>--}}
-                            {{--</div>--}}
-                            {{--<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">--}}
-                                {{--<div class="seg">--}}
-                                    {{--<a href="yellowpages/subcat9738.html?category_id=4" class="text-darkblue text-bold">Beauty & Fitness</a><br/>--}}
-                                    {{--<a href="yellowpages/des_data67d5.html?subcategory_id=164" class="text-light text-small">Parlour</a>,--}}
-                                    {{--<a href="yellowpages/des_data9c79.html?subcategory_id=706" class="text-light text-small">Gym</a>,--}}
-                                    {{--<a href="yellowpages/des_dataa6f7.html?subcategory_id=166" class="text-light text-small">Hair Treat</a>,--}}
-                                    {{--<a href="yellowpages/des_dataf52f.html?subcategory_id=709" class="text-light text-small">Swimming</a>--}}
-                                    {{--<a href="yellowpages/subcat9738.html?category_id=4" class="text-light text-small"> ...</a>--}}
-                                {{--</div>--}}
-                                {{--<div class="seg">--}}
-                                    {{--<a href="yellowpages/subcat4586.html?category_id=20" class="text-darkblue text-bold">Health & Medicine</a><br/>--}}
-                                    {{--<a href="yellowpages/des_data45ee.html?subcategory_id=492" class="text-light text-small">Hospital</a>,--}}
-                                    {{--<a href="yellowpages/des_data805f.html?subcategory_id=495" class="text-light text-small">Medicine</a>,--}}
-                                    {{--<a href="yellowpages/des_data2ab9.html?subcategory_id=471" class="text-light text-small">Dentist</a>,--}}
-                                    {{--<a href="yellowpages/des_datac5e7.html?subcategory_id=995" class="text-light text-small">Home Nurse</a>--}}
-                                    {{--<a href="yellowpages/subcat4586.html?category_id=20" class="text-light text-small"> ...</a>--}}
-                                {{--</div>--}}
-                                {{--<div class="seg">--}}
-                                    {{--<a href="yellowpages/subcat830e.html?category_id=25" class="text-darkblue text-bold">News & Media</a><br/>--}}
-                                    {{--<a href="yellowpages/des_data5e09.html?subcategory_id=848" class="text-light text-small">TV</a>,--}}
-                                    {{--<a href="yellowpages/des_data04cf.html?subcategory_id=662" class="text-light text-small">News papers</a>,--}}
-                                    {{--<a href="yellowpages/des_data3a3e.html?subcategory_id=658" class="text-light text-small"> News Agency</a>--}}
-                                    {{--<a href="yellowpages/subcat3bed.html?category_id=28" class="text-light text-small"> ...</a>--}}
-                                {{--</div>--}}
-                                {{--<div class="seg">--}}
-                                    {{--<a href="yellowpages/subcate9fc.html?category_id=13" class="text-darkblue text-bold">Education & Career</a><br/>--}}
-                                    {{--<a href="yellowpages/des_dataef5a.html?subcategory_id=339" class="text-light text-small"> School</a>,--}}
-                                    {{--<a href="yellowpages/des_data13a9.html?subcategory_id=329" class="text-light text-small">College</a>,--}}
-                                    {{--<a href="yellowpages/des_datab344.html?subcategory_id=333" class="text-light text-small"> Education Service</a>--}}
-                                    {{--<a href="yellowpages/subcate9fc.html?category_id=13" class="text-light text-small"> ...</a>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                            {{--<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">--}}
-                                {{--<div class="seg">--}}
-                                    {{--<a href="yellowpages/subcate475.html?category_id=18" class="text-darkblue text-bold">Garments &amp; Accessories</a><br/>--}}
-                                    {{--<a href="yellowpages/des_data0350.html?subcategory_id=420" class="text-light text-small">Garments</a>,--}}
-                                    {{--<a href="yellowpages/des_datae115.html?subcategory_id=416" class="text-light text-small">Buying House</a>,--}}
-                                    {{--<a href="yellowpages/des_data0723.html?subcategory_id=421" class="text-light text-small"> Knit</a>,--}}
-                                    {{--<a href="yellowpages/des_data77ea.html?subcategory_id=429" class="text-light text-small">Sweater</a>--}}
-                                    {{--<a href="yellowpages/subcate475.html?category_id=18" class="text-light text-small"> ...</a>--}}
-                                {{--</div>--}}
-                                {{--<div class="seg">--}}
-                                    {{--<a href="yellowpages/subcatc9f0.html?category_id=19" class="text-darkblue text-bold">Hardware & Metal</a><br/>--}}
-                                    {{--<a href="yellowpages/des_datacb1a.html?subcategory_id=448" class="text-light text-small">Hardware</a>,--}}
-                                    {{--<a href="yellowpages/des_data71ac.html?subcategory_id=924" class="text-light text-small">Steel Pipe</a>,--}}
-                                    {{--<a href="yellowpages/des_dataa52b.html?subcategory_id=232" class="text-light text-small">Paint</a>,--}}
-                                    {{--<a href="yellowpages/des_datae907.html?subcategory_id=936" class="text-light text-small">RCC Pipe</a>,--}}
-                                    {{--<a href="yellowpages/subcatc9f0.html?category_id=19" class="text-light text-small"> ...</a>--}}
-                                {{--</div>--}}
-                                {{--<div class="seg">--}}
-                                    {{--<a href="yellowpages/subcat8e09.html?category_id=9" class="text-darkblue text-bold">Community & Orgs</a><br/>--}}
-                                    {{--<a href="yellowpages/des_datad9e7.html?subcategory_id=245" class="text-light text-small">Associations</a>,--}}
-                                    {{--<a href="yellowpages/des_datae41f.html?subcategory_id=255" class="text-light text-small">NGO</a>,--}}
-                                    {{--<a href="yellowpages/des_data368a.html?subcategory_id=252" class="text-light text-small">Int'l org.</a>,--}}
-                                    {{--<a href="yellowpages/des_datac290.html?subcategory_id=247" class="text-light text-small">EPZ Companies</a>--}}
-                                    {{--<a href="yellowpages/subcat8e09.html?category_id=9" class="text-light text-small">...</a>--}}
-                                {{--</div>--}}
-                                {{--<div class="seg padding-top-6">--}}
-                                    {{--<a href="yellowpages/index.html" class="text-bold btn-warning padding-6">More Categories >></a><br/>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-
-                        {{--<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 margin-top-5 padding-top-6">--}}
-
+                        {{--<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" style="margin-top: -18%;">--}}
                             {{--<div class="row">--}}
 
                                 {{--<!--ad right-->--}}
-
-                                {{--<div class="col-lg-12 col-md-12 col-sm-4 col-xs-4 text-center margin-top-bottom-10">--}}
-                                    {{--<a href="yellowpages/goadurl6933.html?idn=601" target="_blank"><img src="{{url('public')}}/saimg/ha1.jpg" alt="House Rental Service" title="House Rental Service" class="img-midright-hp2"></a>--}}
+                                {{--<div class="col-lg-12 col-md-12 col-sm-2 col-xs-4 text-center margin-top-bottom-10">--}}
+                                    {{--<a href="#" target="_blank"><img src="{{url('public')}}/saimg/3.gif" alt="Call For Add" title="Call For Add" class="img-midright-hp"></a>--}}
                                 {{--</div>--}}
-                                {{--<div class="col-lg-12 col-md-12 col-sm-4 col-xs-4 text-center margin-top-bottom-10">--}}
-                                    {{--<a href="yellowpages/goadurl159d.html?idn=613" target="_blank"><img src="{{url('public')}}/saimg/ad_dhakapower.gif" alt="Dhaka Power & Engineering Ltd." title="Dhaka Power & Engineering Ltd." class="img-midright-hp2"></a>--}}
+                                {{--<div class="col-lg-12 col-md-12 col-sm-2 col-xs-4 text-center margin-top-bottom-10">--}}
+                                    {{--<a href="#" target="_blank"><img src="{{url('public')}}/saimg/3.gif" alt="Call For Add" title="Call For Add" class="img-midright-hp"></a>--}}
                                 {{--</div>--}}
-                                {{--<div class="col-lg-12 col-md-12 col-sm-4 col-xs-4 text-center margin-top-bottom-10">--}}
-                                    {{--<a href="yellowpages/goadurl1536.html?idn=615" target="_blank"><img src="{{url('public')}}/saimg/ad_asiaclean.gif" alt="Asia Clean & Care" title="Asia Clean & Care" class="img-midright-hp2"></a>--}}
+                                {{--<div class="col-lg-12 col-md-12 col-sm-2 col-xs-4 text-center margin-top-bottom-10">--}}
+                                    {{--<a href="#" target="_blank"><img src="{{url('public')}}/saimg/3.gif" alt="Call For Add" title="Call For Add" class="img-midright-hp"></a>--}}
                                 {{--</div>--}}
-
+                                {{--<div class="col-lg-12 col-md-12 col-sm-2 col-xs-4 text-center margin-top-bottom-10">--}}
+                                    {{--<a href="#" target="_blank"><img src="{{url('public')}}/saimg/3.gif" alt="Call For Add" title="Call For Add" class="img-midright-hp"></a>--}}
+                                {{--</div>--}}
+                                {{--<div class="col-lg-12 col-md-12 col-sm-2 col-xs-4 text-center margin-top-bottom-10">--}}
+                                    {{--<a href="#" target="_blank"><img src="{{url('public')}}/saimg/3.gif" alt="Call For Add" title="Call For Add" class="img-midright-hp"></a>--}}
+                                {{--</div>--}}
                                 {{--<div class="clearfix"></div>--}}
                                 {{--<!--ad right-->--}}
-
                             {{--</div>--}}
-
                         {{--</div>--}}
-                    {{--</div>--}}
+                    </div>
+
                 </div>
-                {{--<div class="row margin-top-bottom-10">--}}
-                    {{--<!--bottom-->--}}
-                    {{--<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">--}}
-                        {{--<a href="yellowpages/goadurl4fa0.html?idn=662" target="_blank"><img src="{{url('public')}}/saimg/ad_banglapower.gif" alt="Bangla Power" title="Bangla Power" class="img-classic-hp"></a>--}}
-                        {{--<!--                            <a href="yellowpages/goadurl.php?idn=607" target="_blank"><img src="saimg/ha7.png" alt="Shopping Center / Shopping Mall" width="215" height="60" title="Shopping Center / Shopping Mall" class="img-classic-hp"></a>-->--}}
-                    {{--</div>--}}
-                    {{--<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">--}}
-                        {{--<a href="yellowpages/goadurl5848.html?idn=619" target="_blank"><img src="{{url('public')}}/saimg/ad_farmersagri.gif" alt="Farmers Agri Business Ltd." title="Farmers Agri Business Ltd." class="img-classic-hp"></a>--}}
-                    {{--</div>--}}
-                    {{--<!--bottom-->--}}
-                {{--</div>--}}
-                {{--<div class="div_style2">--}}
-                    {{--<div class="row">--}}
-                        {{--<div class="col-md-12 col-xs-12 div_style3h">--}}
-                            {{--<div class="col-md-12 col-xs-12 div_style4h">--}}
-                                {{--<h1>Quick Search</h1>--}}
-                            {{--</div>--}}
-                            {{--<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 seg2 padding-top-bottom-5">--}}
-                                {{--<img src="{{url('public')}}/images/icon_emergencyno.png" alt="eo" title="eo"> <a href="yellowpages/subcatf3ee.html?category_id=42" class="text-light text-medium">Emergency Nos.</a>--}}
-                            {{--</div>--}}
-                            {{--<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 seg2 padding-top-bottom-5">--}}
-                                {{--<img src="{{url('public')}}/images/icon_districtinfo.png" alt="di" title="di"> <a href="bangladesh-profile/bd_district.html" class="text-light text-medium">District Info</a>--}}
-                            {{--</div>--}}
-                            {{--<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 seg2 padding-top-bottom-5">--}}
-                                {{--<img src="{{url('public')}}/images/icon_foreignmissions.png" alt="fm" title="fm"> <a href="yellowpages/des_data2724.html?subcategory_id=250" class="text-light text-medium">Foreign Mission</a>--}}
-                            {{--</div>--}}
-                            {{--<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 seg2 padding-top-bottom-5">--}}
-                                {{--<img src="{{url('public')}}/images/icon_conventioncenter.png" alt="cv" title="cv"> <a href="yellowpages/des_dataa7ec.html?subcategory_id=506" class="text-light text-medium">Convension Hall</a>--}}
-                            {{--</div>--}}
-                            {{--<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 seg2 padding-top-bottom-5">--}}
-                                {{--<img src="{{url('public')}}/images/icon_cinemahall.png" alt="ch" title="ch"> <a href="yellowpages/des_data0187.html?subcategory_id=139" class="text-light text-medium">Cinema Theater</a>--}}
-                            {{--</div>--}}
-                            {{--<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 seg2 padding-top-bottom-5">--}}
-                                {{--<img src="{{url('public')}}/images/icon_fashionhouse.png" alt="fo" title="fo"> <a href="yellowpages/des_data4513.html?subcategory_id=876" class="text-light text-medium">Fashion House</a>--}}
-                            {{--</div>--}}
-                            {{--<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 seg2 padding-top-bottom-5">--}}
-                                {{--<img src="{{url('public')}}/images/icon_resturants.png" alt="rt" title="rt"> <a href="yellowpages/des_data4099.html?subcategory_id=394" class="text-light text-medium">Restaurants</a>--}}
-                            {{--</div>--}}
-                            {{--<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 seg2 padding-top-bottom-5">--}}
-                                {{--<img src="{{url('public')}}/images/icon_onlineshopping.png" alt="os" title="os"> <a href="yellowpages/des_data2142.html?subcategory_id=412" class="text-light text-medium">Online Shopping</a>--}}
-                            {{--</div>--}}
-                            {{--<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 seg2 padding-top-bottom-5">--}}
-                                {{--<img src="{{url('public')}}/images/icon_library.png" alt="lb" title="lb"> <a href="yellowpages/des_datab463.html?subcategory_id=176" class="text-light text-medium">Library</a>--}}
-                            {{--</div>--}}
-                            {{--<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 seg2 padding-top-bottom-5">--}}
-                                {{--<img src="{{url('public')}}/images/icon_onlinenewsportal.png" alt="on" title="on"> <a href="yellowpages/des_data890d.html?subcategory_id=890" class="text-light text-medium">News Portal</a>--}}
-                            {{--</div>--}}
-                            {{--<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 seg2 padding-top-bottom-5">--}}
-                                {{--<img src="{{url('public')}}/images/icon_shopping.png" alt="sp" title="sp"> <a href="yellowpages/des_data30d2.html?subcategory_id=714" class="text-light text-medium">Shopping Center</a>--}}
-                            {{--</div>--}}
-                            {{--<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 seg2 padding-top-bottom-5">--}}
-                                {{--<img src="{{url('public')}}/images/icon_eventmanagement.png" alt="am" title="am"> <a href="yellowpages/des_dataebd8.html?subcategory_id=868" class="text-light text-medium">Event Manage</a>--}}
-                            {{--</div>--}}
-                            {{--<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 seg2 padding-top-bottom-5">--}}
-                                {{--<img src="{{url('public')}}/images/icon_adfirms.png" alt="ad" title="ad"> <a href="yellowpages/des_data0b63.html?subcategory_id=190" class="text-light text-medium">Ad Firms</a>--}}
-                            {{--</div>--}}
-                            {{--<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 seg2 padding-top-bottom-5">--}}
-                                {{--<img src="{{url('public')}}/images/icon_drugrehab.png" alt="dr" title="dr"> <a href="yellowpages/des_dataf874.html?subcategory_id=847" class="text-light text-medium">Drug Rehab</a>--}}
-                            {{--</div>--}}
-                            {{--<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 seg2 padding-top-bottom-5">--}}
-                                {{--<img src="{{url('public')}}/images/icon_export.png" alt="ex" title="ex"> <a href="yellowpages/des_datacb1b.html?subcategory_id=200" class="text-light text-medium">Exporters</a>--}}
-                            {{--</div>--}}
-                            {{--<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 seg2 padding-top-bottom-5">--}}
-                                {{--<img src="{{url('public')}}/images/icon_liftcompany.png" alt="on" title="on"> <a href="yellowpages/des_dataae27.html?subcategory_id=601" class="text-light text-medium">Lift Company</a>--}}
-                            {{--</div>--}}
-                            {{--<!--</div>-->--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
+
             </div>
 
             <div class="col-md-2">
@@ -588,105 +447,12 @@
         <div class="clearfix"></div>
     </div>
 
-    {{--<script>--}}
-        {{--$(document).ready(function() {--}}
-            {{--$( "#search" ).autocomplete({--}}
-
-                {{--source: function(request, response) {--}}
-                    {{--$.ajax({--}}
-                        {{--url: "{{url('autocomplete')}}",--}}
-                        {{--method:"GET",--}}
-                        {{--data: {--}}
-                            {{--term : request.term--}}
-                        {{--},--}}
-{{--//                        data: {address: address,},--}}
-                        {{--dataType: "json",--}}
-                        {{--success: function(data){--}}
-                            {{--var resp = $.map(data,function(obj){--}}
-{{--//                                console.log(obj.address);--}}
-                                {{--return obj.name;--}}
-                            {{--});--}}
-
-                            {{--response(resp);--}}
-                        {{--}--}}
-                    {{--});--}}
-                {{--},--}}
-                {{--minLength: 1--}}
-            {{--});--}}
-        {{--});--}}
-
-    {{--</script>--}}
-    {{--<script>--}}
-        {{--$(document).ready(function(){--}}
-
-            {{--$('#search').keyup(function(){--}}
-                {{--var query = $(this).val();--}}
-                {{--if(query != '')--}}
-                {{--{--}}
-                    {{--var _token = $('input[name="_token"]').val();--}}
-                    {{--$.ajax({--}}
-                        {{--url:"{{ route('autocomplete.fetch') }}",--}}
-                        {{--method:"POST",--}}
-                        {{--data:{query:query, _token:_token},--}}
-                        {{--success:function(data){--}}
-                            {{--$('#addressList').fadeIn();--}}
-                            {{--$('#addressList').html(data);--}}
-                        {{--}--}}
-                    {{--});--}}
-                {{--}--}}
-            {{--});--}}
-
-            {{--$(document).on('click', 'li', function(){--}}
-                {{--$('#address').val($(this).text());--}}
-                {{--$('#addressList').fadeOut();--}}
-            {{--});--}}
-
-        {{--});--}}
-    {{--</script>--}}
-
-    {{--<script>--}}
-        {{--$( function() {--}}
-
-
-            {{--var data = JSON.parse('{{ json_encode($cityName) }}');--}}
-            {{--var data = "{{ json_encode($cityName , JSON_NUMERIC_CHECK)}}";--}}
-            {{--var dataSet = JSON.parse({!!json_encode($cityName)!!});--}}
-            {{--var dataset = "{{json_encode(($cityName), ENT_QUOTES)}}";--}}
-{{--//            alert(dataset);--}}
-
-            {{--var availableTags = [--}}
-                {{--"ActionScript",--}}
-                {{--"AppleScript",--}}
-                {{--"Asp",--}}
-                {{--"BASIC",--}}
-                {{--"C",--}}
-                {{--"C++",--}}
-                {{--"Clojure",--}}
-                {{--"COBOL",--}}
-                {{--"ColdFusion",--}}
-                {{--"Erlang",--}}
-                {{--"Fortran",--}}
-                {{--"Groovy",--}}
-                {{--"Haskell",--}}
-                {{--"Java",--}}
-                {{--"JavaScript",--}}
-                {{--"Lisp",--}}
-                {{--"Perl",--}}
-                {{--"PHP",--}}
-                {{--"Python",--}}
-                {{--"Ruby",--}}
-                {{--"Scala",--}}
-                {{--"Scheme"--}}
-            {{--];--}}
-            {{--$( "#tags" ).autocomplete({--}}
-                {{--source: availableTags--}}
-            {{--});--}}
-        {{--} );--}}
-    {{--</script>--}}
 
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+
+    {{--<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>--}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js"></script>
     <SCRIPT language=Javascript>
 
 
@@ -704,4 +470,39 @@
         });
 
     </SCRIPT>
+    <script>
+
+//$('#js-data-example-ajax').select2({
+//    selectOnClose: true
+//
+//});
+//$('#e1').select2({
+//    ajax: {
+//        delay: 250
+//    }
+//});
+{{--$('#js-data-example-ajax').select2({--}}
+    {{--ajax :{--}}
+        {{--type: "GET",--}}
+        {{--url: '{{url('/get-cities').'/'}}'+x,--}}
+        {{--success: function (data) {--}}
+
+            {{--for (i = 0; i < data.length; i++) {--}}
+                {{--$("#city").append("<option value='"+data[i].cityId+"'>"+data[i].cityName+"</option>");--}}
+            {{--}--}}
+        {{--},--}}
+    {{--}--}}
+{{--});--}}
+     $.ajax({
+    type: "GET",
+    url: '{{url('/get-cities').'/'}}'+x,
+    success: function (data) {
+
+        for (i = 0; i < data.length; i++) {
+
+            $("#city").append("<option value='"+data[i].cityId+"'>"+data[i].cityName+"</option>");
+        }
+    },
+});
+    </script>
 @endsection

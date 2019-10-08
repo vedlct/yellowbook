@@ -77,6 +77,101 @@
 
                         </div>
                     </div>
+
+
+                    <div class="div_style2">
+                        <div class="row" >
+                            @foreach($companyInfo as $companyInfo )
+                            <div class="col-md-12 col-xs-12 div_style3">
+
+                                <div class="width-100 mainbody-grid border-bottom-dashed margin-bottom-15 padding-top-bottom-10">
+                                    <div class="row">
+                                        <div class="col-md-11 col-xs-11 mainbody-grid">
+                                            <h4>
+                                                <a class="nav12txt" href="#">{{$companyInfo->companyName}}</a>
+                                            </h4>
+                                        </div>
+                                        <div class="col-md-1 col-xs-1 mainbody-grid text-right">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-8 col-xs-12 mainbody-grid">
+                                        <address>
+                                            <ul class="location">
+                                                <li><span class="glyphicon glyphicon-map-marker"></span></li>
+                                                <li>
+                                                    {{$companyInfo->STATE_NAME}},{{$companyInfo->cityName}} ,{{$companyInfo->address}}.                                             </li>
+                                            </ul>
+                                            <div class="clearfix"> </div>
+                                            {{--<ul class="location">--}}
+                                                {{--<li><span class="glyphicon glyphicon-earphone"></span></li>--}}
+                                                {{--<li>--}}
+                                                    {{--{{$companyInfo->STATE_NAME}}</li>--}}
+
+                                            {{--</ul>--}}
+                                            <ul class="location">
+                                                <li><span class="glyphicon glyphicon-envelope"></span></li>
+
+                                                <li>
+                                                <li>
+                                                    {{$companyInfo->email}}</li>
+                                                </li>
+
+                                            </ul>
+                                            <ul class="location">
+                                                <li><span class="glyphicon glyphicon-earphone"></span></li>
+                                                <li>
+                                                    {{$companyInfo->telephone}}</li>
+
+                                            </ul>
+                                            <div class="clearfix"> </div>
+                                            <ul class="location">
+                                                <li><span class="glyphicon glyphicon-globe"></span></li>
+                                                <li>
+                                                    <a href="#" target=_blank class=navtxt_normal>{{$companyInfo->website}}</a></li>
+
+                                            </ul>
+                                            <ul class="location">
+                                                <li><span class="glyphicon glyphicon-globe"></span></li>
+                                                <li>
+                                                    <a href="#" target=_blank class=navtxt_normal>{{$companyInfo->facebookPage}}</a></li>
+
+                                            </ul>
+                                        </address>
+                                    </div>
+                                    {{--<div class="col-md-4 col-xs-12 mainbody-grid">--}}
+                                        {{--<address>--}}
+                                            {{--<ul class="location">--}}
+                                                {{--<li><span class="glyphicon glyphicon-envelope"></span></li>--}}
+
+                                                {{--<li>--}}
+                                                {{--<li>--}}
+                                                    {{--{{$companyInfo->email}}</li>--}}
+                                                {{--</li>--}}
+
+                                            {{--</ul>--}}
+                                            {{--<div class="clearfix"> </div>--}}
+                                            {{--<ul class="location">--}}
+                                                {{--<li><span class="glyphicon glyphicon-envelope"></span></li>--}}
+                                                {{--<li><a href="send_mailae8f.html?data_id=48357" class="nav7txt" target="_blank"><strong>{{$companyInfo->fax}}</strong></a></li>--}}
+                                            {{--</ul>--}}
+                                        {{--</address>--}}
+                                    {{--</div>--}}
+                                </div>
+
+                                {{--<div class="width-100 mainbody-grid text-justify border-top-dashed">--}}
+                                    {{--<p>--}}
+                                        {{--<img src="../images/icon_keyword.png" alt="Keywords/Description" title="Keywords/Description" height="20" width="20" class="margin-right-15 float-left">--}}
+                                        {{--Our Services : Cockroach Control Service, Termite Control Service, Rodent Control Service, Bed bugs Control Service, Industrial Pest Control Service, Fumigation Service, Snake Control Service, Sofa Cleaning Service, Carpet Cleaning Service etc.                                    </p>--}}
+                                {{--</div>--}}
+                            </div>
+                            @endforeach
+                        </div>
+
+                    </div>
                     <div class="col-md-8 col-md-offset-2 col-xs-12 col-xs-offset-0 text-center margin-bottom-10">
                     </div>                    </div>
             </div>

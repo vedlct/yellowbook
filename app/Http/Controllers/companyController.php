@@ -47,6 +47,7 @@ class companyController extends Controller
             "categoryId" => $request->categoryId,
             "address" => $request->address,
             "cityId" => $request->cityId,
+            "ID" => $request->ID,
             "country" => $request->country,
             "telephone" => $request->telephone,
             "email" => $request->email,
@@ -54,6 +55,7 @@ class companyController extends Controller
             "website" => $request->website,
             "facebookPage" => $request->facebookPage,
             "phone" => $request->phone,
+//            "status" => $request->status,
 
         ]);
 

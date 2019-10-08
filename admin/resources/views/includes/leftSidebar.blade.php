@@ -32,6 +32,11 @@
 
                 </li>
 
+                <li>
+                    <a href="{{route('request_company.index')}}"><i class="fa fa-plus-square"></i><span class="hide-menu">Request Company</span></a>
+
+                </li>
+
                 {{--<li>--}}
                     {{--<a href="{{route('blog.index')}}"><i class="fa fa-plus-square"></i><span class="hide-menu">Blogs</span></a>--}}
 

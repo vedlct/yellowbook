@@ -48,6 +48,7 @@ class CompanyController extends Controller
             ->orderBy('companyId','desc')
 
             ->where('companyStatus','!=','Deleted')
+            ->where('companyStatus','!=','Request')
             ->get();
         $datatables = Datatables::of($companyInfo);
         return $datatables->make(true);
