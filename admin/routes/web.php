@@ -59,7 +59,7 @@ Route::post('/topcategorychecked', 'categoryController@topCategorychecked')->nam
 Route::post('/topcategoryunchecked', 'categoryController@topCategoryunchecked')->name('category.topcategoryunchecked');
 
 /*City*/
-Route::get('/city', 'cityController@index')->name('city.index');
+Route::get('/city', 'CityController@index')->name('city.index');
 Route::post('/city-info', 'CityController@showAllCityInfo')->name('city.showinfo');
 Route::get('/city-add', 'CityController@create')->name('city.addCity');
 
@@ -88,7 +88,7 @@ Route::get('/company-edit/{id}', 'CompanyController@edit')->name('company.edit')
 Route::post('/company-update/{id}', 'CompanyController@update')->name('company.update');
 
 Route::post('/company-delete', 'CompanyController@delete')->name('company.delete');
-Route::get('/get-cities/{id}', 'companyController@getCity');
+Route::get('/get-cities/{id}', 'CompanyController@getCity');
 
 /* post */
 Route::get('/post', 'PostController@index')->name('post.index');
