@@ -2,7 +2,10 @@
 
 @section('content')
     <!-- alphabets -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />
+{{--    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />--}}
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/select2/3.5.4/select2.min.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/select2-bootstrap-css/1.4.6/select2-bootstrap.min.css" />
     <style>
         .select2-container .select2-selection--single {
             box-sizing: border-box;
@@ -18,6 +21,12 @@
             line-height: 24px;
             font-size: 18px;
             margin-top: 3%;
+        }
+        .capitalize {
+            text-transform: capitalize;
+        }
+        .select2-container-multi .select2-choices .select2-search-choice {
+            padding: 5px 5px 5px 18px;
         }
     </style>
 
@@ -89,7 +98,7 @@
                                         {{--<input name="companyName" type="text" id="search" class="searchbox" placeholder="Location" value="" required=""/>--}}
                                             <div class="col-md-5" style="margin-top: 1%;">
 
-                                                <select class="form-control form-control-warning select" name="cityId" style="width: 70%;"  required="">
+                                                <select class="form-control form-control-warning" name="cityId" id="selectcity" style="width: 70%;"  required="">
                                                     <option>Select City</option>
                                                     @foreach($cityInfo as $v_city)
                                                         <option value="{{$v_city->cityId}}">{{$v_city->cityName}}</option>
@@ -192,14 +201,14 @@
                                 <div class="col-md-12" id="search-bar" style="margin-top: 1%;">
                                 <div class="col-md-5" id="search-bar">
 
-                                            <select class="form-control form-control-warning select" name="cityId" style="width: 70%;"  required="">
-                                                <option>Select City</option>
-                                                @foreach($cityInfo as $v_city)
-                                                    <option value="{{$v_city->cityId}}">{{$v_city->cityName}}</option>
-                                                @endforeach
-                                            </select>
+{{--                                            <select class="form-control form-control-warning select" name="cityId" style="width: 70%;"  required="">--}}
+{{--                                                <option>Select City</option>--}}
+{{--                                                @foreach($cityInfo as $v_city)--}}
+{{--                                                    <option value="{{$v_city->cityId}}">{{$v_city->cityName}}</option>--}}
+{{--                                                @endforeach--}}
+{{--                                            </select>--}}
 
-                                {{--<input name="cityName" type="text" id="tags" class="searchbox" placeholder="Location" value=""   required=""/>--}}
+                                <input name="cityName" type="text" id="selectcity" class="searchbox" placeholder="Location" value=""   required=""/>
                                 </div>
 
                                 <div class="col-md-5" id="search-bar">
@@ -686,7 +695,9 @@
 
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+{{--    <script type="text/javascript" src='//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>--}}
+    <!--<![endif]-->
+
     <SCRIPT language=Javascript>
 
 
@@ -700,8 +711,58 @@
         }
 
         $(document).ready(function() {
-            $('.select').select2();
-        });
+          //  $('.select').select2();
 
+        // Function to shuffle the demo data
+        function shuffle(str) {
+            return str
+                .split('')
+                .sort(function() {
+                    return 0.5 - Math.random();
+                })
+                .join('');
+        }
+
+        // For demonstration purposes we first make
+        // a huge array of demo data (20 000 items)
+        // HEADS UP; for the _.map function i use underscore (actually lo-dash) here
+        function mockData() {
+            return _.map(_.range(1, 20000), function(i) {
+                return {
+                    id: i,
+                    text: shuffle('te ststr ing to shuffle') + ' ' + i,
+                };
+            });
+        }
+
+        (function() {
+            // init select 2
+            $('#selectcity').select2({
+                data: mockData(),
+                placeholder: 'search',
+                // query with pagination
+                query: function(q) {
+                    var pageSize,
+                        results,
+                        that = this;
+                    pageSize = 20; // or whatever pagesize
+                    results = [];
+                    if (q.term && q.term !== '') {
+                        // HEADS UP; for the _.filter function i use underscore (actually lo-dash) here
+                        results = _.filter(that.data, function(e) {
+                            return e.text.toUpperCase().indexOf(q.term.toUpperCase()) >= 0;
+                        });
+                    } else if (q.term === '') {
+                        results = that.data;
+                    }
+                    q.callback({
+                        results: results.slice((q.page - 1) * pageSize, q.page * pageSize),
+                        more: results.length >= q.page * pageSize,
+                    });
+                },
+            });
+        })();
+
+        });
     </SCRIPT>
 @endsection
